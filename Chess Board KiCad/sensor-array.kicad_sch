@@ -463,92 +463,710 @@
 		)
 	)
 	(junction
-		(at 36.83 119.38)
+		(at 339.09 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "004d6c3a-9fa5-4339-bdd3-3c9c4a9099f3")
+	)
+	(junction
+		(at 336.55 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "03e807a7-0b7a-46a7-ba86-454e57027793")
+	)
+	(junction
+		(at 210.82 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "045bea85-9e65-4dc2-ae31-d201f1a1bbc5")
+	)
+	(junction
+		(at 171.45 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "047dffc8-5fe1-47dd-b429-0c23bd8e1516")
+	)
+	(junction
+		(at 127 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "05e173bc-8d41-4789-916e-895d14500d3e")
+	)
+	(junction
+		(at 168.91 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06a61893-d4d6-4633-a25f-c306b24c4990")
+	)
+	(junction
+		(at 255.27 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "094a4a30-a3cd-488f-a1a0-eb8510fad42d")
+	)
+	(junction
+		(at 339.09 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c5be91e-e47a-4e17-afc1-fe923a492620")
+	)
+	(junction
+		(at 339.09 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0de2e250-b6c9-47bd-aad0-5563786af43e")
+	)
+	(junction
+		(at 294.64 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f8d8ef2-84bc-46f0-9fc9-e130cc91535d")
+	)
+	(junction
+		(at 171.45 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "102a0e62-2185-4db8-b3f2-8052b101963a")
+	)
+	(junction
+		(at 129.54 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11fef513-34bb-4741-ba3a-8884a4025f85")
+	)
+	(junction
+		(at 87.63 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "13d63699-1184-4d26-ba49-30435e14b96a")
+	)
+	(junction
+		(at 336.55 210.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "147b983d-55dc-4e06-bda8-d0a2a05a6e16")
+	)
+	(junction
+		(at 171.45 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "16d8e156-cbb1-40e0-addb-1ca8d304d5f3")
+	)
+	(junction
+		(at 252.73 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1ea5537c-b3d3-4565-935c-ed1b071cccda")
+	)
+	(junction
+		(at 252.73 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1ec675dd-18e5-4545-85d4-eca482f9674d")
+	)
+	(junction
+		(at 255.27 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "201d7799-6aa0-4dd6-89c2-a46b3002ca2c")
+	)
+	(junction
+		(at 210.82 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "249fa8c6-e566-45c7-a3b3-8e3cb41b1d76")
+	)
+	(junction
+		(at 336.55 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "24b66f4a-9cf0-41bc-96dc-1a26b4a4e927")
+	)
+	(junction
+		(at 45.72 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "25642b9d-3168-4af1-86f9-f2befe43cb09")
 	)
 	(junction
-		(at 36.83 50.8)
+		(at 294.64 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "26a030d7-114f-4250-bb8d-a4bdeea27723")
+	)
+	(junction
+		(at 378.46 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "27c6255c-b72e-474a-9dd1-5bdf490e29a6")
+	)
+	(junction
+		(at 168.91 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2b1897cd-2699-4c49-90e9-6419c32ae9d0")
+	)
+	(junction
+		(at 294.64 210.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "31035dd5-8af8-43ab-b0f1-93ad6935bd73")
+	)
+	(junction
+		(at 87.63 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "313f1deb-c999-4512-94ca-343377cc5897")
+	)
+	(junction
+		(at 210.82 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "36072914-1ee0-4b2d-9fe7-c7534db64f32")
+	)
+	(junction
+		(at 252.73 210.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "366da91d-cdfc-407d-9241-0e8061102071")
+	)
+	(junction
+		(at 294.64 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3dc09442-ed0a-4126-8471-b91eabeee972")
+	)
+	(junction
+		(at 255.27 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ebe9996-8f0b-4d0f-8a38-f2a54ba0da9e")
+	)
+	(junction
+		(at 45.72 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "40a835c9-f6b6-44bb-9c5c-76bf04e9db42")
 	)
 	(junction
-		(at 36.83 96.52)
+		(at 168.91 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4197a0cb-b21d-44cc-b171-7dc833e8cfb8")
+	)
+	(junction
+		(at 45.72 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "42c557cd-859b-419b-aa10-6e2a1d7a4bdc")
 	)
 	(junction
-		(at 36.83 73.66)
+		(at 129.54 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "42d0fb39-5e67-4665-8821-e25e437a88ae")
+	)
+	(junction
+		(at 336.55 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4639bb4b-d353-4140-9d68-b7f220fbb393")
+	)
+	(junction
+		(at 45.72 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "487ac79b-952e-4ff6-93ce-c3577d9edce1")
 	)
 	(junction
-		(at 36.83 142.24)
+		(at 378.46 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "512fc8ef-a76f-442f-8d1a-75c7fcdb8c57")
+	)
+	(junction
+		(at 378.46 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "516605b7-5ce2-41f6-85e9-5a6d414aff83")
+	)
+	(junction
+		(at 45.72 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "540fa537-9799-45fd-b1a1-39b40a85fb3e")
 	)
 	(junction
-		(at 76.2 81.28)
+		(at 213.36 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "54227d28-5399-42a0-94e7-deeb62cc1435")
+	)
+	(junction
+		(at 127 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5b2cd826-a63d-40e7-80a8-f38296c830f6")
+	)
+	(junction
+		(at 129.54 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5dee6100-326e-4203-bc98-b5f4948a7693")
+	)
+	(junction
+		(at 171.45 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5facf893-d1db-4eb6-8875-21203d422ba0")
+	)
+	(junction
+		(at 255.27 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "62345b06-56c6-48bf-9364-7ed70b955df5")
+	)
+	(junction
+		(at 85.09 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6341deca-9f7a-4308-aa8f-a691384a15ee")
 	)
 	(junction
-		(at 76.2 218.44)
+		(at 294.64 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "67e1aaa9-2678-45fd-ad40-d51ab8f48f96")
+	)
+	(junction
+		(at 87.63 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "680e26c8-5e99-45b9-b940-36f05a6c06e6")
+	)
+	(junction
+		(at 85.09 210.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "684327f3-efc7-405e-bf73-05b1a58b374f")
 	)
 	(junction
-		(at 36.83 165.1)
+		(at 378.46 210.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6cafbe52-6f8b-4c0b-a0b9-f865b1c101bc")
+	)
+	(junction
+		(at 339.09 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6cc7c197-e9c3-4058-a75f-45ce48ecef51")
+	)
+	(junction
+		(at 168.91 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d735fed-bb20-4ce7-bfb0-79f98d11cea3")
+	)
+	(junction
+		(at 171.45 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6fa0d87f-1b1e-4a11-b69a-53c1d56b2eb8")
+	)
+	(junction
+		(at 210.82 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "75cd6a0a-845b-46d6-9862-0f1676e0d381")
+	)
+	(junction
+		(at 297.18 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7801462c-4b06-48db-b520-39cb05bbba7b")
+	)
+	(junction
+		(at 252.73 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c6662fa-1a65-4fc4-8cf3-c3cb25b8997d")
+	)
+	(junction
+		(at 297.18 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7dc9b56e-6581-437e-817a-b898545ef5a7")
+	)
+	(junction
+		(at 45.72 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7ddf9662-35f4-4ac9-a31e-f7f54fcf8237")
 	)
 	(junction
-		(at 76.2 149.86)
+		(at 87.63 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e96e190-888d-4712-b0c0-c3385f19475a")
+	)
+	(junction
+		(at 252.73 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "831218b9-00d1-4ae4-8908-ab45d50fbf92")
+	)
+	(junction
+		(at 127 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "835884dd-1196-4adb-a848-4f316988ec23")
+	)
+	(junction
+		(at 85.09 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "853a2b2b-8578-4f67-b801-2d3ea30d1a54")
 	)
 	(junction
-		(at 76.2 104.14)
+		(at 255.27 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ca343d0-58ec-4ce0-b60c-fa6de302986f")
+	)
+	(junction
+		(at 171.45 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "940790c7-870b-4870-9034-1bbb0fb9cf06")
+	)
+	(junction
+		(at 294.64 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "98c101b6-89bf-4b7b-83d4-2852d19a4855")
+	)
+	(junction
+		(at 297.18 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9a677c43-84a0-471e-ae89-d0ff42e99db2")
+	)
+	(junction
+		(at 336.55 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9a68b87f-7500-4ae9-aadb-69248ef50b66")
+	)
+	(junction
+		(at 213.36 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9cdd9de4-b171-4cdb-b523-82ae38cc3dda")
+	)
+	(junction
+		(at 87.63 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9f47a801-d8c4-4675-85cd-d69007e1b634")
+	)
+	(junction
+		(at 339.09 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9f554c0d-33c0-4967-b05d-f7bb4d289018")
+	)
+	(junction
+		(at 378.46 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a8aac7f2-d746-45bc-b6e0-a9bfb9d94d08")
+	)
+	(junction
+		(at 339.09 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ac116aa3-4891-4087-b5ca-ad40224d7e3b")
+	)
+	(junction
+		(at 210.82 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad06f67f-c04a-49ad-aa6c-3cbb03228928")
+	)
+	(junction
+		(at 129.54 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aeefe88b-fd70-42fa-9bd9-10b0f2107048")
+	)
+	(junction
+		(at 297.18 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aef2880b-7cb8-4182-8efb-1d2654bbf797")
+	)
+	(junction
+		(at 339.09 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b0b3ce6b-82af-4564-b225-41aa709e39bd")
+	)
+	(junction
+		(at 127 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b41d17b5-41b1-4097-bd1d-230fbfbc929b")
+	)
+	(junction
+		(at 297.18 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b51d7639-9735-48e0-8c78-dbd2395cc6ae")
+	)
+	(junction
+		(at 127 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b82d346c-0d69-4f12-b811-6c41e0613bf8")
+	)
+	(junction
+		(at 336.55 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bbe3b026-f315-42a6-a9da-6dfef179d803")
+	)
+	(junction
+		(at 213.36 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bd1ff2eb-fa5e-4f39-ad05-9c13cf1f9ffd")
+	)
+	(junction
+		(at 294.64 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bdfd1fe1-7958-4396-9107-f56c5525cb5f")
+	)
+	(junction
+		(at 297.18 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0b9e391-daf0-4e10-8956-5a8cdc15134d")
+	)
+	(junction
+		(at 213.36 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c15ad75b-c371-4768-888d-c0a7995e6bd4")
+	)
+	(junction
+		(at 171.45 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c3104997-38e9-4c80-b7c5-069fceb2974c")
+	)
+	(junction
+		(at 210.82 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c3fd734e-094b-47b5-ba54-8d3bc6737644")
+	)
+	(junction
+		(at 85.09 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c864ce97-2058-47a6-8b0a-e10026471cbb")
 	)
 	(junction
-		(at 76.2 195.58)
+		(at 129.54 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c9d438c8-7f3c-44ba-9c64-8e4cbbc33f32")
+	)
+	(junction
+		(at 168.91 210.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cba04838-c8c8-494a-9550-ebb18842d15a")
+	)
+	(junction
+		(at 127 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cc3e94ca-b83d-4de3-a037-fda9f7ba03ad")
+	)
+	(junction
+		(at 255.27 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d062cb8d-ec18-482b-8a91-36cc7bc5a4e2")
+	)
+	(junction
+		(at 85.09 187.96)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d24baf1a-8b6e-4e1b-a9b4-db24cded6d10")
 	)
 	(junction
-		(at 76.2 127)
+		(at 87.63 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d4fccd17-4f39-4e34-874f-69dcb678919f")
+	)
+	(junction
+		(at 252.73 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6db01d1-7b1c-4bfc-b04b-91dab5de81c9")
+	)
+	(junction
+		(at 87.63 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d7eb1bc7-3850-48b9-8933-1a3abd83cabc")
+	)
+	(junction
+		(at 85.09 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "da1ba20d-f733-47f8-a35b-f944a376bdac")
 	)
 	(junction
-		(at 76.2 172.72)
+		(at 210.82 210.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dcbaba0c-e539-4ba6-9109-18ccde1758da")
+	)
+	(junction
+		(at 168.91 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dce0e4fe-fe8d-4aa0-95ce-8ced959bee37")
+	)
+	(junction
+		(at 85.09 165.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dd71b84a-f7e0-4cd8-8fda-734f67c0daa6")
 	)
 	(junction
-		(at 36.83 187.96)
+		(at 213.36 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e476c294-a730-4062-8e00-df09b69635fd")
+	)
+	(junction
+		(at 129.54 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6b3c815-35be-4316-80af-af04c0f34137")
+	)
+	(junction
+		(at 378.46 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e8cf00ea-766d-4baa-9893-474ea0903ee6")
+	)
+	(junction
+		(at 129.54 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eb569104-d428-41d0-8f59-4c06d47f8b6a")
+	)
+	(junction
+		(at 255.27 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eca559f1-0935-4cfb-a518-7293b93ce7e2")
+	)
+	(junction
+		(at 252.73 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f60edf0b-ff5d-4bf3-a968-57f5b9876d6a")
+	)
+	(junction
+		(at 45.72 180.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f631d1d3-b3a0-4ca5-b66f-0fbd6631f7ca")
 	)
+	(junction
+		(at 297.18 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f7ef9506-72d3-4d80-8a2f-202a1a01cbdf")
+	)
+	(junction
+		(at 336.55 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f94658f6-f676-418b-8728-6cda7a67c8f5")
+	)
+	(junction
+		(at 378.46 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f9c9ed09-7fc3-4794-980e-1532e8c42eff")
+	)
+	(junction
+		(at 213.36 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa9575be-b72d-4cea-877e-c3236ea0e89b")
+	)
+	(junction
+		(at 127 210.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fcbd1ad8-e9ae-4062-a3d0-db7dcbeb1335")
+	)
+	(junction
+		(at 213.36 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd97d715-4e85-4fcc-a71a-abb63669375d")
+	)
+	(junction
+		(at 168.91 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fe69a108-7c7c-4db5-9f5d-23ed0a03e73e")
+	)
 	(wire
 		(pts
-			(xy 76.2 218.44) (xy 76.2 223.52)
+			(xy 339.09 88.9) (xy 339.09 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0010b21e-d7cd-4489-9848-07f0d9849889")
+	)
+	(wire
+		(pts
+			(xy 91.44 157.48) (xy 87.63 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00461f27-3c73-4ac5-bef2-b863ef3d07df")
+	)
+	(wire
+		(pts
+			(xy 121.92 210.82) (xy 127 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00a8ee8a-531e-4f36-8bf3-db8d8edd2d07")
+	)
+	(wire
+		(pts
+			(xy 85.09 210.82) (xy 85.09 215.9)
 		)
 		(stroke
 			(width 0)
@@ -558,7 +1176,137 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 50.8) (xy 71.12 50.8)
+			(xy 163.83 210.82) (xy 168.91 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "014593ac-153c-4bd8-b176-f1de9e4880f4")
+	)
+	(wire
+		(pts
+			(xy 336.55 50.8) (xy 336.55 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "014b820b-dcaa-4000-83e6-3ee242a26dc5")
+	)
+	(wire
+		(pts
+			(xy 331.47 142.24) (xy 336.55 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01de3d64-eb1e-4b23-bf88-a9cdbaba3b24")
+	)
+	(wire
+		(pts
+			(xy 297.18 34.29) (xy 297.18 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "030ac403-4436-43e4-afa5-d3701b8abd7d")
+	)
+	(wire
+		(pts
+			(xy 336.55 119.38) (xy 336.55 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "038a9467-7491-4a1a-b019-1515a039b13c")
+	)
+	(wire
+		(pts
+			(xy 171.45 43.18) (xy 175.26 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03a1a882-8e1d-4517-a72d-7b2540d26a8b")
+	)
+	(wire
+		(pts
+			(xy 378.46 187.96) (xy 378.46 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03c46d83-53dc-44ce-967f-292d917e0f54")
+	)
+	(wire
+		(pts
+			(xy 336.55 96.52) (xy 336.55 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0634a596-e707-4e89-816b-25f948539e39")
+	)
+	(wire
+		(pts
+			(xy 342.9 157.48) (xy 339.09 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0749640c-300e-496e-b1a3-2d18dbbd8c12")
+	)
+	(wire
+		(pts
+			(xy 255.27 157.48) (xy 255.27 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "082c05da-3af1-4e0c-8511-ae9624624d0e")
+	)
+	(wire
+		(pts
+			(xy 331.47 96.52) (xy 336.55 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "098a7815-c569-402e-84a1-debc3c21b405")
+	)
+	(wire
+		(pts
+			(xy 168.91 119.38) (xy 168.91 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09a3e0bc-6653-4301-899a-e16db9918540")
+	)
+	(wire
+		(pts
+			(xy 168.91 210.82) (xy 168.91 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a5eb308-21ad-4142-857a-1880f115da84")
+	)
+	(wire
+		(pts
+			(xy 81.28 43.18) (xy 80.01 43.18)
 		)
 		(stroke
 			(width 0)
@@ -568,7 +1316,187 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 119.38) (xy 36.83 96.52)
+			(xy 339.09 66.04) (xy 339.09 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e3e1170-00d8-4dc4-8515-1181c15c544f")
+	)
+	(wire
+		(pts
+			(xy 133.35 203.2) (xy 129.54 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ed913c6-3d95-414b-917f-0040e44cbb58")
+	)
+	(wire
+		(pts
+			(xy 127 187.96) (xy 127 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ef502e7-ac70-4a1a-a264-01ef5acbe989")
+	)
+	(wire
+		(pts
+			(xy 121.92 50.8) (xy 127 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "102e131d-2e73-4d08-a380-cdceabab01b4")
+	)
+	(wire
+		(pts
+			(xy 339.09 157.48) (xy 339.09 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "111bf13f-7c86-4741-a05c-6b7b5e71adf6")
+	)
+	(wire
+		(pts
+			(xy 210.82 50.8) (xy 210.82 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "114c8dca-fe49-473a-a24a-d899f8eff16a")
+	)
+	(wire
+		(pts
+			(xy 300.99 157.48) (xy 297.18 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "126afd7e-7de6-47ca-94a3-636e9d2eb57b")
+	)
+	(wire
+		(pts
+			(xy 252.73 142.24) (xy 252.73 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1373a201-6075-4783-8593-2a520fe727dc")
+	)
+	(wire
+		(pts
+			(xy 129.54 66.04) (xy 129.54 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13db435a-bb6d-4a73-979e-beadd6eb77a3")
+	)
+	(wire
+		(pts
+			(xy 171.45 88.9) (xy 171.45 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "148f3f05-c041-40b8-a841-8919b1841af5")
+	)
+	(wire
+		(pts
+			(xy 342.9 203.2) (xy 339.09 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14bcfe69-7123-4df8-a85e-636628484311")
+	)
+	(wire
+		(pts
+			(xy 247.65 165.1) (xy 252.73 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "151dce8b-7f82-4fa3-8cec-a418d526bab2")
+	)
+	(wire
+		(pts
+			(xy 205.74 187.96) (xy 210.82 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1793311e-c390-4019-9209-2d0097e03344")
+	)
+	(wire
+		(pts
+			(xy 373.38 119.38) (xy 378.46 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18d5e67d-559d-42f8-bb15-16b806f086aa")
+	)
+	(wire
+		(pts
+			(xy 300.99 66.04) (xy 297.18 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18da6254-d2e2-410f-a3fc-3014a3373975")
+	)
+	(wire
+		(pts
+			(xy 255.27 88.9) (xy 255.27 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1baffc2a-a2be-4f5a-945d-b030f3f6609e")
+	)
+	(wire
+		(pts
+			(xy 213.36 66.04) (xy 213.36 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c63e8b2-d6a1-4326-9f98-8b5d30ec6d20")
+	)
+	(wire
+		(pts
+			(xy 252.73 96.52) (xy 252.73 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cd26309-b12d-4f01-82c2-5f107df52465")
+	)
+	(wire
+		(pts
+			(xy 45.72 111.76) (xy 45.72 88.9)
 		)
 		(stroke
 			(width 0)
@@ -578,7 +1506,27 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 195.58) (xy 76.2 218.44)
+			(xy 342.9 180.34) (xy 339.09 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d78ab20-6f85-4cf6-ba6f-e8bd59f6440d")
+	)
+	(wire
+		(pts
+			(xy 300.99 203.2) (xy 297.18 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f8775ec-5033-4ece-8607-ee38e47ea2af")
+	)
+	(wire
+		(pts
+			(xy 85.09 187.96) (xy 85.09 210.82)
 		)
 		(stroke
 			(width 0)
@@ -588,7 +1536,17 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 50.8) (xy 40.64 50.8)
+			(xy 294.64 96.52) (xy 294.64 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "231bb91a-1be9-4799-b6fc-2029171eef95")
+	)
+	(wire
+		(pts
+			(xy 45.72 43.18) (xy 49.53 43.18)
 		)
 		(stroke
 			(width 0)
@@ -598,7 +1556,157 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 172.72) (xy 76.2 172.72)
+			(xy 207.01 43.18) (xy 205.74 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "261434b6-d8d4-4182-8748-0e0436f64cca")
+	)
+	(wire
+		(pts
+			(xy 373.38 96.52) (xy 378.46 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26eeeb8a-1156-4302-88cb-ee443458cb0c")
+	)
+	(wire
+		(pts
+			(xy 205.74 119.38) (xy 210.82 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "289b357e-d21f-45d3-b541-d919e85ac53c")
+	)
+	(wire
+		(pts
+			(xy 289.56 119.38) (xy 294.64 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28c9e4a8-a7ad-48e2-965e-3b41bd6ede68")
+	)
+	(wire
+		(pts
+			(xy 210.82 210.82) (xy 210.82 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2aa40d13-f63b-4ce1-8d44-0d5618efdd0c")
+	)
+	(wire
+		(pts
+			(xy 87.63 111.76) (xy 87.63 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bbef84d-867e-4d32-8038-f1ed900ff7f8")
+	)
+	(wire
+		(pts
+			(xy 342.9 134.62) (xy 339.09 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2be08e5c-37d0-4719-84ec-fa73f626dd51")
+	)
+	(wire
+		(pts
+			(xy 294.64 73.66) (xy 294.64 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d3c8c22-3261-4634-80ae-ab0cc39259a3")
+	)
+	(wire
+		(pts
+			(xy 378.46 210.82) (xy 378.46 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dcfdf1c-bca0-4a9d-b507-94ff1cac0a97")
+	)
+	(wire
+		(pts
+			(xy 129.54 88.9) (xy 129.54 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "314f564e-b78a-4480-bd2f-670fb06a3cbe")
+	)
+	(wire
+		(pts
+			(xy 129.54 111.76) (xy 129.54 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3376ae2d-73e4-42cf-aa0c-94ea6be20e34")
+	)
+	(wire
+		(pts
+			(xy 373.38 187.96) (xy 378.46 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "339f2e82-be48-4029-95c1-d30ab7f6821b")
+	)
+	(wire
+		(pts
+			(xy 259.08 66.04) (xy 255.27 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34526ab5-5c2b-4652-b974-1eed6dbd7248")
+	)
+	(wire
+		(pts
+			(xy 342.9 88.9) (xy 339.09 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3498307c-9aba-4b73-a36d-2a6d2650dcb0")
+	)
+	(wire
+		(pts
+			(xy 289.56 187.96) (xy 294.64 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a28e833-4a03-4171-b908-4deca21a17f8")
+	)
+	(wire
+		(pts
+			(xy 80.01 165.1) (xy 85.09 165.1)
 		)
 		(stroke
 			(width 0)
@@ -608,7 +1716,47 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 73.66) (xy 72.39 73.66)
+			(xy 255.27 34.29) (xy 255.27 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c9ceda4-6c05-48db-8279-ad18baf09db8")
+	)
+	(wire
+		(pts
+			(xy 121.92 119.38) (xy 127 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d17457e-8f7a-4112-8590-04c4361145fa")
+	)
+	(wire
+		(pts
+			(xy 171.45 134.62) (xy 171.45 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d96913a-cb65-491e-8a99-7027287bd75f")
+	)
+	(wire
+		(pts
+			(xy 163.83 73.66) (xy 168.91 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e07fa6a-9035-45ef-a22d-1953011904e9")
+	)
+	(wire
+		(pts
+			(xy 80.01 66.04) (xy 81.28 66.04)
 		)
 		(stroke
 			(width 0)
@@ -618,7 +1766,57 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 210.82) (xy 36.83 210.82)
+			(xy 121.92 142.24) (xy 127 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3eb8ba2c-79c6-400e-9142-616ef87205ae")
+	)
+	(wire
+		(pts
+			(xy 91.44 66.04) (xy 87.63 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f708eec-4786-41a6-a978-f88fe272640b")
+	)
+	(wire
+		(pts
+			(xy 247.65 187.96) (xy 252.73 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "402316f3-8948-4a32-a5d0-2a08cdb6063d")
+	)
+	(wire
+		(pts
+			(xy 175.26 134.62) (xy 171.45 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "409cf6fd-693d-4d48-ba9c-d60f43a98c73")
+	)
+	(wire
+		(pts
+			(xy 127 210.82) (xy 127 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41b368e1-6894-48f3-9ef0-fe21df69dd9b")
+	)
+	(wire
+		(pts
+			(xy 49.53 203.2) (xy 45.72 203.2)
 		)
 		(stroke
 			(width 0)
@@ -628,7 +1826,47 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 96.52) (xy 36.83 73.66)
+			(xy 87.63 180.34) (xy 87.63 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42a9cf1d-4713-40d8-b8ed-662557cd9434")
+	)
+	(wire
+		(pts
+			(xy 294.64 142.24) (xy 294.64 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4429ed51-192e-4c41-813c-27114c2b3e28")
+	)
+	(wire
+		(pts
+			(xy 87.63 134.62) (xy 87.63 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "450fc67e-50c6-404b-8394-5330e9775f00")
+	)
+	(wire
+		(pts
+			(xy 127 73.66) (xy 127 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "458354bf-845d-4de7-bb70-1d4aae2a65b0")
+	)
+	(wire
+		(pts
+			(xy 45.72 88.9) (xy 45.72 66.04)
 		)
 		(stroke
 			(width 0)
@@ -638,7 +1876,57 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 142.24) (xy 36.83 119.38)
+			(xy 91.44 203.2) (xy 87.63 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4733dcfe-6c89-46a3-b9a9-ed436d084c0b")
+	)
+	(wire
+		(pts
+			(xy 336.55 210.82) (xy 336.55 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47786ae2-a088-454b-803d-7e7202704fd8")
+	)
+	(wire
+		(pts
+			(xy 331.47 66.04) (xy 332.74 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "481cf88d-3726-4726-91e2-679523a483b8")
+	)
+	(wire
+		(pts
+			(xy 255.27 157.48) (xy 255.27 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48277dc2-d653-44c8-a6b1-b5716d68b664")
+	)
+	(wire
+		(pts
+			(xy 91.44 180.34) (xy 87.63 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48d45ef2-7fde-462e-8c47-9eab397fc508")
+	)
+	(wire
+		(pts
+			(xy 45.72 134.62) (xy 45.72 111.76)
 		)
 		(stroke
 			(width 0)
@@ -648,7 +1936,27 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 165.1) (xy 36.83 165.1)
+			(xy 168.91 165.1) (xy 168.91 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a280c88-5926-47ec-b626-2ea60d446585")
+	)
+	(wire
+		(pts
+			(xy 127 96.52) (xy 127 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a954f56-b89e-4c02-952f-c9b779290526")
+	)
+	(wire
+		(pts
+			(xy 49.53 157.48) (xy 45.72 157.48)
 		)
 		(stroke
 			(width 0)
@@ -658,7 +1966,67 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 142.24) (xy 36.83 142.24)
+			(xy 121.92 73.66) (xy 127 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c9b1ce3-7f1f-4552-b529-9f8fd1a43c8b")
+	)
+	(wire
+		(pts
+			(xy 336.55 187.96) (xy 336.55 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e6aaffe-8d06-4a86-b95a-ad7a02a70bf1")
+	)
+	(wire
+		(pts
+			(xy 289.56 66.04) (xy 290.83 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e872b3a-9866-4e27-af8f-f5b7e47c8ddb")
+	)
+	(wire
+		(pts
+			(xy 163.83 66.04) (xy 165.1 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fa59ce3-2f7e-4df5-88fa-1daf87b8f54e")
+	)
+	(wire
+		(pts
+			(xy 217.17 111.76) (xy 213.36 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5066c3fe-acbe-4381-95ce-220ddb4dd8fd")
+	)
+	(wire
+		(pts
+			(xy 378.46 119.38) (xy 378.46 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5150b0e6-5129-4bed-8a33-4ab61bd7f881")
+	)
+	(wire
+		(pts
+			(xy 49.53 134.62) (xy 45.72 134.62)
 		)
 		(stroke
 			(width 0)
@@ -668,7 +2036,37 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 149.86) (xy 76.2 172.72)
+			(xy 336.55 142.24) (xy 336.55 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52596504-0e6a-464f-96ad-1213fe5e368c")
+	)
+	(wire
+		(pts
+			(xy 252.73 210.82) (xy 252.73 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53d3c1ef-1882-435b-8416-ad756b63e7f2")
+	)
+	(wire
+		(pts
+			(xy 133.35 157.48) (xy 129.54 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53e68e81-1303-4c93-ac78-39a0f1c0951b")
+	)
+	(wire
+		(pts
+			(xy 85.09 142.24) (xy 85.09 165.1)
 		)
 		(stroke
 			(width 0)
@@ -678,7 +2076,17 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 104.14) (xy 76.2 127)
+			(xy 342.9 66.04) (xy 339.09 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b73dadf-c1ae-449b-b014-f7c532ca0384")
+	)
+	(wire
+		(pts
+			(xy 85.09 96.52) (xy 85.09 119.38)
 		)
 		(stroke
 			(width 0)
@@ -688,7 +2096,87 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 218.44) (xy 76.2 218.44)
+			(xy 171.45 66.04) (xy 171.45 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bf5e3f9-675a-4cb1-a27a-312a4b498b76")
+	)
+	(wire
+		(pts
+			(xy 289.56 142.24) (xy 294.64 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5dd78e5d-7715-4f58-9439-969357ebdca2")
+	)
+	(wire
+		(pts
+			(xy 331.47 210.82) (xy 336.55 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ee58ad1-a635-48fc-ace3-3c2f0e44f623")
+	)
+	(wire
+		(pts
+			(xy 217.17 180.34) (xy 213.36 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f1c206e-fe32-459a-b68c-2424fa2a7c2b")
+	)
+	(wire
+		(pts
+			(xy 213.36 180.34) (xy 213.36 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60f04ebe-f1d5-4f68-a88b-f0ad324c7ad4")
+	)
+	(wire
+		(pts
+			(xy 373.38 50.8) (xy 378.46 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "612bbf25-c051-43eb-8f3d-84a0a64fb609")
+	)
+	(wire
+		(pts
+			(xy 339.09 43.18) (xy 342.9 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61eae307-5844-4d4f-8368-2ff357ffb80b")
+	)
+	(wire
+		(pts
+			(xy 87.63 43.18) (xy 91.44 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "623fb881-67fc-4fa0-8255-bef631d565f8")
+	)
+	(wire
+		(pts
+			(xy 80.01 210.82) (xy 85.09 210.82)
 		)
 		(stroke
 			(width 0)
@@ -698,7 +2186,17 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 96.52) (xy 36.83 96.52)
+			(xy 247.65 210.82) (xy 252.73 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "634a23a8-a82e-4f6c-870b-15a1b6c77360")
+	)
+	(wire
+		(pts
+			(xy 49.53 88.9) (xy 45.72 88.9)
 		)
 		(stroke
 			(width 0)
@@ -708,7 +2206,37 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 58.42) (xy 76.2 81.28)
+			(xy 217.17 203.2) (xy 213.36 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "663c4787-8911-46a5-bdcf-88adf8829a69")
+	)
+	(wire
+		(pts
+			(xy 259.08 88.9) (xy 255.27 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66a474d7-f4ad-4a95-91b1-50b0d1ff3f5f")
+	)
+	(wire
+		(pts
+			(xy 300.99 88.9) (xy 297.18 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "672e3cf6-8432-495a-839c-a31c2a05ad8c")
+	)
+	(wire
+		(pts
+			(xy 85.09 50.8) (xy 85.09 73.66)
 		)
 		(stroke
 			(width 0)
@@ -718,7 +2246,107 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 172.72) (xy 76.2 195.58)
+			(xy 213.36 34.29) (xy 213.36 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67a48a3c-25ca-4cbd-b9cc-6c798ab936db")
+	)
+	(wire
+		(pts
+			(xy 290.83 43.18) (xy 289.56 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67a53a00-ba95-44ea-a4e6-68661a7b19fd")
+	)
+	(wire
+		(pts
+			(xy 378.46 96.52) (xy 378.46 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a2327e4-60dc-4788-8327-ca5f6af6612e")
+	)
+	(wire
+		(pts
+			(xy 252.73 73.66) (xy 252.73 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a3672f3-4912-4b1e-9508-c5b8a8a76391")
+	)
+	(wire
+		(pts
+			(xy 121.92 187.96) (xy 127 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b8733a2-377d-4916-bf9c-aedfcf196971")
+	)
+	(wire
+		(pts
+			(xy 289.56 165.1) (xy 294.64 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6be0dad2-e70e-4a1f-b0c7-6798a3307b04")
+	)
+	(wire
+		(pts
+			(xy 87.63 34.29) (xy 87.63 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d9a52bb-76e2-42ef-8313-ace75e08ed8e")
+	)
+	(wire
+		(pts
+			(xy 252.73 50.8) (xy 252.73 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fd23286-4f73-43b6-b692-12f7e7b07261")
+	)
+	(wire
+		(pts
+			(xy 289.56 96.52) (xy 294.64 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70649ebe-45de-4903-adee-6cbd135e6a58")
+	)
+	(wire
+		(pts
+			(xy 378.46 142.24) (xy 378.46 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "709c512d-bfb8-455e-9f87-1c723bae3cfc")
+	)
+	(wire
+		(pts
+			(xy 85.09 165.1) (xy 85.09 187.96)
 		)
 		(stroke
 			(width 0)
@@ -728,7 +2356,57 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 195.58) (xy 76.2 195.58)
+			(xy 297.18 88.9) (xy 297.18 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71cc2e83-0d0a-411b-8119-b444267955b5")
+	)
+	(wire
+		(pts
+			(xy 133.35 88.9) (xy 129.54 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71f9da72-70f1-477e-b61c-5e9452342041")
+	)
+	(wire
+		(pts
+			(xy 129.54 43.18) (xy 133.35 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72ad9dd2-640e-40a1-85ec-7df62dce1591")
+	)
+	(wire
+		(pts
+			(xy 247.65 119.38) (xy 252.73 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "736b75f1-537d-4fbd-a8bf-ad5d6c682e5f")
+	)
+	(wire
+		(pts
+			(xy 252.73 187.96) (xy 252.73 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73e59085-06cc-49b7-97f6-d7b58bdf87cc")
+	)
+	(wire
+		(pts
+			(xy 80.01 187.96) (xy 85.09 187.96)
 		)
 		(stroke
 			(width 0)
@@ -738,7 +2416,67 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 104.14) (xy 76.2 104.14)
+			(xy 252.73 165.1) (xy 252.73 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75d092b9-e729-4a1d-bfbe-e12eecaff820")
+	)
+	(wire
+		(pts
+			(xy 129.54 157.48) (xy 129.54 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7744e9c5-6f03-4f1c-891e-ad025b314f1b")
+	)
+	(wire
+		(pts
+			(xy 247.65 96.52) (xy 252.73 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77d866f4-3e69-409b-a535-d4e3ba0116bd")
+	)
+	(wire
+		(pts
+			(xy 300.99 134.62) (xy 297.18 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79071ef3-0c09-4e34-bd04-03f3c41fd31a")
+	)
+	(wire
+		(pts
+			(xy 133.35 66.04) (xy 129.54 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7aaaca8b-817b-4e0d-8a75-62452e6789fe")
+	)
+	(wire
+		(pts
+			(xy 121.92 96.52) (xy 127 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7afc2a49-01b2-4676-addd-2b45b443afec")
+	)
+	(wire
+		(pts
+			(xy 80.01 96.52) (xy 85.09 96.52)
 		)
 		(stroke
 			(width 0)
@@ -748,7 +2486,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 187.96) (xy 36.83 210.82)
+			(xy 45.72 180.34) (xy 45.72 203.2)
 		)
 		(stroke
 			(width 0)
@@ -758,7 +2496,107 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 58.42) (xy 76.2 58.42)
+			(xy 168.91 73.66) (xy 168.91 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80b5dd35-d223-4e23-8edb-7429b1bf190d")
+	)
+	(wire
+		(pts
+			(xy 210.82 73.66) (xy 210.82 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81b78f79-dd5e-4c8d-999c-4f1f04bd22f4")
+	)
+	(wire
+		(pts
+			(xy 133.35 180.34) (xy 129.54 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8214446f-72cc-4e53-b8f2-d7974bb4acb4")
+	)
+	(wire
+		(pts
+			(xy 259.08 203.2) (xy 255.27 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82466c7a-9708-4619-9f9d-9808205f8647")
+	)
+	(wire
+		(pts
+			(xy 217.17 157.48) (xy 213.36 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82598762-c0ff-478a-9763-bb94fc98b867")
+	)
+	(wire
+		(pts
+			(xy 259.08 180.34) (xy 255.27 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8369ab49-0f76-44d5-8b75-e279fc9d6f7c")
+	)
+	(wire
+		(pts
+			(xy 129.54 180.34) (xy 129.54 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8370ff5e-dd4f-434f-9cb3-2169e0f5d08a")
+	)
+	(wire
+		(pts
+			(xy 297.18 157.48) (xy 297.18 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84df6de0-2312-434b-9672-17f7efae9d0b")
+	)
+	(wire
+		(pts
+			(xy 331.47 187.96) (xy 336.55 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85b3e454-3fdf-44f1-972b-e622f4b4d663")
+	)
+	(wire
+		(pts
+			(xy 210.82 96.52) (xy 210.82 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87940903-e7f3-47c4-8240-f4cf7a20101c")
+	)
+	(wire
+		(pts
+			(xy 80.01 50.8) (xy 85.09 50.8)
 		)
 		(stroke
 			(width 0)
@@ -768,7 +2606,57 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 81.28) (xy 76.2 104.14)
+			(xy 213.36 134.62) (xy 213.36 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "889019ff-3a39-469d-8c1c-e6e0de2ca4d6")
+	)
+	(wire
+		(pts
+			(xy 294.64 187.96) (xy 294.64 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "899ec03c-1309-4812-906e-6ab7a73fd553")
+	)
+	(wire
+		(pts
+			(xy 373.38 165.1) (xy 378.46 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8afebf86-f897-4012-920d-edc6eb608b88")
+	)
+	(wire
+		(pts
+			(xy 300.99 180.34) (xy 297.18 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ba2deed-9228-45dc-ae5d-e675914f5cd6")
+	)
+	(wire
+		(pts
+			(xy 300.99 111.76) (xy 297.18 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bc4a644-34c8-44c9-8ca4-ecead12956ba")
+	)
+	(wire
+		(pts
+			(xy 85.09 73.66) (xy 85.09 96.52)
 		)
 		(stroke
 			(width 0)
@@ -778,7 +2666,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 127) (xy 76.2 149.86)
+			(xy 85.09 119.38) (xy 85.09 142.24)
 		)
 		(stroke
 			(width 0)
@@ -788,7 +2676,107 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 73.66) (xy 36.83 50.8)
+			(xy 336.55 165.1) (xy 336.55 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90d22ff4-d4bb-43cc-89ca-62e6186b6f1d")
+	)
+	(wire
+		(pts
+			(xy 127 165.1) (xy 127 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90f07f02-77bf-4da5-b083-acd6e8ce5803")
+	)
+	(wire
+		(pts
+			(xy 121.92 165.1) (xy 127 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92db2f6c-cfd1-400e-9af7-a8c1d9735e4e")
+	)
+	(wire
+		(pts
+			(xy 168.91 50.8) (xy 168.91 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "935ecb00-a8a1-4eb2-873a-e9fab1a56106")
+	)
+	(wire
+		(pts
+			(xy 339.09 157.48) (xy 339.09 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95acb92f-8cc4-4250-9067-0b246d33b6e0")
+	)
+	(wire
+		(pts
+			(xy 378.46 73.66) (xy 378.46 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96550bf1-0aef-4fcd-b141-df874c1f42f6")
+	)
+	(wire
+		(pts
+			(xy 213.36 43.18) (xy 217.17 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97a097cb-1ad6-4f61-8965-14321fb8c1c8")
+	)
+	(wire
+		(pts
+			(xy 129.54 134.62) (xy 129.54 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97e37f46-0b04-4772-8879-5f5a83253a8b")
+	)
+	(wire
+		(pts
+			(xy 163.83 187.96) (xy 168.91 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a1923fb-7606-4dae-bb8c-c5d67cf4b234")
+	)
+	(wire
+		(pts
+			(xy 339.09 34.29) (xy 339.09 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ad9405b-c2b3-40ac-a0b3-fc80283a0621")
+	)
+	(wire
+		(pts
+			(xy 45.72 66.04) (xy 45.72 43.18)
 		)
 		(stroke
 			(width 0)
@@ -798,7 +2786,27 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 119.38) (xy 36.83 119.38)
+			(xy 127 119.38) (xy 127 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d6272ca-373b-46c0-b4eb-4cc7d3fe814f")
+	)
+	(wire
+		(pts
+			(xy 205.74 210.82) (xy 210.82 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dae2cd7-9662-40d5-8e27-3e22bed80221")
+	)
+	(wire
+		(pts
+			(xy 49.53 111.76) (xy 45.72 111.76)
 		)
 		(stroke
 			(width 0)
@@ -808,7 +2816,437 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 41.91) (xy 36.83 50.8)
+			(xy 213.36 88.9) (xy 213.36 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f5c76fc-e110-41d2-a803-96908f17c640")
+	)
+	(wire
+		(pts
+			(xy 297.18 180.34) (xy 297.18 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a05c6a47-4ced-458d-84d5-7d953abc8b8f")
+	)
+	(wire
+		(pts
+			(xy 163.83 50.8) (xy 168.91 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a074adc6-b877-4b9e-ac78-5dcb668fb8c7")
+	)
+	(wire
+		(pts
+			(xy 217.17 66.04) (xy 213.36 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0f4427a-daf3-4557-b56b-07fb35cd1933")
+	)
+	(wire
+		(pts
+			(xy 91.44 134.62) (xy 87.63 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1b285bd-eee8-4752-8083-5926396ceead")
+	)
+	(wire
+		(pts
+			(xy 175.26 203.2) (xy 171.45 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a486569e-af6c-4b85-8bd6-514d2fc7eaee")
+	)
+	(wire
+		(pts
+			(xy 342.9 111.76) (xy 339.09 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5b3d0db-8904-47ae-b660-2757aa7750b2")
+	)
+	(wire
+		(pts
+			(xy 171.45 111.76) (xy 171.45 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a75254d6-9e16-4228-9e80-d7cf21fdedce")
+	)
+	(wire
+		(pts
+			(xy 91.44 88.9) (xy 87.63 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a761919e-d685-4cdd-b0a3-352c29e52673")
+	)
+	(wire
+		(pts
+			(xy 129.54 34.29) (xy 129.54 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8aa0cd5-3811-47f1-a361-070a6f113f48")
+	)
+	(wire
+		(pts
+			(xy 87.63 88.9) (xy 87.63 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8d15e3e-7485-4c33-92e9-12fee822ecba")
+	)
+	(wire
+		(pts
+			(xy 205.74 50.8) (xy 210.82 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa7e8a6a-3ec8-4380-9bcf-f70cd130e3b5")
+	)
+	(wire
+		(pts
+			(xy 205.74 142.24) (xy 210.82 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad3056b1-58f9-4f5a-911e-e7cb000d8458")
+	)
+	(wire
+		(pts
+			(xy 259.08 157.48) (xy 255.27 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae2670f8-809a-42db-b4ab-2eb3793ec9da")
+	)
+	(wire
+		(pts
+			(xy 247.65 142.24) (xy 252.73 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af8ac2c9-340f-4ba2-aad6-c42d28cfa21f")
+	)
+	(wire
+		(pts
+			(xy 205.74 96.52) (xy 210.82 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b045bdb6-ffc5-4ce7-8d76-7753818427aa")
+	)
+	(wire
+		(pts
+			(xy 175.26 66.04) (xy 171.45 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b14cf362-3286-4a2e-ad98-cc9697cdee1f")
+	)
+	(wire
+		(pts
+			(xy 289.56 210.82) (xy 294.64 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2787fcd-6384-4a52-9d7a-73d3c8a95f7a")
+	)
+	(wire
+		(pts
+			(xy 171.45 157.48) (xy 171.45 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3095bae-a2e5-4b71-95fc-95cc577d1eab")
+	)
+	(wire
+		(pts
+			(xy 297.18 157.48) (xy 297.18 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b37afb7a-3396-4c44-a87f-b0cc0d8ca7ea")
+	)
+	(wire
+		(pts
+			(xy 168.91 187.96) (xy 168.91 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3ed412d-3733-4f59-a6b1-3f67a4636ddc")
+	)
+	(wire
+		(pts
+			(xy 373.38 73.66) (xy 378.46 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b534fb80-e657-412b-a3c8-acd3813b53e4")
+	)
+	(wire
+		(pts
+			(xy 297.18 66.04) (xy 297.18 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5d6d072-73b8-4353-9e11-17dfbcb8cfc8")
+	)
+	(wire
+		(pts
+			(xy 252.73 119.38) (xy 252.73 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6330bf7-9164-4d18-b7ee-3a98b58de7c0")
+	)
+	(wire
+		(pts
+			(xy 255.27 180.34) (xy 255.27 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b637d7a2-9434-432a-a3ea-b66d2bfb19a9")
+	)
+	(wire
+		(pts
+			(xy 127 142.24) (xy 127 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b77e6f6e-4377-4963-81a1-5c4ad57e1352")
+	)
+	(wire
+		(pts
+			(xy 217.17 88.9) (xy 213.36 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b794501e-7d54-4df9-ad70-8ccb43b9176e")
+	)
+	(wire
+		(pts
+			(xy 123.19 43.18) (xy 121.92 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b80855d0-5db8-45ed-988a-07b2d1c8b6b6")
+	)
+	(wire
+		(pts
+			(xy 127 50.8) (xy 127 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8d591b4-2edf-4daa-bf18-97a6c8a9ab00")
+	)
+	(wire
+		(pts
+			(xy 129.54 157.48) (xy 129.54 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9d45d27-900a-4e09-b59a-3457ebbd47fb")
+	)
+	(wire
+		(pts
+			(xy 168.91 142.24) (xy 168.91 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9ee96a9-f54a-4cf0-ac44-03108c3c5612")
+	)
+	(wire
+		(pts
+			(xy 259.08 134.62) (xy 255.27 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc2bf8cb-d41e-455e-8daf-c4e29edb9b98")
+	)
+	(wire
+		(pts
+			(xy 297.18 43.18) (xy 300.99 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd9a1feb-e179-4ff3-a620-ce7213a6af19")
+	)
+	(wire
+		(pts
+			(xy 205.74 66.04) (xy 207.01 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be51ab5e-58ae-43d1-b3d3-3c93a7ec37de")
+	)
+	(wire
+		(pts
+			(xy 373.38 210.82) (xy 378.46 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bed945d7-e769-4983-a42d-349a860494bc")
+	)
+	(wire
+		(pts
+			(xy 171.45 157.48) (xy 171.45 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bef08f5f-d219-4f59-a950-2540f9624d26")
+	)
+	(wire
+		(pts
+			(xy 259.08 111.76) (xy 255.27 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf6f64b7-bbbe-41b6-b199-6497294a7b68")
+	)
+	(wire
+		(pts
+			(xy 294.64 165.1) (xy 294.64 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfc2d6d1-b2ae-4754-91d4-7f6b34723648")
+	)
+	(wire
+		(pts
+			(xy 289.56 73.66) (xy 294.64 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1069598-9c96-4682-a2e7-95f507b409a6")
+	)
+	(wire
+		(pts
+			(xy 294.64 119.38) (xy 294.64 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c15cbdf4-3ba4-4ec8-abe0-073f53633b83")
+	)
+	(wire
+		(pts
+			(xy 121.92 66.04) (xy 123.19 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c40a06d8-287a-4c0f-89c8-ef10759773b0")
+	)
+	(wire
+		(pts
+			(xy 297.18 111.76) (xy 297.18 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c43a819f-1652-4ebc-b409-fe97f6931f95")
+	)
+	(wire
+		(pts
+			(xy 205.74 73.66) (xy 210.82 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c65f36d5-ec89-4572-9234-ba8c6d90e322")
+	)
+	(wire
+		(pts
+			(xy 45.72 34.29) (xy 45.72 43.18)
 		)
 		(stroke
 			(width 0)
@@ -818,7 +3256,17 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 165.1) (xy 36.83 142.24)
+			(xy 133.35 134.62) (xy 129.54 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca050432-e549-4050-97a8-3df451f47a6c")
+	)
+	(wire
+		(pts
+			(xy 45.72 157.48) (xy 45.72 134.62)
 		)
 		(stroke
 			(width 0)
@@ -828,7 +3276,127 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 149.86) (xy 76.2 149.86)
+			(xy 289.56 50.8) (xy 294.64 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb8789af-8933-4634-ba9d-b7cd69bde429")
+	)
+	(wire
+		(pts
+			(xy 87.63 66.04) (xy 87.63 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbadebd8-c4b9-49ab-93c5-81705ad05c6c")
+	)
+	(wire
+		(pts
+			(xy 247.65 66.04) (xy 248.92 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbb96853-d936-487a-8eb2-13fde26f715e")
+	)
+	(wire
+		(pts
+			(xy 331.47 50.8) (xy 336.55 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbddfcba-f0d6-4c36-a1e9-f0d4dfe8326a")
+	)
+	(wire
+		(pts
+			(xy 378.46 50.8) (xy 378.46 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc27565b-747f-4388-824a-5b8f295b7187")
+	)
+	(wire
+		(pts
+			(xy 171.45 180.34) (xy 171.45 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc47778d-aaca-4b4d-8cae-44de200a6550")
+	)
+	(wire
+		(pts
+			(xy 171.45 34.29) (xy 171.45 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc4e82f7-e8d8-4c06-aac6-f65d447f6e83")
+	)
+	(wire
+		(pts
+			(xy 168.91 96.52) (xy 168.91 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd13c72c-7647-42ec-948b-a22f50d75805")
+	)
+	(wire
+		(pts
+			(xy 133.35 111.76) (xy 129.54 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cef5e2d9-119c-47a3-b4d7-139bfade416d")
+	)
+	(wire
+		(pts
+			(xy 248.92 43.18) (xy 247.65 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d023f15e-b212-4510-8171-910c82f607fb")
+	)
+	(wire
+		(pts
+			(xy 373.38 142.24) (xy 378.46 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d03775fb-ee66-4607-8791-e75b8543e489")
+	)
+	(wire
+		(pts
+			(xy 213.36 157.48) (xy 213.36 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1309966-3f41-4d2a-878a-7560576a7081")
+	)
+	(wire
+		(pts
+			(xy 80.01 142.24) (xy 85.09 142.24)
 		)
 		(stroke
 			(width 0)
@@ -838,7 +3406,27 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 81.28) (xy 76.2 81.28)
+			(xy 175.26 180.34) (xy 171.45 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3168e16-495a-46f2-b196-985f6b9e1b7d")
+	)
+	(wire
+		(pts
+			(xy 163.83 119.38) (xy 168.91 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d77cabca-902e-436c-8e4d-38b0c4ea081d")
+	)
+	(wire
+		(pts
+			(xy 80.01 73.66) (xy 85.09 73.66)
 		)
 		(stroke
 			(width 0)
@@ -848,7 +3436,137 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 127) (xy 76.2 127)
+			(xy 331.47 73.66) (xy 336.55 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d99d9170-f1bd-4f55-903e-9a0ddc1f9a44")
+	)
+	(wire
+		(pts
+			(xy 339.09 134.62) (xy 339.09 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9cff615-262e-4554-92ff-6257ae3b309e")
+	)
+	(wire
+		(pts
+			(xy 374.65 43.18) (xy 373.38 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da3229e3-c712-4ac9-827b-7a0500eb2672")
+	)
+	(wire
+		(pts
+			(xy 297.18 134.62) (xy 297.18 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc4f764b-1883-471b-878a-d620b418e118")
+	)
+	(wire
+		(pts
+			(xy 255.27 43.18) (xy 259.08 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcacf872-2d6c-4ed0-a9c5-81d6861fc57a")
+	)
+	(wire
+		(pts
+			(xy 373.38 66.04) (xy 374.65 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcb37247-73c3-4922-98f0-3d977cdb49c8")
+	)
+	(wire
+		(pts
+			(xy 331.47 119.38) (xy 336.55 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcf6da36-bbc0-4348-a8c8-d99787cfcc11")
+	)
+	(wire
+		(pts
+			(xy 213.36 157.48) (xy 213.36 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd3528c6-f622-4cde-b6f5-ac8394134b88")
+	)
+	(wire
+		(pts
+			(xy 336.55 73.66) (xy 336.55 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd686c3b-c763-49d2-986c-0b53f6224c8c")
+	)
+	(wire
+		(pts
+			(xy 213.36 111.76) (xy 213.36 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de59d89a-00fc-4306-87f7-8f8c4ad5bd44")
+	)
+	(wire
+		(pts
+			(xy 163.83 96.52) (xy 168.91 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfd9f712-f22a-46b1-897f-c02537da75a7")
+	)
+	(wire
+		(pts
+			(xy 210.82 142.24) (xy 210.82 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0510205-65d0-40c5-90cb-f5a4ab462979")
+	)
+	(wire
+		(pts
+			(xy 205.74 165.1) (xy 210.82 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2cb9b2f-8ec0-4ae9-b6b2-9964c2b1f164")
+	)
+	(wire
+		(pts
+			(xy 80.01 119.38) (xy 85.09 119.38)
 		)
 		(stroke
 			(width 0)
@@ -858,7 +3576,137 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 73.66) (xy 36.83 73.66)
+			(xy 247.65 73.66) (xy 252.73 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4f2270a-234c-4bf3-b24e-3534ce78f984")
+	)
+	(wire
+		(pts
+			(xy 331.47 165.1) (xy 336.55 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5e78b6d-380a-4b61-b4de-3912e23fd0c4")
+	)
+	(wire
+		(pts
+			(xy 378.46 165.1) (xy 378.46 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6c1c2e9-7cbe-43e5-a64e-d9f0ebbeca85")
+	)
+	(wire
+		(pts
+			(xy 210.82 165.1) (xy 210.82 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e98bf3ac-8d14-4120-86a7-9f7c609ce1c6")
+	)
+	(wire
+		(pts
+			(xy 217.17 134.62) (xy 213.36 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea447034-6ad1-42c0-80c9-cfd151538216")
+	)
+	(wire
+		(pts
+			(xy 294.64 50.8) (xy 294.64 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eaa81882-0282-409b-a8d9-0c57c4a81f49")
+	)
+	(wire
+		(pts
+			(xy 165.1 43.18) (xy 163.83 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eab335b0-4f1f-446b-9c22-00433b98a938")
+	)
+	(wire
+		(pts
+			(xy 91.44 111.76) (xy 87.63 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eac4a68b-22ea-419b-8bef-d5b49e7016bc")
+	)
+	(wire
+		(pts
+			(xy 339.09 180.34) (xy 339.09 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebfb1481-007d-4567-84f6-5148f6e31edb")
+	)
+	(wire
+		(pts
+			(xy 332.74 43.18) (xy 331.47 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed4ef6a7-c33c-46cd-a9a7-99d79333ce47")
+	)
+	(wire
+		(pts
+			(xy 175.26 157.48) (xy 171.45 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee16d29a-25b1-48e9-9614-3921d8de146d")
+	)
+	(wire
+		(pts
+			(xy 175.26 88.9) (xy 171.45 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee90040c-7b72-4db9-a4d9-ff92f32e9124")
+	)
+	(wire
+		(pts
+			(xy 339.09 111.76) (xy 339.09 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef38166d-4b64-46df-8aab-3bef381fda73")
+	)
+	(wire
+		(pts
+			(xy 49.53 66.04) (xy 45.72 66.04)
 		)
 		(stroke
 			(width 0)
@@ -868,7 +3716,47 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 187.96) (xy 36.83 187.96)
+			(xy 255.27 134.62) (xy 255.27 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0901bbd-7056-4d25-8f05-b3abcdc1e9d5")
+	)
+	(wire
+		(pts
+			(xy 255.27 111.76) (xy 255.27 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0b5765a-b2dd-4e94-9f60-fb86c2cb97aa")
+	)
+	(wire
+		(pts
+			(xy 175.26 111.76) (xy 171.45 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0d909d2-6c1a-4e7c-b5bb-6069991c193f")
+	)
+	(wire
+		(pts
+			(xy 255.27 66.04) (xy 255.27 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2a34ecc-94c0-4727-9644-2f35c6d19765")
+	)
+	(wire
+		(pts
+			(xy 49.53 180.34) (xy 45.72 180.34)
 		)
 		(stroke
 			(width 0)
@@ -878,7 +3766,67 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 165.1) (xy 36.83 187.96)
+			(xy 210.82 119.38) (xy 210.82 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f57993d3-9a37-4a03-bce0-300d5739ff6d")
+	)
+	(wire
+		(pts
+			(xy 163.83 142.24) (xy 168.91 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f624c246-626f-45dd-8c07-c49b953b7e1f")
+	)
+	(wire
+		(pts
+			(xy 210.82 187.96) (xy 210.82 210.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8ec7229-899e-46c0-8cec-31b4114d25cf")
+	)
+	(wire
+		(pts
+			(xy 87.63 157.48) (xy 87.63 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f92e5d09-bb7b-4423-8172-7ada92978dcf")
+	)
+	(wire
+		(pts
+			(xy 163.83 165.1) (xy 168.91 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbd67395-9f76-40c8-82c5-01bdafc81647")
+	)
+	(wire
+		(pts
+			(xy 294.64 210.82) (xy 294.64 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcee641d-1c7d-40e8-bab5-d0865c494687")
+	)
+	(wire
+		(pts
+			(xy 45.72 157.48) (xy 45.72 180.34)
 		)
 		(stroke
 			(width 0)
@@ -886,9 +3834,40 @@
 		)
 		(uuid "fd2b0e2e-069e-4843-a65d-6ef7bf120117")
 	)
+	(wire
+		(pts
+			(xy 247.65 50.8) (xy 252.73 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff4933fe-0a2f-428b-8688-47ce53d3f312")
+	)
+	(wire
+		(pts
+			(xy 87.63 157.48) (xy 87.63 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff83759d-7bbd-4d07-86a5-a69aec4ef244")
+	)
+	(hierarchical_label "A2"
+		(shape input)
+		(at 248.92 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "05bba932-a1c9-4545-b332-0f251868d88c")
+	)
 	(hierarchical_label "A1"
 		(shape input)
-		(at 72.39 50.8 0)
+		(at 81.28 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -899,7 +3878,7 @@
 	)
 	(hierarchical_label "A2"
 		(shape input)
-		(at 72.39 73.66 0)
+		(at 81.28 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -908,9 +3887,20 @@
 		)
 		(uuid "9a10d016-69a2-459b-a1dc-ddf207834b14")
 	)
+	(hierarchical_label "A1"
+		(shape input)
+		(at 248.92 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a6b8d95a-b07d-4537-9fcd-9eca8f109573")
+	)
 	(symbol
 		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
-		(at 40.64 119.38 0)
+		(at 175.26 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -919,9 +3909,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1802d81f-af4a-43e7-8ec1-a4ffcd815300")
-		(property "Reference" "U6"
-			(at 55.88 109.22 0)
+		(uuid "005c0a0a-2a98-4a35-a60a-a3edbe3595ad")
+		(property "Reference" "U30"
+			(at 190.5 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -931,7 +3921,7 @@
 			)
 		)
 		(property "Value" "DRV5032AJLPG"
-			(at 55.88 111.76 0)
+			(at 190.5 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -941,7 +3931,7 @@
 			)
 		)
 		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
-			(at 40.64 119.38 0)
+			(at 175.26 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -953,7 +3943,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
-			(at 40.64 119.38 0)
+			(at 175.26 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -965,7 +3955,1013 @@
 			)
 		)
 		(property "Description" ""
-			(at 40.64 119.38 0)
+			(at 175.26 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7ddcb13d-1d4a-4ee6-90e8-d9a58a9f4b1d")
+		)
+		(pin "3"
+			(uuid "8560a6ef-0f35-4ea6-976c-a764d79df3ac")
+		)
+		(pin "1"
+			(uuid "3c6cc327-9aa9-485c-a21b-7d11591167f3")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 342.9 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0241c0db-d7b2-4801-bf57-ec721605e1fa")
+		(property "Reference" "U62"
+			(at 358.14 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 358.14 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 342.9 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 342.9 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 342.9 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d17f22d5-b300-466e-86fb-820cea977f30")
+		)
+		(pin "3"
+			(uuid "2a8bbbbb-eaeb-40c1-846b-6ee5cc6cc422")
+		)
+		(pin "1"
+			(uuid "e39cb83a-36e9-4bb5-8744-0f43f5682a0d")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U62")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 217.17 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0648ebbf-1b2c-438a-a1ec-9ac6d04a7f53")
+		(property "Reference" "U37"
+			(at 232.41 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 232.41 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 217.17 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 217.17 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 217.17 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "17d713b7-688a-4766-b470-0cc58854391f")
+		)
+		(pin "3"
+			(uuid "56f630f7-3302-4367-869b-591224e28e3f")
+		)
+		(pin "1"
+			(uuid "1073750b-944c-4b71-95d8-a81c0dcd9c1b")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 300.99 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0663776a-7e22-4585-89f4-479744f35640")
+		(property "Reference" "U54"
+			(at 316.23 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 316.23 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 300.99 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 300.99 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 300.99 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "60f33dc6-7a71-4714-8718-fd1eed71cc01")
+		)
+		(pin "3"
+			(uuid "025fda16-35fa-46f8-a1c1-14394f6c95a0")
+		)
+		(pin "1"
+			(uuid "013bb336-ebe9-490f-ba4c-635844ef7cc0")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 213.36 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "06eda4aa-a7bd-419f-aa4b-d77a45386e60")
+		(property "Reference" "#PWR011"
+			(at 213.36 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 213.36 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 213.36 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 213.36 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "04ad2d01-acbf-43e6-83f3-74e898527466")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 300.99 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "089b50a3-fc94-4536-a246-59013481ec01")
+		(property "Reference" "U56"
+			(at 316.23 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 316.23 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 300.99 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 300.99 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 300.99 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c83853e3-3bd2-416a-ba5b-2e3cd5d74e9e")
+		)
+		(pin "3"
+			(uuid "2f113b21-a62a-4176-a5d9-fe756f93afba")
+		)
+		(pin "1"
+			(uuid "1b28d44a-21cb-41a4-82ed-f9b6c3dd9169")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 259.08 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "094f1a9e-8fe2-46f6-8a94-db6af1a79cee")
+		(property "Reference" "U45"
+			(at 274.32 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 274.32 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 259.08 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 259.08 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "4f2a70f2-1cee-4b62-8213-b43a3dbe675c")
+		)
+		(pin "3"
+			(uuid "b8a9cea7-f3a3-4621-b9c4-208740e35bf8")
+		)
+		(pin "1"
+			(uuid "5358d9fe-5740-49b7-b4fc-302b0fb62bbc")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 210.82 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "106bc57e-f8fb-41a0-96b5-0ce03ad3f1bc")
+		(property "Reference" "#PWR010"
+			(at 210.82 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 210.82 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 210.82 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 210.82 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d443e6cc-adc1-4d93-ab5b-66c775091951")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 217.17 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "153177bb-2a4c-4cc7-96c1-d85a895636b4")
+		(property "Reference" "U36"
+			(at 232.41 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 232.41 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 217.17 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 217.17 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 217.17 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ec813acd-65ef-4962-85f7-ce460a3d3791")
+		)
+		(pin "3"
+			(uuid "03d2cfed-6d05-4d6c-beb4-5fa0907e6fcc")
+		)
+		(pin "1"
+			(uuid "6ada4485-fccf-4a04-a5db-96ba68c60fe6")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 133.35 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "153ada7f-f4ed-49ab-aac2-99597ae18691")
+		(property "Reference" "U23"
+			(at 148.59 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 148.59 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 133.35 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 133.35 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0c3392f6-a6b1-4151-b60b-175f595df4db")
+		)
+		(pin "3"
+			(uuid "e741cbff-109a-45d2-b0e0-90aad6ede06a")
+		)
+		(pin "1"
+			(uuid "b32665f3-83f8-4a69-b57c-a43f8482726d")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 133.35 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "16e2a8cd-d383-4458-a84d-5a7f65352423")
+		(property "Reference" "U22"
+			(at 148.59 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 148.59 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 133.35 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 133.35 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5539fa54-1de8-4e07-9abc-dc92b3a879c9")
+		)
+		(pin "3"
+			(uuid "28504432-6bc8-46d5-b8b3-6297c48976b2")
+		)
+		(pin "1"
+			(uuid "2f28941e-59d5-4ec3-96ed-a05ac02a9db5")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 91.44 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "17f11079-707e-4b0b-b654-d2db355743e8")
+		(property "Reference" "U16"
+			(at 106.68 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 106.68 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 91.44 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 91.44 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e7991e9e-d9f1-41fb-864a-2b1fcd13df77")
+		)
+		(pin "3"
+			(uuid "00dbb823-915e-4f77-aace-fc1270910d76")
+		)
+		(pin "1"
+			(uuid "25c0a6f8-06ec-4d1a-bd06-92e80c746587")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 49.53 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1802d81f-af4a-43e7-8ec1-a4ffcd815300")
+		(property "Reference" "U6"
+			(at 64.77 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 64.77 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 49.53 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 49.53 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -994,8 +4990,8 @@
 		)
 	)
 	(symbol
-		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
-		(at 40.64 50.8 0)
+		(lib_id "power:+3.3V")
+		(at 255.27 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1004,9 +5000,87 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "20b6aa9c-e728-4c34-8101-4378c1c7cf39")
-		(property "Reference" "U2"
-			(at 55.88 40.64 0)
+		(uuid "1b43eed9-d4cc-48d8-b199-ae6b09194e8b")
+		(property "Reference" "#PWR013"
+			(at 255.27 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 255.27 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 255.27 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 255.27 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0ca20d18-b0f8-4efd-a94b-7bb0cd9b9d1c")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 91.44 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1daa8bf4-2995-4763-a9d3-cc8b674416e5")
+		(property "Reference" "U11"
+			(at 106.68 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1016,7 +5090,7 @@
 			)
 		)
 		(property "Value" "DRV5032AJLPG"
-			(at 55.88 43.18 0)
+			(at 106.68 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1026,7 +5100,7 @@
 			)
 		)
 		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
-			(at 40.64 50.8 0)
+			(at 91.44 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1038,7 +5112,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
-			(at 40.64 50.8 0)
+			(at 91.44 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1050,7 +5124,92 @@
 			)
 		)
 		(property "Description" ""
-			(at 40.64 50.8 0)
+			(at 91.44 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5fd2bd01-36cd-45e4-bd93-816c9963352b")
+		)
+		(pin "3"
+			(uuid "e88d3896-eb6a-4e21-836d-feedcb02e6b8")
+		)
+		(pin "1"
+			(uuid "7f7749c1-6fbf-45fa-b865-ec375de80c02")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 49.53 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20b6aa9c-e728-4c34-8101-4378c1c7cf39")
+		(property "Reference" "U2"
+			(at 64.77 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 64.77 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 49.53 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 49.53 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1080,7 +5239,7 @@
 	)
 	(symbol
 		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
-		(at 40.64 210.82 0)
+		(at 91.44 180.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1089,9 +5248,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "34fe477d-463e-485a-8c11-87e19a2321e2")
-		(property "Reference" "U10"
-			(at 55.88 200.66 0)
+		(uuid "2144ea34-4424-4e60-b3f2-91ad2a2ed7f9")
+		(property "Reference" "U17"
+			(at 106.68 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1101,7 +5260,7 @@
 			)
 		)
 		(property "Value" "DRV5032AJLPG"
-			(at 55.88 203.2 0)
+			(at 106.68 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1111,7 +5270,7 @@
 			)
 		)
 		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
-			(at 40.64 210.82 0)
+			(at 91.44 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1123,7 +5282,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
-			(at 40.64 210.82 0)
+			(at 91.44 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1135,7 +5294,510 @@
 			)
 		)
 		(property "Description" ""
-			(at 40.64 210.82 0)
+			(at 91.44 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7e8b440f-f605-4303-b073-848a1403686d")
+		)
+		(pin "3"
+			(uuid "c46fcf91-de7d-4c07-9e5f-214a2038bf14")
+		)
+		(pin "1"
+			(uuid "2fbc5e89-90d1-46d0-881f-f4b7404aa037")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 342.9 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "214ca88e-62f4-4c6d-ade1-3102ab745f94")
+		(property "Reference" "U60"
+			(at 358.14 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 358.14 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 342.9 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 342.9 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 342.9 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f795161b-133b-492b-a0a5-54bb9ae3b695")
+		)
+		(pin "3"
+			(uuid "6109aee2-6501-4af1-ba6f-bf183be7231f")
+		)
+		(pin "1"
+			(uuid "f370cdbd-e933-471f-be60-31e0967c09e0")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 127 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2bb15173-3c5f-4c9e-b53a-093f09331339")
+		(property "Reference" "#PWR06"
+			(at 127 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 127 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 127 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "81c17ebf-16af-494e-baef-9067c6249ab7")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 91.44 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2e944ec7-3360-4422-bea0-91494c7993bb")
+		(property "Reference" "U14"
+			(at 106.68 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 106.68 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 91.44 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 91.44 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b56a2aa3-f66e-4f40-b13a-fe2c03ff56f3")
+		)
+		(pin "3"
+			(uuid "ef7a9618-3f4e-4f3d-a6eb-e28a7ae282ff")
+		)
+		(pin "1"
+			(uuid "170dd2cb-2339-4950-a1b9-b49ed8072bcb")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 342.9 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ead227c-ca39-4708-9e44-9030e6f42361")
+		(property "Reference" "U61"
+			(at 358.14 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 358.14 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 342.9 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 342.9 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 342.9 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ef5355ff-a7b9-4deb-8e57-eeb93d9b6bfa")
+		)
+		(pin "3"
+			(uuid "bb531a42-0f3c-4a20-a2ac-c2c98203f4bf")
+		)
+		(pin "1"
+			(uuid "2187884e-7b1c-4ad8-a35f-488cb4c7db8f")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 300.99 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33c9dc82-1ba8-4429-889d-9abf9cb9260a")
+		(property "Reference" "U51"
+			(at 316.23 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 316.23 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 300.99 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 300.99 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 300.99 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8ac698ba-6ac0-4be7-af1d-71493c0ef06b")
+		)
+		(pin "3"
+			(uuid "5d414f11-7a7b-4d32-9e05-535d5977c498")
+		)
+		(pin "1"
+			(uuid "4d2b1555-0637-410f-8d18-71cd67d9386c")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U51")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 49.53 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "34fe477d-463e-485a-8c11-87e19a2321e2")
+		(property "Reference" "U10"
+			(at 64.77 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 64.77 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 49.53 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 49.53 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 203.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1164,8 +5826,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 36.83 41.91 0)
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 217.17 180.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1174,9 +5836,94 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4c123193-da10-47c0-bcfa-ba23911de835")
-		(property "Reference" "#PWR03"
-			(at 36.83 45.72 0)
+		(uuid "369afed1-e3a2-4361-ab6d-42ac1ef8c1f0")
+		(property "Reference" "U41"
+			(at 232.41 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 232.41 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 217.17 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 217.17 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 217.17 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "10553a3f-c81e-4442-91ca-55b29269eb27")
+		)
+		(pin "3"
+			(uuid "2d2334bb-c047-44c4-beac-1f1543d124db")
+		)
+		(pin "1"
+			(uuid "79f3cf22-470e-4a40-9c2b-960534f1b39b")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 339.09 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3b036f14-37de-4326-a588-03fd5ddfd776")
+		(property "Reference" "#PWR017"
+			(at 339.09 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1187,7 +5934,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 36.83 36.83 0)
+			(at 339.09 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1197,7 +5944,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 41.91 0)
+			(at 339.09 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1208,7 +5955,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 41.91 0)
+			(at 339.09 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1219,7 +5966,248 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 36.83 41.91 0)
+			(at 339.09 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b5497a93-aea2-4e54-811c-e0567226a4c0")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 87.63 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d5a80bd-9b3a-428b-a427-7f789ade7725")
+		(property "Reference" "#PWR05"
+			(at 87.63 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 87.63 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 87.63 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "671ba197-f190-4c8d-b71c-313f1a727bf3")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 342.9 180.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "48ec6980-6275-4293-a882-d45ecfaea772")
+		(property "Reference" "U65"
+			(at 358.14 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 358.14 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 342.9 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 342.9 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 342.9 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "73fb5447-d7b2-43e1-b060-808fcfb22416")
+		)
+		(pin "3"
+			(uuid "6d04c8a2-9924-4126-b35f-6867565f4e9e")
+		)
+		(pin "1"
+			(uuid "0beaec7f-b16f-4aa8-99d5-047c9d3347e4")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U65")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 45.72 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4c123193-da10-47c0-bcfa-ba23911de835")
+		(property "Reference" "#PWR03"
+			(at 45.72 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 45.72 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 45.72 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1242,8 +6230,8 @@
 		)
 	)
 	(symbol
-		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
-		(at 40.64 187.96 0)
+		(lib_id "power:+3.3V")
+		(at 297.18 34.29 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1252,9 +6240,87 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "59f3a4f3-0931-468b-aff5-ea098c21d365")
-		(property "Reference" "U9"
-			(at 55.88 177.8 0)
+		(uuid "4e5a3b50-ab28-4706-b489-f31b3c932cfa")
+		(property "Reference" "#PWR015"
+			(at 297.18 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 297.18 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 297.18 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 297.18 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 297.18 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4d3ee04b-f8c0-4447-beac-c472386d6c37")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 175.26 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "583fff7a-be36-46f1-8c81-474eac070f4a")
+		(property "Reference" "U27"
+			(at 190.5 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1264,7 +6330,7 @@
 			)
 		)
 		(property "Value" "DRV5032AJLPG"
-			(at 55.88 180.34 0)
+			(at 190.5 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1274,7 +6340,7 @@
 			)
 		)
 		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
-			(at 40.64 187.96 0)
+			(at 175.26 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1286,7 +6352,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
-			(at 40.64 187.96 0)
+			(at 175.26 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1298,7 +6364,170 @@
 			)
 		)
 		(property "Description" ""
-			(at 40.64 187.96 0)
+			(at 175.26 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "cbccc69b-2c06-4f6c-96a1-0a34fed9433d")
+		)
+		(pin "3"
+			(uuid "5eb09bff-13ea-49d4-9283-66329188e6b1")
+		)
+		(pin "1"
+			(uuid "5f9d4729-5c8f-4230-b491-88cb37a73cc9")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 171.45 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "586d600a-5fb0-4d4c-bd2a-f359e9ab98da")
+		(property "Reference" "#PWR09"
+			(at 171.45 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 171.45 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 171.45 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b3c15957-2afd-48c2-b615-4c1f8d53aefa")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 49.53 180.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "59f3a4f3-0931-468b-aff5-ea098c21d365")
+		(property "Reference" "U9"
+			(at 64.77 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 64.77 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 49.53 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 49.53 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1327,8 +6556,8 @@
 		)
 	)
 	(symbol
-		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
-		(at 40.64 73.66 0)
+		(lib_id "power:GND")
+		(at 252.73 215.9 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1337,9 +6566,87 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "87f00d50-fa2f-4c14-b8ac-1bdf102ba044")
-		(property "Reference" "U4"
-			(at 55.88 63.5 0)
+		(uuid "5b0806a4-21c9-4836-b285-1a6a01114b72")
+		(property "Reference" "#PWR012"
+			(at 252.73 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 252.73 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 252.73 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 252.73 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2fd76d16-b1e0-4e5e-9894-3f88f980d46a")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 175.26 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5daf8953-8a23-4b03-9e2d-5f82855ed1a8")
+		(property "Reference" "U34"
+			(at 190.5 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1349,7 +6656,7 @@
 			)
 		)
 		(property "Value" "DRV5032AJLPG"
-			(at 55.88 66.04 0)
+			(at 190.5 195.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1359,7 +6666,7 @@
 			)
 		)
 		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
-			(at 40.64 73.66 0)
+			(at 175.26 203.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1371,7 +6678,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
-			(at 40.64 73.66 0)
+			(at 175.26 203.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1383,7 +6690,942 @@
 			)
 		)
 		(property "Description" ""
-			(at 40.64 73.66 0)
+			(at 175.26 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "13de1949-396a-44fc-ba82-6f01b973a6f3")
+		)
+		(pin "3"
+			(uuid "66164f5a-77af-4c61-ab90-286d8c44995c")
+		)
+		(pin "1"
+			(uuid "8c26f784-20e5-4672-914b-492f7661947a")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 259.08 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "620ff1aa-0af8-42d2-aff3-46e361bf7f4b")
+		(property "Reference" "U43"
+			(at 274.32 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 274.32 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 259.08 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 259.08 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9e0524f5-b167-41b8-b9b7-28c47f81004a")
+		)
+		(pin "3"
+			(uuid "f4c3322b-ae9f-4504-9ef3-76581b6eed98")
+		)
+		(pin "1"
+			(uuid "bd10419b-c568-44bb-a90e-cfbc772e3117")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U43")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 91.44 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b324613-bed9-4c75-92ff-8f51253cc68b")
+		(property "Reference" "U12"
+			(at 106.68 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 106.68 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 91.44 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 91.44 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3203553f-4577-4976-886d-57019487bbcc")
+		)
+		(pin "3"
+			(uuid "08d4aea5-8825-4f9e-a68e-4dba7c800579")
+		)
+		(pin "1"
+			(uuid "9ed67971-9e77-4b2f-83e1-2870fcd13e8d")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 259.08 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6bc29349-e8d1-4005-a303-6cdf257d013a")
+		(property "Reference" "U47"
+			(at 274.32 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 274.32 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 259.08 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 259.08 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f6cfb01c-5ebc-48c4-a8df-5ddcfa707483")
+		)
+		(pin "3"
+			(uuid "80d9a11d-10bc-4aa6-9f28-c8ee826ab95c")
+		)
+		(pin "1"
+			(uuid "7420f61d-0322-4f56-bd48-450b59ae807a")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 133.35 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6d0d11cf-b6f8-4799-98fa-fd449886c65c")
+		(property "Reference" "U19"
+			(at 148.59 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 148.59 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 133.35 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 133.35 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "1e75fa81-3f45-4bf6-b7a8-a522dd6fff8f")
+		)
+		(pin "3"
+			(uuid "7ced2e79-be4b-41bb-810b-265d445aca6c")
+		)
+		(pin "1"
+			(uuid "ac080c9b-b0fb-4b24-b0a2-f0585fc9480a")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 300.99 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6ec4eca7-67b6-4722-81d8-e2630fe5ef62")
+		(property "Reference" "U52"
+			(at 316.23 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 316.23 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 300.99 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 300.99 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 300.99 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "fd4fc7bb-0072-42e9-ade9-f454bbb0a1e5")
+		)
+		(pin "3"
+			(uuid "b89dccc0-3fa2-4e35-979c-da5c8ff500ca")
+		)
+		(pin "1"
+			(uuid "5add12d4-4917-45d8-b0a9-d103bf824f80")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 133.35 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7258c0bc-6058-4577-b462-da6d92e0c44f")
+		(property "Reference" "U21"
+			(at 148.59 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 148.59 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 133.35 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 133.35 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "90b0a91c-32f6-4af0-a227-f2eb708b7431")
+		)
+		(pin "3"
+			(uuid "72cc98ef-d914-4a10-9a88-26eed1134c8b")
+		)
+		(pin "1"
+			(uuid "842d1a83-104e-45ea-a0e1-b2c2b97d586c")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 175.26 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "725ccd97-ef64-41e6-8526-799302862fcc")
+		(property "Reference" "U31"
+			(at 190.5 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 190.5 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 175.26 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 175.26 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "cd2d430f-f071-43ed-8374-7c082ec1d4e7")
+		)
+		(pin "3"
+			(uuid "10e3b4a8-9efc-45c7-aeea-2c578fc26e73")
+		)
+		(pin "1"
+			(uuid "74a4f001-0b4c-4ac4-9406-c38d2d114827")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 175.26 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "758df6e9-6dfb-4b96-87ba-d132901c0935")
+		(property "Reference" "U32"
+			(at 190.5 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 190.5 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 175.26 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 175.26 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e2b2c363-cc30-4274-aa90-d673dc3e79ec")
+		)
+		(pin "3"
+			(uuid "37635e2a-6c66-41ec-a6ef-ea64cae5565e")
+		)
+		(pin "1"
+			(uuid "f4ed2f81-f0c4-49db-b78c-d847774db85f")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 259.08 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "790b4996-59d4-404f-8a97-108321d4976b")
+		(property "Reference" "U46"
+			(at 274.32 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 274.32 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 259.08 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 259.08 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c0f00c1f-16fc-43e9-9b17-fa0074980988")
+		)
+		(pin "3"
+			(uuid "20aa867a-904d-414a-98e7-6002451b1cb3")
+		)
+		(pin "1"
+			(uuid "7eb7ea8b-17d3-487e-8d87-20192f127a80")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U46")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 259.08 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "851aba0f-81b7-4817-8936-76a0ba048b42")
+		(property "Reference" "U48"
+			(at 274.32 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 274.32 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 259.08 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 259.08 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8d45e80d-7bc9-4515-8345-f9fcd9fe3af5")
+		)
+		(pin "3"
+			(uuid "291ab407-c7a0-4701-897a-77d34dd9edfa")
+		)
+		(pin "1"
+			(uuid "89391d64-a3c3-402c-9a7e-7970d612b66a")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 49.53 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "87f00d50-fa2f-4c14-b8ac-1bdf102ba044")
+		(property "Reference" "U4"
+			(at 64.77 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 64.77 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 49.53 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 49.53 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1413,7 +7655,7 @@
 	)
 	(symbol
 		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
-		(at 40.64 165.1 0)
+		(at 91.44 88.9 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1422,9 +7664,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9244f81a-8e92-4298-971c-d0d936f80527")
-		(property "Reference" "U8"
-			(at 55.88 154.94 0)
+		(uuid "8c7b4a6d-74dd-4ab2-9156-1cd70cbd7d0b")
+		(property "Reference" "U13"
+			(at 106.68 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1434,7 +7676,7 @@
 			)
 		)
 		(property "Value" "DRV5032AJLPG"
-			(at 55.88 157.48 0)
+			(at 106.68 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1444,7 +7686,7 @@
 			)
 		)
 		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
-			(at 40.64 165.1 0)
+			(at 91.44 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1456,7 +7698,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
-			(at 40.64 165.1 0)
+			(at 91.44 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1468,7 +7710,340 @@
 			)
 		)
 		(property "Description" ""
-			(at 40.64 165.1 0)
+			(at 91.44 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "19985f92-e0f4-47bc-9f52-256366f163b9")
+		)
+		(pin "3"
+			(uuid "4e8de667-2b9d-49ff-8bdb-9b48e3e0e3e4")
+		)
+		(pin "1"
+			(uuid "dc45864c-0614-4034-b0d2-1d97e6f1f9c2")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 175.26 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8cd961b2-1e4d-478a-b4d1-d588c9371bbd")
+		(property "Reference" "U29"
+			(at 190.5 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 190.5 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 175.26 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 175.26 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7151e0dd-3625-42e9-b07a-9e7320d69f30")
+		)
+		(pin "3"
+			(uuid "07f48a58-0b96-4163-b705-8e17ddb61dbc")
+		)
+		(pin "1"
+			(uuid "deb75099-a237-4e28-a7e8-4a81236881a0")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 133.35 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8f2d89fc-ae1d-460c-8c60-c23e8abb00d4")
+		(property "Reference" "U24"
+			(at 148.59 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 148.59 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 133.35 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 133.35 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "32de22b8-22fb-4cd9-acdc-e985e410d08a")
+		)
+		(pin "3"
+			(uuid "9947404f-b85a-4aed-8d91-3e6c5dc1da55")
+		)
+		(pin "1"
+			(uuid "e740ab9c-f535-45b4-8999-c44f40e84511")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 336.55 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "922285f2-7bc8-4d1b-8ec0-07715dc695fa")
+		(property "Reference" "#PWR016"
+			(at 336.55 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 336.55 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 336.55 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 336.55 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 336.55 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "94b5827f-4103-49be-8709-437a8cc63b39")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 49.53 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9244f81a-8e92-4298-971c-d0d936f80527")
+		(property "Reference" "U8"
+			(at 64.77 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 64.77 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 49.53 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 49.53 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1497,8 +8072,93 @@
 		)
 	)
 	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 133.35 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "972bcc95-a237-4cc4-b6fb-0d42137fdbe5")
+		(property "Reference" "U26"
+			(at 148.59 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 148.59 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 133.35 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 133.35 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8827aae3-b56b-4137-9181-d26fbfbfa3ad")
+		)
+		(pin "3"
+			(uuid "00291213-ef97-414e-b358-111d4b4d28df")
+		)
+		(pin "1"
+			(uuid "47fb5a4c-7cfc-4f04-8b1b-7d1e09a9af2f")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 76.2 223.52 0)
+		(at 85.09 215.9 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1509,7 +8169,7 @@
 		(fields_autoplaced yes)
 		(uuid "97d9eac2-4d5f-4883-b56b-a49a8c60a5cc")
 		(property "Reference" "#PWR04"
-			(at 76.2 229.87 0)
+			(at 85.09 222.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1520,7 +8180,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 76.2 228.6 0)
+			(at 85.09 220.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1530,7 +8190,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 223.52 0)
+			(at 85.09 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1541,7 +8201,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 223.52 0)
+			(at 85.09 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1552,7 +8212,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 76.2 223.52 0)
+			(at 85.09 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1576,7 +8236,7 @@
 	)
 	(symbol
 		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
-		(at 40.64 96.52 0)
+		(at 342.9 157.48 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1585,9 +8245,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b14ba454-1845-42a0-8afb-d638e1576d24")
-		(property "Reference" "U5"
-			(at 55.88 86.36 0)
+		(uuid "98a2d2e3-219a-4298-bb72-351a7ae25427")
+		(property "Reference" "U64"
+			(at 358.14 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1597,7 +8257,7 @@
 			)
 		)
 		(property "Value" "DRV5032AJLPG"
-			(at 55.88 88.9 0)
+			(at 358.14 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1607,7 +8267,7 @@
 			)
 		)
 		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
-			(at 40.64 96.52 0)
+			(at 342.9 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1619,7 +8279,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
-			(at 40.64 96.52 0)
+			(at 342.9 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1631,7 +8291,432 @@
 			)
 		)
 		(property "Description" ""
-			(at 40.64 96.52 0)
+			(at 342.9 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d70e7cd9-ba2e-46d2-8a9f-128a0ff05892")
+		)
+		(pin "3"
+			(uuid "728e9cd6-0011-4bdb-8b2d-e9bdd449977f")
+		)
+		(pin "1"
+			(uuid "aadb1e0f-617a-4dda-ac71-e55241041fce")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U64")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 91.44 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a3a5f0c7-92df-47a5-a640-1144a5010c26")
+		(property "Reference" "U15"
+			(at 106.68 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 106.68 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 91.44 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 91.44 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ab6ddb17-aa3d-43ca-8a82-e237346ed07a")
+		)
+		(pin "3"
+			(uuid "0730eeec-bc71-4791-9a5c-b2b3f4e83476")
+		)
+		(pin "1"
+			(uuid "afdc3c87-8f37-4272-87f0-145133ddf5cd")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 217.17 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a429f371-4244-435b-92fa-0b1c213ad1bc")
+		(property "Reference" "U35"
+			(at 232.41 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 232.41 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 217.17 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 217.17 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 217.17 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "fd2387f4-b398-4d5c-b5b2-27d885c2e87c")
+		)
+		(pin "3"
+			(uuid "a5c06918-2a3f-4789-aea4-3f10db35c61a")
+		)
+		(pin "1"
+			(uuid "80d5a31d-07a4-450c-ac20-66d917fc6d67")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 300.99 180.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a8cf5d54-b314-4190-b97d-daed591c8bb8")
+		(property "Reference" "U57"
+			(at 316.23 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 316.23 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 300.99 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 300.99 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 300.99 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "27cecd6e-8e39-47fb-9250-b0a11f19acdd")
+		)
+		(pin "3"
+			(uuid "38069df0-d578-4e8a-b1ab-3fa8b0b501a2")
+		)
+		(pin "1"
+			(uuid "360943b6-d1eb-4a7b-a5b7-c56e41b7de33")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 300.99 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a8e82fba-2e65-4ec5-aa4a-90b6116d8085")
+		(property "Reference" "U55"
+			(at 316.23 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 316.23 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 300.99 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 300.99 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 300.99 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "da6a3957-5849-48a8-8842-9b6fe7bb9cbc")
+		)
+		(pin "3"
+			(uuid "fcd1c23b-a6f4-41f8-bea8-8b8e2da6a763")
+		)
+		(pin "1"
+			(uuid "5ffbd0aa-3d67-41c7-aaef-8b863b9e0ba9")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 49.53 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b14ba454-1845-42a0-8afb-d638e1576d24")
+		(property "Reference" "U5"
+			(at 64.77 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 64.77 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 49.53 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 49.53 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1661,7 +8746,7 @@
 	)
 	(symbol
 		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
-		(at 40.64 142.24 0)
+		(at 217.17 134.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1670,9 +8755,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ced3355d-144b-4a74-ade4-c2e3bfc647ce")
-		(property "Reference" "U7"
-			(at 55.88 132.08 0)
+		(uuid "b2134334-c0ae-4030-afbe-a385cf71f312")
+		(property "Reference" "U39"
+			(at 232.41 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1682,7 +8767,7 @@
 			)
 		)
 		(property "Value" "DRV5032AJLPG"
-			(at 55.88 134.62 0)
+			(at 232.41 127 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1692,7 +8777,7 @@
 			)
 		)
 		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
-			(at 40.64 142.24 0)
+			(at 217.17 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1704,7 +8789,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
-			(at 40.64 142.24 0)
+			(at 217.17 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1716,7 +8801,177 @@
 			)
 		)
 		(property "Description" ""
-			(at 40.64 142.24 0)
+			(at 217.17 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "1207e233-f32f-4360-8490-1965a9da9f11")
+		)
+		(pin "3"
+			(uuid "4a78f4b2-2c42-416b-a17f-785e25c42cd9")
+		)
+		(pin "1"
+			(uuid "e25653ac-5136-4476-a9b6-23c79e502084")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 342.9 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca87f42c-80d2-4b3e-bc9c-195ec06325da")
+		(property "Reference" "U63"
+			(at 358.14 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 358.14 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 342.9 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 342.9 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 342.9 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "812b3ae7-9938-4bc2-96bc-de3156063e6b")
+		)
+		(pin "3"
+			(uuid "917d49f4-565f-424c-b85f-cfdcf9e3de15")
+		)
+		(pin "1"
+			(uuid "b617fa19-222d-4f17-8e9f-7a12b9cc90ef")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U63")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 49.53 134.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ced3355d-144b-4a74-ade4-c2e3bfc647ce")
+		(property "Reference" "U7"
+			(at 64.77 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 64.77 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 49.53 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 49.53 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1739,6 +8994,1593 @@
 			(project "chessboard"
 				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
 					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 175.26 180.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf66a2bd-4ac6-4a13-b183-d0e13be25b48")
+		(property "Reference" "U33"
+			(at 190.5 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 190.5 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 175.26 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 175.26 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6bfeb65f-782b-443d-9c3b-9ef3de5c0d88")
+		)
+		(pin "3"
+			(uuid "e37517b6-f612-4a6e-a506-56a0ad390fe0")
+		)
+		(pin "1"
+			(uuid "cac2511d-5b63-463a-92ba-f9e20b9f02d7")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 259.08 180.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d04b0b67-c623-406c-9562-7f61cd19b994")
+		(property "Reference" "U49"
+			(at 274.32 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 274.32 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 259.08 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 259.08 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7796496a-f5c2-4246-8630-bebd41b07032")
+		)
+		(pin "3"
+			(uuid "c5065d98-f64f-47ce-ad01-eec6f6d51820")
+		)
+		(pin "1"
+			(uuid "a2a8ddd4-2eb5-4485-913a-da32eda74bb6")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U49")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 133.35 180.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d201fdaf-772f-438e-b5f7-ac59dd24e45e")
+		(property "Reference" "U25"
+			(at 148.59 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 148.59 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 133.35 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 133.35 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ad39788f-765a-4554-8b55-2e11e46ba785")
+		)
+		(pin "3"
+			(uuid "c9b6a318-dfd7-45f9-8872-5710cef84b85")
+		)
+		(pin "1"
+			(uuid "d5265947-137b-461d-ba28-da4e19001d51")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 91.44 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d31a272b-caeb-4e60-aa2c-c8bef8c3ad3d")
+		(property "Reference" "U18"
+			(at 106.68 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 106.68 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 91.44 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 91.44 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f9b5343d-8674-49b8-a7d5-4b6b03b05110")
+		)
+		(pin "3"
+			(uuid "eca447a2-9ea0-4d1b-8f1e-cf1923d0746b")
+		)
+		(pin "1"
+			(uuid "531d2ad4-747a-411f-83a8-34910c442bea")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 294.64 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d34f5ad0-ba9e-4769-8d22-4d54a159c9b9")
+		(property "Reference" "#PWR014"
+			(at 294.64 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 294.64 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 294.64 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 294.64 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 294.64 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4b6cea2a-0cda-42b8-b168-2a9864631517")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 259.08 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d5412528-d98c-40f2-9eb7-c2808b39476b")
+		(property "Reference" "U44"
+			(at 274.32 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 274.32 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 259.08 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 259.08 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3af7ef56-bb5a-4434-9862-a1032aafe9a0")
+		)
+		(pin "3"
+			(uuid "ebeaa187-b0d2-4adf-b058-d5510307c2df")
+		)
+		(pin "1"
+			(uuid "699f72a1-9921-48e5-b0ca-eb5eddf72aa4")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 300.99 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d8283a84-4971-49f5-a8c6-45b14f86689b")
+		(property "Reference" "U53"
+			(at 316.23 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 316.23 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 300.99 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 300.99 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 300.99 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6b305247-a0e4-461e-af6b-1d1b93f55ac3")
+		)
+		(pin "3"
+			(uuid "430d66ee-5c73-44f8-8f1f-6665fe2395bb")
+		)
+		(pin "1"
+			(uuid "39f38641-fd0a-438d-9f45-1b677e33becd")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 133.35 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "da5ffe23-ae5f-422d-b674-0e359ca8bbb0")
+		(property "Reference" "U20"
+			(at 148.59 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 148.59 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 133.35 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 133.35 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 133.35 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "51007eb0-c96a-4682-891d-bb5004e0d23f")
+		)
+		(pin "3"
+			(uuid "1251f120-ada5-46c7-9ff9-389d49cc0fa8")
+		)
+		(pin "1"
+			(uuid "94042ce9-92cd-4ef2-8877-23fe5ac4881b")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 378.46 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "daa98965-54b2-4408-ace5-d2dace4f5946")
+		(property "Reference" "#PWR018"
+			(at 378.46 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 378.46 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 378.46 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 378.46 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 378.46 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ff333027-9dc1-4fbe-844a-322986c715f7")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 168.91 215.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dca6a494-1d0d-49af-b7aa-cb551628c684")
+		(property "Reference" "#PWR08"
+			(at 168.91 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 168.91 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 168.91 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 168.91 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 168.91 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b3544452-b781-4fe9-b6dd-ff5e8aca2bca")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 342.9 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e325c55d-b232-437f-bc85-173f2c49dce2")
+		(property "Reference" "U66"
+			(at 358.14 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 358.14 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 342.9 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 342.9 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 342.9 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "1398ecc4-1dea-48c7-ae50-8022e9117a84")
+		)
+		(pin "3"
+			(uuid "429634f7-cdb4-4717-a094-9f461aed52ef")
+		)
+		(pin "1"
+			(uuid "1585fbcb-3c5c-4cf2-87e1-2fcf604f0a19")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U66")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 217.17 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5c57afd-8742-48e7-82a3-c3a390f2c99b")
+		(property "Reference" "U42"
+			(at 232.41 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 232.41 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 217.17 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 217.17 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 217.17 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a258f172-f513-4848-b8c9-60d759a96bb6")
+		)
+		(pin "3"
+			(uuid "9f09a309-78a6-4ffe-8400-fdb238ec9c5c")
+		)
+		(pin "1"
+			(uuid "85e07c7c-345f-4166-afce-b6a7645b3b1d")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 217.17 157.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e705d9e2-f256-4900-a39e-909f82a8d718")
+		(property "Reference" "U40"
+			(at 232.41 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 232.41 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 217.17 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 217.17 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 217.17 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e7cd0833-b82c-490c-a3da-f4d43d8d1f9f")
+		)
+		(pin "3"
+			(uuid "9e55c315-9f82-48bc-9c2f-0e50cd4b9fef")
+		)
+		(pin "1"
+			(uuid "2d3a829d-e092-48f9-893c-78c4d1fda685")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 300.99 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e81ffdde-f17d-4f84-95cd-b2462ce24061")
+		(property "Reference" "U58"
+			(at 316.23 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 316.23 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 300.99 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 300.99 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 300.99 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "20cfc561-9d87-4e3d-95c0-9ee045f2ae13")
+		)
+		(pin "3"
+			(uuid "6c46885c-7426-4783-bc42-01f2b0b1bc83")
+		)
+		(pin "1"
+			(uuid "b0719013-54c2-4b21-aa77-c06af7511fe5")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 129.54 34.29 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee23e3f5-55ee-48b0-8000-4cbc6a163a08")
+		(property "Reference" "#PWR07"
+			(at 129.54 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 129.54 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 129.54 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "695b2f04-15c2-4b63-b73d-85cbece4862a")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 175.26 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee28a137-7b89-47b3-af40-31c976dfcb42")
+		(property "Reference" "U28"
+			(at 190.5 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 190.5 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 175.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 175.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5666df04-a8aa-4a03-835d-fe2c7bf9928a")
+		)
+		(pin "3"
+			(uuid "9d875b0f-83fb-4c84-a221-f36a4c50f125")
+		)
+		(pin "1"
+			(uuid "a7f8ab53-c478-43a7-8696-e36c0df25b6a")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 342.9 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0f8f96f-3cf3-4c24-950e-56af19f11c19")
+		(property "Reference" "U59"
+			(at 358.14 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 358.14 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 342.9 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 342.9 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 342.9 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "72710999-349a-45a2-ad3b-173bb6ef1997")
+		)
+		(pin "3"
+			(uuid "b2875238-0cba-4a1a-84a5-5a52a9e8265a")
+		)
+		(pin "1"
+			(uuid "3fb2b0d2-f42d-4b39-ba95-fefc7b5c34ad")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U59")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 217.17 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f3f5b836-1b0a-4ed5-98d4-89f7d4eb4e3f")
+		(property "Reference" "U38"
+			(at 232.41 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 232.41 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 217.17 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 217.17 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 217.17 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3916e561-2a90-4e69-a2b3-dfdeae46114a")
+		)
+		(pin "3"
+			(uuid "687f7047-32c9-41aa-bce1-b7b6e4df20be")
+		)
+		(pin "1"
+			(uuid "8c019c5d-3637-4be4-8101-001e0ddc02ed")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "DRV5032AJLPG:DRV5032AJLPG")
+		(at 259.08 203.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f45c187e-537e-44f7-9fe1-ee460257d8b1")
+		(property "Reference" "U50"
+			(at 274.32 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJLPG"
+			(at 274.32 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "DRV5032AJLPG:LPG0003A-MFG"
+			(at 259.08 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv5032"
+			(at 259.08 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 259.08 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0427c875-19e0-454d-a420-80312d83a380")
+		)
+		(pin "3"
+			(uuid "bd608bf6-b059-4e3e-9891-062f50e1680f")
+		)
+		(pin "1"
+			(uuid "e939d3ef-3d23-4484-bb45-31b280c769a1")
+		)
+		(instances
+			(project "chessboard"
+				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7/d13f836e-d950-4ab7-99e0-064f111ffb6a"
+					(reference "U50")
 					(unit 1)
 				)
 			)
