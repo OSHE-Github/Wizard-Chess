@@ -2452,6 +2452,26 @@
 				(justify left top)
 			)
 		)
+		(pin "A1" input
+			(at 149.86 39.37 0)
+			(uuid "f4b7349a-8861-4083-82de-d0a1be16f4d6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "A2" input
+			(at 149.86 55.88 0)
+			(uuid "ee15534c-92da-41b4-8a7b-d93080af065f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "chessboard"
 				(path "/c2bfc41f-35d2-4280-ad5e-8908cca83be7"
