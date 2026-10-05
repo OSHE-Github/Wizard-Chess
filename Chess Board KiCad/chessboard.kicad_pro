@@ -674,21 +674,17 @@
         "uuid": "c2bfc41f-35d2-4280-ad5e-8908cca83be7"
       }
     ],
-    "used_designators": "U1-74,#PWR1-18",
-    "variants": []
+    "used_designators": "U1-94,#PWR1-18",
+    "variants": [
+      {
+        "name": "shift registers"
+      }
+    ]
   },
   "sheets": [
     [
       "c2bfc41f-35d2-4280-ad5e-8908cca83be7",
       "chessboard"
-    ],
-    [
-      "d13f836e-d950-4ab7-99e0-064f111ffb6a",
-      "sensor-array"
-    ],
-    [
-      "0c49232c-a23b-4254-a8eb-6f02916ccc25",
-      "shift-registers"
     ]
   ],
   "text_variables": {},
