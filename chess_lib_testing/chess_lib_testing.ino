@@ -13,6 +13,7 @@ typedef struct c_move {
   uint32_t TO;
 } c_move;
 
+// A list of moves with some illegal ones to simulate board input
 struct c_move get_next_move() {
   static uint32_t move_number = 0;
   c_move next_move;
@@ -41,6 +42,8 @@ struct c_move get_next_move() {
     case 7:
       next_move = {49, 41};
       break;
+    default:
+    while(1){}
   }
   move_number++;
   return next_move;
@@ -53,18 +56,20 @@ void wait_next() {
 
 void updateTurn() {
   int team = chess_turn(&chess_game);
+  uint64_t hey = 0;
   digitalWrite(LED_BLACK, team);
   digitalWrite(LED_WHITE, !team);
+  Serial.println(team);
 }
 
 void setup() {
   Serial.begin(9600);
 
-  pinMode(LED_OK, OUTPUT);
-  pinMode(LED_ILLEGAL, OUTPUT);
-  pinMode(LED_WHITE, OUTPUT);
-  pinMode(LED_BLACK, OUTPUT);
-  pinMode(BTN_NEXT, INPUT_PULLUP);
+  // pinMode(LED_OK, OUTPUT);
+  // pinMode(LED_ILLEGAL, OUTPUT);
+  // pinMode(LED_WHITE, OUTPUT);
+  // pinMode(LED_BLACK, OUTPUT);
+  // pinMode(BTN_NEXT, INPUT_PULLUP);
 
   chess_init(&chess_game);
 }
@@ -73,7 +78,7 @@ void loop() {
   updateTurn();
   delay(100);
   Serial.println("turn updated & wait next");
-  wait_next();
+  // wait_next();
 
   // Make the move
   c_move next_move = get_next_move();
@@ -85,11 +90,13 @@ void loop() {
   if (move_result == -2) {
     digitalWrite(LED_OK, LOW);
     digitalWrite(LED_ILLEGAL, HIGH);
+    Serial.println("Illegal Move");
   }
   else {
     digitalWrite(LED_OK, HIGH);
     digitalWrite(LED_ILLEGAL, LOW);
+    Serial.println("Move OK");
   }
 
-  Serial.println("updated status");
+  Serial.println("Updated status");
 }
