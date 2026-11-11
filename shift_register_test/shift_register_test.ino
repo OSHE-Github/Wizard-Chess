@@ -2,6 +2,9 @@
 #define SHIFT_REG_CLOCK 23
 #define SHIFT_REG_INPUT 25
 
+// uint8_t getState(int64_t* serial_data, uint8_t index) {
+//   return (serial_data >> index) & 0x1;
+// }
 
 void setup() {
   Serial.begin(9600);
@@ -22,7 +25,8 @@ void loop() {
 
   uint16_t value = shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST);
   // Serial.println(value);
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 8;
+  // value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 8;
+  value |= 0xFFC0;
   Serial.println(value, BIN);
 
   delay(100);
