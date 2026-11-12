@@ -1,4 +1,6 @@
-CAD files for pieces, chess board, sensor, and sensor board: https://cad.onshape.com/documents/152f1d018ad2492951ff712e/w/12fee917137295870bfb3060/e/c9f503dafb29288906f2b71c?renderMode=0&uiState=6acc4d26fead8fb1662700f9
+CAD Files:
+CAD files for pieces, chessboard, sensor, and sensor board: 
+https://cad.onshape.com/documents/152f1d018ad2492951ff712e/w/12fee917137295870bfb3060/e/c9f503dafb29288906f2b71c?renderMode=0&uiState=6acc4d26fead8fb1662700f9
 
 Files to Print:
 Chessboard Top
