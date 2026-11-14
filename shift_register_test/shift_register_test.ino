@@ -17,11 +17,11 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(SHIFT_REG_SHLD, HIGH);
-  delay(10);
+  delayMicroseconds(10);
   digitalWrite(SHIFT_REG_SHLD, LOW);
-  delay(10);
+  delayMicroseconds(10);
   digitalWrite(SHIFT_REG_SHLD, HIGH);
-  delay(10);
+  delayMicroseconds(10);
 
   uint64_t value = shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST);
   value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 8;
