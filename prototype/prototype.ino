@@ -1,7 +1,8 @@
 
+#include <OLED_I2C.h>
 #include "display.h"
 
-#define PRINT_DEBUG 1 // 1 = on 0 = off
+#define PRINT_DEBUG 0 // 1 = on 0 = off
 
 // Sensor Array 
 #define SHIFT_REG_SHLD 22
@@ -11,8 +12,29 @@
 #define SHIFT_REG_READ_DELAY 1 // microseconds
 
 // Displays
+Display *display;
 
 // Buttons
+#define BTN_LEFT_PIN 12
+#define BTN_SELECT_PIN 
+#define BTN_RIGHT_PIN 14
+#define BTN_WHITE_TIMER_PIN
+#define BTN_BLACK_TIMER_PIN
+
+// Button Masks
+#define BTN_LEFT 0b1
+#define BTN_SELECT 0b10
+#define BTN_RIGHT 0b100
+#define BTN_WHITE_TIMER 0b1000
+#define BTN_BLACK_TIMER 0b10000
+
+volatile uint8_t buttons;
+
+void Btn_Left_ISR();
+void Btn_Select_ISR();
+void Btn_Right_ISR();
+void Btn_White_Timer_ISR();
+void Btn_Black_Timer_ISR();
 
 // Globals
 
@@ -47,6 +69,22 @@ bool update_board()
     Serial.println();
   }
 
+  // Serial.print(buttons, BIN);
+  // Serial.print("    ");
+  // Serial.println(last_read);
+
+  // temp disply test code
+  if ((buttons & BTN_LEFT)) {
+    last_read--;
+    display->set_debug_data(last_read);
+    buttons -= BTN_LEFT;
+  }
+  if ((buttons & BTN_RIGHT)) {
+    last_read++;
+    display->set_debug_data(last_read);
+    buttons -= BTN_RIGHT;
+  }
+
   return false;
 }
 
@@ -60,22 +98,52 @@ void setup()
   pinMode(SHIFT_REG_INPUT, INPUT);
 
   // Displays
-
-  // Buttons
+  Serial.println("Starting Displays");
+  display = new Display();
+  
+  // Buttons & Interupts
+  Serial.println("Setting Interrupts");
+  pinMode(BTN_LEFT_PIN, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(BTN_LEFT_PIN), Btn_Left_ISR, RISING);
+  // pinMode(BTN_SELECT_PIN, INPUT_PULLUP);
+  pinMode(BTN_RIGHT_PIN, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(BTN_RIGHT_PIN), Btn_Right_ISR, RISING);
+  // pinMode(BTN_WHITE_TIMER_PIN, INPUT_PULLUP);
+  // pinMode(BTN_BACK_TIMER_PIN, INPUT_PULLUP);
 
   Serial.println("SETUP COMPLETE");
 }
 
 void loop() 
 {
-  // Read the board
+  // read and update the board
+  update_board();
 
-  // Check if a move was made
-
-  // if so, validate move & report
 
   // update timer values
 
   // update displays
+  display->update();
+}
 
+// ISR
+void Btn_Left_ISR() 
+{
+  buttons |= BTN_LEFT;
+}
+void Btn_Select_ISR()
+{
+  buttons |= BTN_SELECT;
+}
+void Btn_Right_ISR()
+{
+  buttons |= BTN_RIGHT;
+}
+void Btn_White_Timer_ISR()
+{
+  buttons |= BTN_WHITE_TIMER;
+}
+void Btn_Black_Timer_ISR()
+{
+  buttons |= BTN_BLACK_TIMER;
 }
