@@ -11,8 +11,9 @@
 #define BLACK_SCR_2_SDA 25
 #define BLACK_SCR_2_SCL 33
 
-//////// Bitmaps
+extern uint8_t button_states;
 
+//////// Bitmaps
 
 static uint8_t debug_tile[] = {
   0b00000000, 0b01111110,
@@ -134,10 +135,13 @@ void Display::update()
     default:
       Serial.println("INVALID SCREEN STATE");
   }
+
+  // Invalid Moves
+
+  // Refresh Screens
   // Serial.println("Calling Update Functions");
   if (white1 != NULL && refresh) 
     white1->update();
-  // delay(1000);
   if (white2 != NULL && refresh) 
     white2->update();
   if (black1 != NULL && refresh) 

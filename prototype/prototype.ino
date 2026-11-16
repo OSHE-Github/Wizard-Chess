@@ -11,10 +11,10 @@
 
 #define SHIFT_REG_READ_DELAY 1 // microseconds
 
-// Displays
+// Displays (See display.cpp for pin assignments)
 Display *display;
 
-// Buttons
+// Button Pins
 #define BTN_LEFT_PIN 12
 #define BTN_SELECT_PIN 
 #define BTN_RIGHT_PIN 14
@@ -22,13 +22,18 @@ Display *display;
 #define BTN_BLACK_TIMER_PIN
 
 // Button Masks
-#define BTN_LEFT 0b1
-#define BTN_SELECT 0b10
-#define BTN_RIGHT 0b100
-#define BTN_WHITE_TIMER 0b1000
-#define BTN_BLACK_TIMER 0b10000
+#define BTN_LEFT (1 << 0)
+#define BTN_SELECT (1 << 1)
+#define BTN_RIGHT (1 << 2)
+#define BTN_WHITE_TIMER (1 << 3)
+#define BTN_BLACK_TIMER (1 << 4)
 
-volatile uint8_t buttons;
+// Button Interrupts
+volatile uint8_t button_itr;
+uint8_t button_states;
+unsigned long button_debounce_times[7];
+
+#define BTN_DEBOUNCE 200 // milliseconds
 
 void Btn_Left_ISR();
 void Btn_Select_ISR();
@@ -37,6 +42,20 @@ void Btn_White_Timer_ISR();
 void Btn_Black_Timer_ISR();
 
 // Globals
+
+void update_buttons()
+{
+  for (uint8_t i = 0; i < 8; i++) {
+    uint8_t mask = (1 << i);
+    if (button_itr & mask) {
+      if ((millis() - button_debounce_times[i]) > BTN_DEBOUNCE) {
+        button_states |= mask;
+        button_debounce_times[i] = millis();
+      }
+      button_itr -= mask;
+    }
+  }
+}
 
 bool update_board() 
 {
@@ -69,20 +88,22 @@ bool update_board()
     Serial.println();
   }
 
-  // Serial.print(buttons, BIN);
-  // Serial.print("    ");
-  // Serial.println(last_read);
+  Serial.print(button_itr, BIN);
+  Serial.print("    ");
+  Serial.print(button_states, BIN);
+  Serial.print("    ");
+  Serial.println(last_read);
 
   // temp disply test code
-  if ((buttons & BTN_LEFT)) {
+  if ((button_states & BTN_LEFT)) {
     last_read--;
     display->set_debug_data(last_read);
-    buttons -= BTN_LEFT;
+    button_states -= BTN_LEFT;
   }
-  if ((buttons & BTN_RIGHT)) {
+  if ((button_states & BTN_RIGHT)) {
     last_read++;
     display->set_debug_data(last_read);
-    buttons -= BTN_RIGHT;
+    button_states -= BTN_RIGHT;
   }
 
   return false;
@@ -106,44 +127,52 @@ void setup()
   pinMode(BTN_LEFT_PIN, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(BTN_LEFT_PIN), Btn_Left_ISR, RISING);
   // pinMode(BTN_SELECT_PIN, INPUT_PULLUP);
+  // attachInterrupt(digitalPinToInterrupt(BTN_SELECT_PIN), Btn_Select_ISR, RISING);
   pinMode(BTN_RIGHT_PIN, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(BTN_RIGHT_PIN), Btn_Right_ISR, RISING);
   // pinMode(BTN_WHITE_TIMER_PIN, INPUT_PULLUP);
+  // attachInterrupt(digitalPinToInterrupt(BTN_WHITE_TIMER_PIN), Btn_White_Timer_ISR, RISING);
   // pinMode(BTN_BACK_TIMER_PIN, INPUT_PULLUP);
+  // attachInterrupt(digitalPinToInterrupt(BTN_LEFT_PIN), Btn_Black_Timer_ISR, RISING);
+  button_itr = 0;
+  button_states = 0;
+  memset(button_debounce_times, 0, 8*sizeof(unsigned long));
 
   Serial.println("SETUP COMPLETE");
 }
 
 void loop() 
 {
+  // update buttons
+  update_buttons();
   // read and update the board
   update_board();
-
 
   // update timer values
 
   // update displays
   display->update();
+  // delay(1000);
 }
 
 // ISR
 void Btn_Left_ISR() 
 {
-  buttons |= BTN_LEFT;
+  button_itr |= BTN_LEFT;
 }
 void Btn_Select_ISR()
 {
-  buttons |= BTN_SELECT;
+  button_itr |= BTN_SELECT;
 }
 void Btn_Right_ISR()
 {
-  buttons |= BTN_RIGHT;
+  button_itr |= BTN_RIGHT;
 }
 void Btn_White_Timer_ISR()
 {
-  buttons |= BTN_WHITE_TIMER;
+  button_itr |= BTN_WHITE_TIMER;
 }
 void Btn_Black_Timer_ISR()
 {
-  buttons |= BTN_BLACK_TIMER;
+  button_itr |= BTN_BLACK_TIMER;
 }
