@@ -5,9 +5,9 @@
 #define PRINT_DEBUG 0 // 1 = on 0 = off
 
 // Sensor Array 
-#define SHIFT_REG_SHLD 22
-#define SHIFT_REG_CLOCK 23
-#define SHIFT_REG_INPUT 25
+#define SHIFT_REG_SHLD 32
+#define SHIFT_REG_CLOCK 35
+#define SHIFT_REG_INPUT 34
 
 #define SHIFT_REG_READ_DELAY 1 // microseconds
 

@@ -16,17 +16,17 @@ class mOLED : public OLED {
   public:
 		mOLED(uint8_t data_pin, uint8_t sclk_pin, uint8_t rst_pin);
 		mOLED(uint8_t data_pin, uint8_t sclk_pin);
-    void update();
+    void cupdate();  // if this doesnt work right, indicate this overrides the base class update function
     uint8_t* _getScreen();
   private:
 };
 
 class Display {
-private:
-  OLED *white1;// = OLED(WHITE_SCR_1_SDA, WHITE_SCR_1_SCL);
-  OLED *white2;// = OLED(WHITE_SCR_2_SDA, WHITE_SCR_2_SCL);
-  OLED *black1;// = OLED(BLACK_SCR_1_SDA, BLACK_SCR_1_SCL);
-  OLED *black2;// = OLED(BLACK_SCR_2_SDA, BLACK_SCR_2_SCL);
+protected:
+  mOLED *white1;// = OLED(WHITE_SCR_1_SDA, WHITE_SCR_1_SCL);
+  mOLED *white2;// = OLED(WHITE_SCR_2_SDA, WHITE_SCR_2_SCL);
+  mOLED *black1;// = OLED(BLACK_SCR_1_SDA, BLACK_SCR_1_SCL);
+  mOLED *black2;// = OLED(BLACK_SCR_2_SDA, BLACK_SCR_2_SCL);
   Screen screen;
   uint64_t debug_data;
   bool refresh, invaid_move;

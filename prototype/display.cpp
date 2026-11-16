@@ -1,5 +1,8 @@
 #include <OLED_I2C.h>
+#include <Wire.h>
 #include "display.h"
+
+extern uint8_t SmallFont[];
 
 #define WHITE_SCR_1_SDA 18
 #define WHITE_SCR_1_SCL 19
@@ -45,7 +48,25 @@ void Display::timer_display()
 
 void Display::splash_screen()
 {
-
+  static int num = 0;
+  num++;
+  Serial.println("White 1");
+  white1->clrScr();
+  white1->print("White 1", 0, 0);
+  white1->printNumI(num, 20, 20);
+  Serial.println("White 2");
+  white2->clrScr();
+  white2->print("White 2", 0, 0);
+  white2->printNumI(num, 20, 20);
+  Serial.println("Black 1");
+  black1->clrScr();
+  black1->print("Black 1", 0, 0);
+  Serial.println("Black 2");
+  black1->printNumI(num, 20, 20);
+  black2->clrScr();
+  black2->print("Black 2", 0, 0);
+  black2->printNumI(num, 20, 20);
+  refresh=true;
 }
 
 void Display::debug_screen()
@@ -75,47 +96,55 @@ void Display::debug_screen()
 Display::Display()
 {
   Serial.println("Init White 1");
-  white1 = new OLED(WHITE_SCR_1_SDA, WHITE_SCR_1_SCL);
-  // Serial.println("Init White 2");
-  // white2 = new OLED(WHITE_SCR_2_SDA, WHITE_SCR_2_SCL);
-  // Serial.println("Init Black 1");
-  // black1 = new OLED(BLACK_SCR_1_SDA, BLACK_SCR_1_SCL);
-  // Serial.println("Init Black 2");
-  // black2 = new OLED(BLACK_SCR_2_SDA, BLACK_SCR_2_SCL);
+  white1 = new mOLED(WHITE_SCR_1_SDA, WHITE_SCR_1_SCL);
+  Serial.println("Init White 2");
+  white2 = new mOLED(WHITE_SCR_2_SDA, WHITE_SCR_2_SCL);
+  Serial.println("Init Black 1");
+  black1 = new mOLED(BLACK_SCR_1_SDA, BLACK_SCR_1_SCL);
+  Serial.println("Init Black 2");
+  black2 = new mOLED(BLACK_SCR_2_SDA, BLACK_SCR_2_SCL);
 
-  white2 = NULL;
-  black1 = NULL;
-  black2 = NULL;
   if (!white1->begin(SSD1306_128X64))
   {
     Serial.println("Failed to start White 1");
     white1 = NULL;
   }
-  // if (!white2->begin(SSD1306_128X64))
-  // {
-  //   Serial.println("Failed to start White 2");
-  //   white2 = NULL;
-  // }
-  // if (!black1->begin(SSD1306_128X64))
-  // {
-  //   Serial.println("Failed to start Black 1");
-  //   black1 = NULL;
-  // }
-  // if (!black2->begin(SSD1306_128X64))
-  // {
-  //   Serial.println("Failed to start Black 2");
-  //   black2 = NULL;
-  // }
+  Wire.end();
+  // white2 = NULL;
+  // black1 = NULL;
+  // black2 = NULL;
+  if (!white2->begin(SSD1306_128X64))
+  {
+    Serial.println("Failed to start White 2");
+    white2 = NULL;
+  }
+  Wire.end();
+  if (!black1->begin(SSD1306_128X64))
+  {
+    Serial.println("Failed to start Black 1");
+    black1 = NULL;
+  }
+  Wire.end();
+  if (!black2->begin(SSD1306_128X64))
+  {
+    Serial.println("Failed to start Black 2");
+    black2 = NULL;
+  }
+  Wire.end();
   
+  white1->setFont(SmallFont);
+  white2->setFont(SmallFont);
+  black1->setFont(SmallFont);
+  black2->setFont(SmallFont);
 
-  screen = DEBUG;
-  debug_data = 0;
+  screen = SPLASH;
+  debug_data = 65;
   refresh = true;
 }
 
 void Display::update()
 {
-  // Serial.println("Calling Screen Function");
+  Serial.println("Calling Screen Function");
   switch(screen) {
     case TIMER_CONF:
       timer_configuration();
@@ -139,15 +168,27 @@ void Display::update()
   // Invalid Moves
 
   // Refresh Screens
-  // Serial.println("Calling Update Functions");
-  if (white1 != NULL && refresh) 
-    white1->update();
-  if (white2 != NULL && refresh) 
-    white2->update();
-  if (black1 != NULL && refresh) 
-    black1->update();
-  if (black2 != NULL && refresh) 
-    black2->update();
+  Serial.println("Calling Update Functions");
+  if (white1 != NULL && refresh) {
+    Serial.println("Updating white 1");
+    white1->cupdate();
+  }
+  delay(200);
+  if (white2 != NULL && refresh) {
+    Serial.println("Updating white 2");
+    white2->cupdate();
+  }
+  delay(200);
+  if (black1 != NULL && refresh) {
+    Serial.println("Updating black 1");
+    black1->cupdate();
+  }
+  delay(200);
+  if (black2 != NULL && refresh) {
+    Serial.println("Updating black 2");
+    black2->cupdate();
+  }
+  delay(200);
   refresh = false;
 }
 
@@ -155,6 +196,7 @@ void Display::set_screen(Screen scr)
 {
   // TODO: validate
   screen = scr;
+  refresh = true;
 }
 
 void Display::set_invalid_mode(bool set)
@@ -181,11 +223,18 @@ mOLED::mOLED(uint8_t data_pin, uint8_t sclk_pin)
   // calls parent constructor
 }
 
-void mOLED::update() 
+void mOLED::cupdate() 
 {
   // Switch the selected Wire pins to current class
   _initTWI();
-  OLED::update();
+  Serial.print("Reset Wire Interface with args: ");
+  Serial.print(_sda_pin);
+  Serial.print(" ");
+  Serial.print(_scl_pin);
+  Serial.print(" ");
+  Serial.println(TWI_FREQ);
+  update();
+  Wire.end();
 }
 
 uint8_t* mOLED::_getScreen()
