@@ -167,3 +167,29 @@ void Display::set_debug_data(uint64_t data)
   debug_data = data;
   refresh = true;
 }
+
+///////// Custom OLED functions
+
+mOLED::mOLED(uint8_t data_pin, uint8_t sclk_pin, uint8_t rst_pin)
+  : OLED(data_pin, sclk_pin, rst_pin) 
+{
+  // calls parent constructor
+}
+mOLED::mOLED(uint8_t data_pin, uint8_t sclk_pin)
+	: OLED(data_pin, sclk_pin) 
+{
+  // calls parent constructor
+}
+
+void mOLED::update() 
+{
+  // Switch the selected Wire pins to current class
+  _initTWI();
+  OLED::update();
+}
+
+uint8_t* mOLED::_getScreen()
+{
+  // return the ptr to the screen buffer
+  return scrbuf;
+}

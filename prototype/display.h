@@ -11,6 +11,16 @@ enum Screen {
   DEBUG
 };
 
+// Custom OLED class to add support for multiple displays
+class mOLED : public OLED {
+  public:
+		mOLED(uint8_t data_pin, uint8_t sclk_pin, uint8_t rst_pin);
+		mOLED(uint8_t data_pin, uint8_t sclk_pin);
+    void update();
+    uint8_t* _getScreen();
+  private:
+};
+
 class Display {
 private:
   OLED *white1;// = OLED(WHITE_SCR_1_SDA, WHITE_SCR_1_SCL);
