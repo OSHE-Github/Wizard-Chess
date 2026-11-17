@@ -38,8 +38,25 @@ void Display::board_display()
 
 }
 
-void Display::timer_display()
-{
+void Display::timer_display() {
+
+  if (timer = NULL) 
+    return;
+
+  // Get time
+  uint32_t white_time = timer->get_white_time();
+  uint32_t black_time = timer->get_black_time();
+
+  // Convert time to minutes and seconds
+  uint32_t white_minutes = white_time / 60000;
+  uint32_t white_seconds = (white_time % 60000) / 1000;
+
+  uint32_t black_minutes = black_time / 60000;
+  uint32_t black_seconds = (black_time % 60000) / 1000;
+
+  white1->clrScr();
+
+  // putting stuff on screen goes here
 
 }
 
@@ -107,7 +124,7 @@ Display::Display()
   //   black2 = NULL;
   // }
   
-
+  timer = NULL;
   screen = DEBUG;
   debug_data = 0;
   refresh = true;
@@ -155,6 +172,11 @@ void Display::set_screen(Screen scr)
 {
   // TODO: validate
   screen = scr;
+}
+
+void Display::set_timer(Timer *t) {
+  timer = t;
+  refresh = true;
 }
 
 void Display::set_invalid_mode(bool set)

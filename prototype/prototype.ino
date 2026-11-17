@@ -1,6 +1,7 @@
 
 #include <OLED_I2C.h>
 #include "display.h"
+#include "timer.h"
 
 #define PRINT_DEBUG 0 // 1 = on 0 = off
 
