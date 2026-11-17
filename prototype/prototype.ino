@@ -2,7 +2,7 @@
 #include <OLED_I2C.h>
 #include "display.h"
 
-#define PRINT_DEBUG 0 // 1 = on 0 = off
+#define PRINT_DEBUG 1 // 1 = on 0 = off
 
 // Sensor Array 
 #define SHIFT_REG_SHLD 32
@@ -88,23 +88,7 @@ bool update_board()
     Serial.println();
   }
 
-  Serial.print(button_itr, BIN);
-  Serial.print("    ");
-  Serial.print(button_states, BIN);
-  Serial.print("    ");
-  Serial.println(last_read);
-
-  // temp disply test code
-  if ((button_states & BTN_LEFT)) {
-    last_read--;
-    display->set_debug_data(last_read);
-    button_states -= BTN_LEFT;
-  }
-  if ((button_states & BTN_RIGHT)) {
-    last_read++;
-    display->set_debug_data(last_read);
-    button_states -= BTN_RIGHT;
-  }
+  display->set_debug_data(value);
 
   return false;
 }
