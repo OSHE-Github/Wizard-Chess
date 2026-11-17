@@ -12,6 +12,7 @@
 #define BLACK_SCR_2_SCL 33
 
 extern uint8_t button_states;
+extern uint8_t BigFont[];
 
 //////// Bitmaps
 
@@ -38,25 +39,87 @@ void Display::board_display()
 
 }
 
-void Display::timer_display() {
+void Display::timer_display()
+{
+    if (timer == NULL)
+        return;
 
-  if (timer = NULL) 
-    return;
+    // if (white1 == NULL || black1 == NULL)
+    //     return;
+    
+    static uint32_t last_screen_update = 0;
+    if (millis() - last_screen_update < 250) return;
+    
+    last_screen_update = millis();
+    refresh = true;
 
-  // Get time
-  uint32_t white_time = timer->get_white_time();
-  uint32_t black_time = timer->get_black_time();
+    uint32_t white_time = timer->get_white_time();
+    uint32_t black_time = timer->get_black_time();
 
-  // Convert time to minutes and seconds
-  uint32_t white_minutes = white_time / 60000;
-  uint32_t white_seconds = (white_time % 60000) / 1000;
+    uint32_t white_total_seconds = (white_time + 999) / 1000;
+    uint32_t black_total_seconds = (black_time + 999) / 1000;
 
-  uint32_t black_minutes = black_time / 60000;
-  uint32_t black_seconds = (black_time % 60000) / 1000;
+    uint32_t white_minutes = white_total_seconds / 60;
+    uint32_t white_seconds = white_total_seconds % 60;
 
-  white1->clrScr();
+    uint32_t black_minutes = black_total_seconds / 60;
+    uint32_t black_seconds = black_total_seconds % 60;
 
-  // putting stuff on screen goes here
+    white1->clrScr();
+
+    // White clock (top)
+    white1->print("W:", 0, 0);
+    white1->printNumI(white_minutes, 32, 0);
+    white1->print(":", 56, 0);
+
+    if (white_seconds < 10) {
+      white1->printNumI(0, 72, 0);
+      white1->printNumI(white_seconds, 88, 0);
+    } else {
+      white1->printNumI(white_seconds, 72, 0);
+    }
+
+    // Black clock (bottom)
+    white1->print("B:", 0, 32);
+    white1->printNumI(black_minutes, 32, 32);
+    white1->print(":", 56, 32);
+
+    if (black_seconds < 10) {
+      white1->printNumI(0, 72, 32);
+      white1->printNumI(black_seconds, 88, 32);
+    } else {
+      white1->printNumI(black_seconds, 72, 32);
+    }
+
+    // Indicate active player
+  
+    if (timer->is_white_turn())
+        white1->invert(true);
+    else
+        white1->invert(false);
+    
+    // // White clock
+    // white1->clrScr();
+    // white1->printNumI(white_minutes, 24, 0);
+    // white1->print(":", 56, 0);
+
+    // if (white_seconds < 10) {
+    //   white1->printNumI(0, 72, 0);
+    //   white1->printNumI(white_seconds, 88, 0);
+    // } else {
+    //   white1->printNumI(white_seconds, 72, 0);
+    // }
+    // // Black clock
+    // black1->clrScr();
+    // black1->printNumI(black_minutes, 24, 0);
+    // black1->print(":", 56, 0);
+
+    // if (black_seconds < 10) {
+    //   black1->printNumI(0, 72, 0);
+    //   black1->printNumI(black_seconds, 88, 0);
+    // } else {
+    //   black1->printNumI(black_seconds, 72, 0)
+    // }
 
 }
 
@@ -77,7 +140,12 @@ void Display::debug_screen()
       y = i / 8;
       x = i % 8;
       if (((data) & 1)) {
-        white1->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+        // white1->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+        white1->printNumI(10, 24, 0);
+        white1->print(":", 56, 0);
+        white1->printNumI(50, 72, 0);
+        white1->invert(true);
+        // white1->print(":")
         // white1->drawRect(x*16, y*8, x*16 + 16, y*8 + 8);
       }
       data = data >> 1;
@@ -108,6 +176,7 @@ Display::Display()
     Serial.println("Failed to start White 1");
     white1 = NULL;
   }
+  white1->setFont(BigFont);
   // if (!white2->begin(SSD1306_128X64))
   // {
   //   Serial.println("Failed to start White 2");
@@ -126,7 +195,7 @@ Display::Display()
   
   timer = NULL;
   screen = DEBUG;
-  debug_data = 0;
+  debug_data = 1;
   refresh = true;
 }
 
@@ -172,6 +241,7 @@ void Display::set_screen(Screen scr)
 {
   // TODO: validate
   screen = scr;
+  refresh = true;
 }
 
 void Display::set_timer(Timer *t) {

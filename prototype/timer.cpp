@@ -16,7 +16,10 @@ Timer::Timer(uint32_t start_time_min) {
 }
 
 void Timer::start() {
-  // Get new time and start clock
+  // Prevent restarting game before reset
+  if (white_time == 0 || black_time == 0) return;
+
+  // Start clock
   last_update = millis();
   running = true;
 }
@@ -90,4 +93,8 @@ bool Timer::is_running() {
 
 bool Timer::is_white_turn() {
   return white_turn;
+}
+
+bool Timer::is_game_over() {
+  return (white_time == 0 || black_time == 0);
 }

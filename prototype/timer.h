@@ -37,6 +37,7 @@ class Timer {
   uint32_t get_black_time();
   bool is_running();
   bool is_white_turn();
+  bool is_game_over();
 
 };
 
