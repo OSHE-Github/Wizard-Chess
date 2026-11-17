@@ -84,6 +84,9 @@ void Display::debug_screen()
         white1->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
         // white1->drawRect(x*16, y*8, x*16 + 16, y*8 + 8);
       }
+      else {
+        white1->printNumI(i, x*16, y*8);
+      }
       data = data >> 1;
     }
     Serial.println(debug_data, BIN);
@@ -137,8 +140,8 @@ Display::Display()
   black1->setFont(SmallFont);
   black2->setFont(SmallFont);
 
-  screen = SPLASH;
-  debug_data = 65;
+  screen = DEBUG;
+  debug_data = 0;
   refresh = true;
 }
 
@@ -171,24 +174,24 @@ void Display::update()
   Serial.println("Calling Update Functions");
   if (white1 != NULL && refresh) {
     Serial.println("Updating white 1");
-    white1->cupdate();
+    white1->update();
   }
-  delay(200);
+  // delay(200);
   if (white2 != NULL && refresh) {
     Serial.println("Updating white 2");
-    white2->cupdate();
+    white2->update();
   }
-  delay(200);
+  // delay(200);
   if (black1 != NULL && refresh) {
     Serial.println("Updating black 1");
-    black1->cupdate();
+    black1->update();
   }
-  delay(200);
+  // delay(200);
   if (black2 != NULL && refresh) {
     Serial.println("Updating black 2");
-    black2->cupdate();
+    black2->update();
   }
-  delay(200);
+  // delay(200);
   refresh = false;
 }
 
@@ -223,7 +226,7 @@ mOLED::mOLED(uint8_t data_pin, uint8_t sclk_pin)
   // calls parent constructor
 }
 
-void mOLED::cupdate() 
+void mOLED::update() 
 {
   // Switch the selected Wire pins to current class
   _initTWI();
@@ -233,7 +236,7 @@ void mOLED::cupdate()
   Serial.print(_scl_pin);
   Serial.print(" ");
   Serial.println(TWI_FREQ);
-  update();
+  OLED::update();
   Wire.end();
 }
 
