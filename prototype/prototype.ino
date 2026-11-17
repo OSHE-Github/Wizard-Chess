@@ -1,8 +1,11 @@
 
 #include <OLED_I2C.h>
 #include "display.h"
+#include "timer.h"
 
 #define PRINT_DEBUG 1 // 1 = on 0 = off
+#define TIMER_TEST 1
+
 
 // Sensor Array 
 #define SHIFT_REG_SHLD 32
@@ -13,6 +16,7 @@
 
 // Displays (See display.cpp for pin assignments)
 Display *display;
+Timer *timer;
 
 // Button Pins
 #define BTN_LEFT_PIN 12
@@ -96,6 +100,7 @@ bool update_board()
 void setup() 
 {
   Serial.begin(115200);
+  
 
   // Sensor Array
   pinMode(SHIFT_REG_CLOCK, OUTPUT);
@@ -105,6 +110,20 @@ void setup()
   // Displays
   Serial.println("Starting Displays");
   display = new Display();
+
+  // Timer
+  Serial.println("Initializing timer");
+  timer = new Timer();
+  // Pass timer to display
+  display->set_timer(timer);
+
+  #if TIMER_TEST
+    // 1 minute test clock
+    timer->reset(1);
+    timer->start();
+
+    display->set_screen(TIMER_DISPLAY);
+  #endif
   
   // Buttons & Interupts
   Serial.println("Setting Interrupts");
@@ -133,6 +152,22 @@ void loop()
   update_board();
 
   // update timer values
+  timer->update();
+
+  
+  
+
+  #if TIMER_TEST
+    static uint32_t test_start = millis();
+
+    if (millis() - test_start >= 10000) {
+        timer->swapTurn();
+        test_start += 10000;
+
+        Serial.println("Switched timer");
+    }
+  #endif 
+
 
   // update displays
   display->update();
