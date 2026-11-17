@@ -9,3 +9,4 @@ First navigate to the project materials and building section. This will show the
 
 # Note:
 This project references another open source chess project OpenChess. Feel free to go check it out: https://github.com/joojoooo/OpenChess
+Along with that we also reference the OLED Library http://rinkydinkelectronics.com/library.php?id=79 , and the Chess Library https://github.com/codewitch-honey-crisis/htcw_chess
