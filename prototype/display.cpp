@@ -68,6 +68,8 @@ void Display::timer_display()
     uint32_t black_minutes = black_total_seconds / 60;
     uint32_t black_seconds = black_total_seconds % 60;
 
+    white1->setFont(BigFont); 
+
     white1->clrScr();
 
     // White clock (top)
@@ -152,6 +154,10 @@ void Display::splash_screen()
 void Display::debug_screen()
 {
   if (refresh == true) {
+    white1->setFont(SmallFont);
+    white2->setFont(SmallFont);
+    black1->setFont(SmallFont);
+    black2->setFont(SmallFont);  
     int x = 0;
     int y = 0;
     int bit = 0;
@@ -220,12 +226,6 @@ Display::Display()
   }
   Wire.end();
   
-  white1->setFont(SmallFont);
-  white2->setFont(SmallFont);
-  black1->setFont(SmallFont);
-  black2->setFont(SmallFont);  
-  
-  white1->setFont(BigFont);
   timer = NULL;
 
 
