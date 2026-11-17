@@ -4,12 +4,12 @@
 #include "timer.h"
 
 #define PRINT_DEBUG 1 // 1 = on 0 = off
-#define TIMER_TEST 1
+#define TIMER_TEST 0
 
 
 // Sensor Array 
-#define SHIFT_REG_SHLD 32
-#define SHIFT_REG_CLOCK 35
+#define SHIFT_REG_SHLD 12
+#define SHIFT_REG_CLOCK 14
 #define SHIFT_REG_INPUT 34
 
 #define SHIFT_REG_READ_DELAY 1 // microseconds
@@ -19,9 +19,9 @@ Display *display;
 Timer *timer;
 
 // Button Pins
-#define BTN_LEFT_PIN 12
+#define BTN_LEFT_PIN 
 #define BTN_SELECT_PIN 
-#define BTN_RIGHT_PIN 14
+#define BTN_RIGHT_PIN 
 #define BTN_WHITE_TIMER_PIN
 #define BTN_BLACK_TIMER_PIN
 
@@ -61,6 +61,13 @@ void update_buttons()
   }
 }
 
+unsigned char reverse(unsigned char b) {
+   b = (b & 0xF0) >> 4 | (b & 0x0F) << 4;
+   b = (b & 0xCC) >> 2 | (b & 0x33) << 2;
+   b = (b & 0xAA) >> 1 | (b & 0x55) << 1;
+   return b;
+}
+
 bool update_board() 
 {
   uint64_t current_read = 0;
@@ -77,22 +84,30 @@ bool update_board()
   digitalWrite(SHIFT_REG_SHLD, HIGH);
   delayMicroseconds(SHIFT_REG_READ_DELAY);
 
-  uint64_t value = shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST);
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 8;
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 16;
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 24;
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 32;
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 40;
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 48;
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 56;
+  uint32_t value = 0;
+  uint32_t value2 = 0;
+  uint8_t bitorder = LSBFIRST;
+  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
+  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
+  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
+  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
+  value2 |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
+  value2 |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
+  value2 |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
+  value2 |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
+   
+  value |= (value2 << 32);
   if (PRINT_DEBUG) {
-    for (int i = 0; i < 8; i++) {
-      Serial.print((uint8_t)(value >> (8*i)), BIN);
-    }
-    Serial.println();
+    // for (int i = 0; i < 8; i++) {
+    //   Serial.print((uint8_t)(value >> (8*i)), BIN);
+    // }
+    // Serial.println();
+    Serial.print(value, BIN);
+    Serial.print(" ");
+    Serial.println(value2, BIN);
   }
 
-  display->set_debug_data(value);
+  display->set_debug_data(value, value2);
 
   return false;
 }
@@ -127,12 +142,12 @@ void setup()
   
   // Buttons & Interupts
   Serial.println("Setting Interrupts");
-  pinMode(BTN_LEFT_PIN, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(BTN_LEFT_PIN), Btn_Left_ISR, RISING);
+  // pinMode(BTN_LEFT_PIN, INPUT_PULLUP);
+  // attachInterrupt(digitalPinToInterrupt(BTN_LEFT_PIN), Btn_Left_ISR, RISING);
   // pinMode(BTN_SELECT_PIN, INPUT_PULLUP);
   // attachInterrupt(digitalPinToInterrupt(BTN_SELECT_PIN), Btn_Select_ISR, RISING);
-  pinMode(BTN_RIGHT_PIN, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(BTN_RIGHT_PIN), Btn_Right_ISR, RISING);
+  // pinMode(BTN_RIGHT_PIN, INPUT_PULLUP);
+  // attachInterrupt(digitalPinToInterrupt(BTN_RIGHT_PIN), Btn_Right_ISR, RISING);
   // pinMode(BTN_WHITE_TIMER_PIN, INPUT_PULLUP);
   // attachInterrupt(digitalPinToInterrupt(BTN_WHITE_TIMER_PIN), Btn_White_Timer_ISR, RISING);
   // pinMode(BTN_BACK_TIMER_PIN, INPUT_PULLUP);

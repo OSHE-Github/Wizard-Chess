@@ -130,6 +130,10 @@ void Display::timer_display()
 
 void Display::splash_screen()
 {
+  white1->setFont(SmallFont);
+  white2->setFont(SmallFont);
+  black1->setFont(SmallFont);
+  black2->setFont(SmallFont);  
   static int num = 0;
   num++;
   Serial.println("White 1");
@@ -162,26 +166,29 @@ void Display::debug_screen()
     int y = 0;
     int bit = 0;
     white1->clrScr();
-    uint64_t data = debug_data;
+    uint64_t data = debug_data[0];
     for (int i = 0; i < 64; i++) {
-      y = i / 8;
-      x = i % 8;
+      if (i == 32) {
+        data = debug_data[1];
+      }
+      y = ((63 - i) / 8);
+      x = 7 - ((63 - i) % 8);
       if (((data) & 1)) {
-        // white1->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
-        white1->printNumI(10, 24, 0);
-        white1->print(":", 56, 0);
-        white1->printNumI(50, 72, 0);
-        white1->invert(true);
+        white1->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+        // white1->printNumI(10, 24, 0);
+        // white1->print(":", 56, 0);
+        // white1->printNumI(50, 72, 0);
+        // white1->invert(true);
         // white1->print(":")
         // white1->drawRect(x*16, y*8, x*16 + 16, y*8 + 8);
       }
       else {
-        white1->printNumI(i, x*16, y*8);
+        white1->printNumI((63 - i), x*16, y*8);
       }
       data = data >> 1;
     }
-    Serial.println(debug_data, BIN);
-    Serial.println(0xFFFFFFFFFFFFFFFE, BIN);
+    // Serial.println(debug_data, BIN);
+    // Serial.println(0xFFFFFFFFFFFFFFFE, BIN);
   }
 }
 
@@ -227,11 +234,13 @@ Display::Display()
   Wire.end();
   
   timer = NULL;
-
+  chess_game = NULL;
 
   screen = DEBUG;
-  debug_data = 1;
+  debug_data[0] = 0;
+  debug_data[1] = 0;
   refresh = true;
+  Serial.println("Displays Started");
 }
 
 void Display::update()
@@ -262,22 +271,22 @@ void Display::update()
   // Refresh Screens
   Serial.println("Calling Update Functions");
   if (white1 != NULL && refresh) {
-    Serial.println("Updating white 1");
+    // Serial.println("Updating white 1");
     white1->update();
   }
   // delay(200);
   if (white2 != NULL && refresh) {
-    Serial.println("Updating white 2");
+    // Serial.println("Updating white 2");
     white2->update();
   }
   // delay(200);
   if (black1 != NULL && refresh) {
-    Serial.println("Updating black 1");
+    // Serial.println("Updating black 1");
     black1->update();
   }
   // delay(200);
   if (black2 != NULL && refresh) {
-    Serial.println("Updating black 2");
+    // Serial.println("Updating black 2");
     black2->update();
   }
   // delay(200);
@@ -301,9 +310,10 @@ void Display::set_invalid_mode(bool set)
   invaid_move = set;
 }
 
-void Display::set_debug_data(uint64_t data)
+void Display::set_debug_data(uint32_t dataLow, uint32_t dataHigh)
 {
-  debug_data = data;
+  debug_data[0] = dataLow;
+  debug_data[1] = dataHigh;
   refresh = true;
 }
 
@@ -323,13 +333,14 @@ mOLED::mOLED(uint8_t data_pin, uint8_t sclk_pin)
 void mOLED::update() 
 {
   // Switch the selected Wire pins to current class
+  Wire.end();
   _initTWI();
-  Serial.print("Reset Wire Interface with args: ");
-  Serial.print(_sda_pin);
-  Serial.print(" ");
-  Serial.print(_scl_pin);
-  Serial.print(" ");
-  Serial.println(TWI_FREQ);
+  // Serial.print("Reset Wire Interface with args: ");
+  // Serial.print(_sda_pin);
+  // Serial.print(" ");
+  // Serial.print(_scl_pin);
+  // Serial.print(" ");
+  // Serial.println(TWI_FREQ);
   OLED::update();
   Wire.end();
 }

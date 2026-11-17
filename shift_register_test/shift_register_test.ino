@@ -1,6 +1,6 @@
 
-#define SHIFT_REG_SHLD 32
-#define SHIFT_REG_CLOCK 35
+#define SHIFT_REG_SHLD 12
+#define SHIFT_REG_CLOCK 14
 #define SHIFT_REG_INPUT 34
 
 // uint8_t getState(int64_t* serial_data, uint8_t index) {
@@ -8,12 +8,12 @@
 // }
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   pinMode(SHIFT_REG_CLOCK, OUTPUT);
   pinMode(SHIFT_REG_SHLD, OUTPUT);
   pinMode(SHIFT_REG_INPUT, INPUT);
-  digitalWrite(SHIFT_REG_SHLD, HIGH);
-  digitalWrite(SHIFT_REG_CLOCK, LOW);
+  // digitalWrite(SHIFT_REG_SHLD, HIGH);
+  // digitalWrite(SHIFT_REG_CLOCK, LOW);
   Serial.println("SETUP COMPLETE");
 }
 
@@ -25,6 +25,48 @@ void loop() {
   delayMicroseconds(10000);
   digitalWrite(SHIFT_REG_SHLD, HIGH);
   delayMicroseconds(10000);
+
+
+  // digitalWrite(SHIFT_REG_CLOCK, HIGH);
+  // Serial.println(digitalRead(SHIFT_REG_INPUT), BIN);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, LOW);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, HIGH);
+  // Serial.println(digitalRead(SHIFT_REG_INPUT), BIN);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, LOW);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, HIGH);
+  // Serial.println(digitalRead(SHIFT_REG_INPUT), BIN);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, LOW);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, HIGH);
+  // Serial.println(digitalRead(SHIFT_REG_INPUT), BIN);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, LOW);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, HIGH);
+  // Serial.println(digitalRead(SHIFT_REG_INPUT), BIN);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, LOW);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, HIGH);
+  // Serial.println(digitalRead(SHIFT_REG_INPUT), BIN);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, LOW);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, HIGH);
+  // Serial.println(digitalRead(SHIFT_REG_INPUT), BIN);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, LOW);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, HIGH);
+  // Serial.println(digitalRead(SHIFT_REG_INPUT), BIN);
+  // delayMicroseconds(10000);
+  // digitalWrite(SHIFT_REG_CLOCK, LOW);
+
 
   uint32_t value = shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST);
   // value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, MSBFIRST) << 8;

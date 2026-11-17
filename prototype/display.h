@@ -3,6 +3,7 @@
 
 #include <OLED_I2C.h>
 #include "timer.h"
+#include "chess.h"
 
 enum Screen {
   TIMER_CONF,
@@ -30,7 +31,8 @@ protected:
   mOLED *black2;// = OLED(BLACK_SCR_2_SDA, BLACK_SCR_2_SCL);
   Screen screen;
   Timer *timer;
-  uint64_t debug_data;
+  chess_game_t *chess_game;
+  uint64_t debug_data[2];
   bool refresh, invaid_move;
 
 
@@ -46,7 +48,8 @@ public:
   void set_screen(Screen);
   void set_timer(Timer *t);
   void set_invalid_mode(bool);
-  void set_debug_data(uint64_t);
+  void set_debug_data(uint32_t, uint32_t);
+  void set_chess_board();
 };
 
 #endif
