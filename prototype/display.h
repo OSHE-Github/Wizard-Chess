@@ -49,7 +49,7 @@ public:
   void set_timer(Timer *t);
   void set_invalid_mode(bool);
   void set_debug_data(uint32_t, uint32_t);
-  void set_chess_board();
+  void set_chess_board(chess_game_t*);
 };
 
 #endif

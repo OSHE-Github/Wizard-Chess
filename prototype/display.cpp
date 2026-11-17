@@ -175,12 +175,6 @@ void Display::debug_screen()
       x = 7 - ((63 - i) % 8);
       if (((data) & 1)) {
         white1->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
-        // white1->printNumI(10, 24, 0);
-        // white1->print(":", 56, 0);
-        // white1->printNumI(50, 72, 0);
-        // white1->invert(true);
-        // white1->print(":")
-        // white1->drawRect(x*16, y*8, x*16 + 16, y*8 + 8);
       }
       else {
         white1->printNumI((63 - i), x*16, y*8);
@@ -189,6 +183,65 @@ void Display::debug_screen()
     }
     // Serial.println(debug_data, BIN);
     // Serial.println(0xFFFFFFFFFFFFFFFE, BIN);
+    if (chess_game != NULL) {
+      for (int i = 0; i < 64; i++) {
+        chess_id_t current = chess_game->board[i];
+        int y = ((i) / 8);
+        int x = 7 - ((i) % 8);
+        switch (CHESS_TEAM(current)) {
+          case CHESS_WHITE:
+            switch (CHESS_TYPE(current)) {
+              case CHESS_PAWN:
+                white2->print("wp", x*16, y*8);
+                break;
+              case CHESS_BISHOP:
+                white2->print("wB", x*16, y*8);
+                break;
+              case CHESS_ROOK:
+                white2->print("wR", x*16, y*8);
+                break;
+              case CHESS_KNIGHT:
+                white2->print("wH", x*16, y*8);
+                break;
+              case CHESS_QUEEN:
+                white2->print("WQ", x*16, y*8);
+                break;
+              case CHESS_KING:
+                white2->print("WK", x*16, y*8);
+                break;
+              default:
+                white2->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+            }
+          break;
+          case CHESS_BLACK:
+            switch (CHESS_TYPE(current)) {
+              case CHESS_PAWN:
+                white2->print("bp", x*16, y*8);
+                break;
+              case CHESS_BISHOP:
+                white2->print("bB", x*16, y*8);
+                break;
+              case CHESS_ROOK:
+                white2->print("bR", x*16, y*8);
+                break;
+              case CHESS_KNIGHT:
+                white2->print("bH", x*16, y*8);
+                break;
+              case CHESS_QUEEN:
+                white2->print("BQ", x*16, y*8);
+                break;
+              case CHESS_KING:
+                white2->print("BK", x*16, y*8);
+                break;
+              default:
+                white2->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+            }
+          break;
+          default:
+            white2->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+        }
+      }
+    }
   }
 }
 
@@ -303,6 +356,10 @@ void Display::set_screen(Screen scr)
 void Display::set_timer(Timer *t) {
   timer = t;
   refresh = true;
+}
+
+void Display::set_chess_board(chess_game_t *game) {
+  chess_game = game;
 }
 
 void Display::set_invalid_mode(bool set)

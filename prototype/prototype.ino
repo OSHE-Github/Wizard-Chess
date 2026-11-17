@@ -3,7 +3,7 @@
 #include "display.h"
 #include "timer.h"
 
-#define PRINT_DEBUG 1 // 1 = on 0 = off
+#define PRINT_DEBUG 0 // 1 = on 0 = off
 #define TIMER_TEST 0
 
 
@@ -17,6 +17,7 @@
 // Displays (See display.cpp for pin assignments)
 Display *display;
 Timer *timer;
+chess_game_t chess_game;
 
 // Button Pins
 #define BTN_LEFT_PIN 
@@ -84,30 +85,29 @@ bool update_board()
   digitalWrite(SHIFT_REG_SHLD, HIGH);
   delayMicroseconds(SHIFT_REG_READ_DELAY);
 
-  uint32_t value = 0;
-  uint32_t value2 = 0;
+  uint32_t new_read_low = 0;
+  uint32_t new_read_high = 0;
   uint8_t bitorder = LSBFIRST;
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
-  value |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
-  value2 |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
-  value2 |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
-  value2 |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
-  value2 |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
-   
-  value |= (value2 << 32);
+  new_read_low |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
+  new_read_low |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
+  new_read_low |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
+  new_read_low |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
+  new_read_high |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
+  new_read_high |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
+  new_read_high |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
+  new_read_high |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
+
   if (PRINT_DEBUG) {
     // for (int i = 0; i < 8; i++) {
     //   Serial.print((uint8_t)(value >> (8*i)), BIN);
     // }
     // Serial.println();
-    Serial.print(value, BIN);
+    Serial.print(new_read_low, BIN);
     Serial.print(" ");
-    Serial.println(value2, BIN);
+    Serial.println(new_read_high, BIN);
   }
 
-  display->set_debug_data(value, value2);
+  display->set_debug_data(new_read_low, new_read_high);
 
   return false;
 }
@@ -139,6 +139,10 @@ void setup()
 
     display->set_screen(TIMER_DISPLAY);
   #endif
+
+  // Chess Engine
+  chess_init(&chess_game);
+  display->set_chess_board(&chess_game);
   
   // Buttons & Interupts
   Serial.println("Setting Interrupts");
