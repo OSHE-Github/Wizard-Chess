@@ -41,6 +41,7 @@ protected:
   void timer_display();
   void splash_screen();
   void debug_screen();
+  void draw_invalid();
 
 public:
   Display();

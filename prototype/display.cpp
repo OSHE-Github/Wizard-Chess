@@ -320,6 +320,7 @@ void Display::update()
   }
 
   // Invalid Moves
+  draw_invalid();
 
   // Refresh Screens
   Serial.println("Calling Update Functions");
