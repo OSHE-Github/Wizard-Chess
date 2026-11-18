@@ -1,6 +1,8 @@
 #include <OLED_I2C.h>
 #include <Wire.h>
+#include <cstdio>
 #include "display.h"
+
 
 extern uint8_t SmallFont[];
 
@@ -13,6 +15,8 @@ extern uint8_t SmallFont[];
 #define BLACK_SCR_1_SCL 26
 #define BLACK_SCR_2_SDA 25
 #define BLACK_SCR_2_SCL 33
+
+
 
 extern uint8_t button_states;
 extern uint8_t BigFont[];
@@ -41,11 +45,12 @@ void Display::timer_configuration() {
     BULLET,
     FIFTEEN_TEN,
     THREE_TWO,
-    SET
+    SET,
+    START
   };
 
-  uint32_t set_time = 0;
-  uint32_t set_increment = 0;
+  static uint32_t set_time = 0;
+  static uint32_t set_increment = 0;
 
   static configPhase phase = FIRST;
   // Set rapid as default config 
@@ -175,8 +180,25 @@ void Display::timer_configuration() {
       timer->reset(set_time, set_increment);
       timer->set_configured();
 
-      screen = TIMER_DISPLAY;
+      white1->clrScr();
+      white1->setFont(BigFont);
+      white1->print("READY?", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("Select To Start", CENTER, 24);
+      white1->print("<-          ", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = FIRST;
+      else if (button_states & (1 << 1)){ 
+        phase = START;
+      } 
+
       break;
+      case START:
+        // start timer 
+        timer->start();
+        phase = FIRST;
+        screen = TIMER_DISPLAY;
     default:
       break;
   }
@@ -193,7 +215,7 @@ void Display::board_display()
 
 void Display::timer_display()
 {
-    Serial.println("HELLO");
+    
     if (timer == NULL)
         return;
 
@@ -201,7 +223,10 @@ void Display::timer_display()
     //     return;
     
     static uint32_t last_screen_update = 0;
-    if (millis() - last_screen_update < 250) return;
+    if (millis() - last_screen_update < 250) {
+      return;
+    }
+
     
     last_screen_update = millis();
     refresh = true;
@@ -218,33 +243,20 @@ void Display::timer_display()
     uint32_t black_minutes = black_total_seconds / 60;
     uint32_t black_seconds = black_total_seconds % 60;
 
-    white1->setFont(BigFont); 
+    char white_buffer[6];
+    char black_buffer[6];
+    std::sprintf(white_buffer, "%d:%02d", white_minutes, white_seconds);
+    std::sprintf(black_buffer, "%d:%02d", black_minutes, black_seconds);
 
+    white1->setFont(BigFont);
+    black1->setFont(BigFont); 
     white1->clrScr();
+    black1->clrScr();
 
     // White clock (top)
-    white1->print("W:", 0, 0);
-    white1->printNumI(white_minutes, 32, 0);
-    white1->print(":", 56, 0);
+    white1->print(white_buffer, CENTER, 4);
+    black1->print(black_buffer, CENTER, 4);
 
-    if (white_seconds < 10) {
-      white1->printNumI(0, 72, 0);
-      white1->printNumI(white_seconds, 88, 0);
-    } else {
-      white1->printNumI(white_seconds, 72, 0);
-    }
-
-    // Black clock (bottom)
-    white1->print("B:", 0, 32);
-    white1->printNumI(black_minutes, 32, 32);
-    white1->print(":", 56, 32);
-
-    if (black_seconds < 10) {
-      white1->printNumI(0, 72, 32);
-      white1->printNumI(black_seconds, 88, 32);
-    } else {
-      white1->printNumI(black_seconds, 72, 32);
-    }
 
     // Indicate active player
   
@@ -252,29 +264,6 @@ void Display::timer_display()
         white1->invert(true);
     else
         white1->invert(false);
-    
-    // // White clock
-    // white1->clrScr();
-    // white1->printNumI(white_minutes, 24, 0);
-    // white1->print(":", 56, 0);
-
-    // if (white_seconds < 10) {
-    //   white1->printNumI(0, 72, 0);
-    //   white1->printNumI(white_seconds, 88, 0);
-    // } else {
-    //   white1->printNumI(white_seconds, 72, 0);
-    // }
-    // // Black clock
-    // black1->clrScr();
-    // black1->printNumI(black_minutes, 24, 0);
-    // black1->print(":", 56, 0);
-
-    // if (black_seconds < 10) {
-    //   black1->printNumI(0, 72, 0);
-    //   black1->printNumI(black_seconds, 88, 0);
-    // } else {
-    //   black1->printNumI(black_seconds, 72, 0)
-    // }
 
 }
 
@@ -549,6 +538,13 @@ void mOLED::update()
   // Serial.print(_scl_pin);
   // Serial.print(" ");
   // Serial.println(TWI_FREQ);
+  OLED::update();
+  Wire.end();
+}
+
+void mOLED::invert(bool mode) {
+  Wire.end();
+  _initTWI();
   OLED::update();
   Wire.end();
 }

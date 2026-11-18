@@ -19,6 +19,7 @@ class mOLED : public OLED {
 		mOLED(uint8_t data_pin, uint8_t sclk_pin, uint8_t rst_pin);
 		mOLED(uint8_t data_pin, uint8_t sclk_pin);
     void update();  // if this doesnt work right, indicate this overrides the base class update function
+    void invert(bool mode);
     uint8_t* _getScreen();
   private:
 };

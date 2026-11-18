@@ -4,7 +4,7 @@
 #include "timer.h"
 
 #define PRINT_DEBUG 0 // 1 = on 0 = off
-#define TIMER_TEST 0
+#define TIMER_TEST 1
 
 
 // Sensor Array 
@@ -170,24 +170,12 @@ void loop()
   
 
   #if TIMER_TEST
-    static uint32_t test_start = millis();
-    static uint32_t go_next = 0;
-    if (millis() - test_start >= 5000) {
-      uint8_t randomButton = rand() % 3;
-      if (!go_next) {
-        button_states |= (1 << 1);
-        go_next = 1;
-      } else {
-        
-        button_states |= (1 << randomButton);
-      }
-      test_start += 5000;
-
-      
-      Serial.print("Button ");
-      Serial.print(randomButton);
-      Serial.println(" Pressed");
+    bool white = timer->is_white_turn();
+    if (((button_states & BTN_WHITE_TIMER) && white) || (!white && (button_states & BTN_BLACK_TIMER))) {
+      timer->swapTurn();
+      button_states = 0;
     }
+    
   #endif 
 
 
