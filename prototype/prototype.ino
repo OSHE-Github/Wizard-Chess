@@ -218,8 +218,7 @@ bool update_board()
         }
         to = changed_index;
         state = MOVE_MADE;
-        button_states -= BTN_WHITE_TIMER;
-        button_states -= BTN_BLACK_TIMER;
+        button_states = 0;
        }
     break;
     case MOVE_MADE:

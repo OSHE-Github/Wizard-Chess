@@ -290,13 +290,15 @@ void Display::board_display()
   white2->clrScr();
   white2->setFont(SmallFont);
   if (chess_game != NULL) {
-    uint64_t data = debug_data[0];
+    uint32_t data = debug_data[1];
+    uint32_t offset = 1 << 31;
     uint8_t *tile_bitmap = NULL;
     for (int i = 0; i < 64; i++) {
       if (i == 32) {
-        data = debug_data[1];
+        data = debug_data[0];
+        offset = 1 << 31;
       }
-      if (((data) & 1)) {
+      if (((data) & offset)) {
         tile_bitmap = empty_debug_tile;
         white2->invertText(false);
       }
@@ -304,11 +306,12 @@ void Display::board_display()
         tile_bitmap = debug_tile;
         white2->invertText(true);
       }
-      data = data >> 1;
-
+      offset = offset >> 1;
+      
       chess_id_t current = chess_game->board[i];
       int y = ((63 - i) / 8);
       int x = 7 - ((63 - i) % 8);
+      white2->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
       switch (CHESS_TEAM(current)) {
         case CHESS_WHITE:
           switch (CHESS_TYPE(current)) {
@@ -331,7 +334,7 @@ void Display::board_display()
               white2->print("WK", x*16, y*8);
               break;
             default:
-              white2->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+              white2->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
           }
         break;
         case CHESS_BLACK:
@@ -355,11 +358,11 @@ void Display::board_display()
               white2->print("BK", x*16, y*8);
               break;
             default:
-              white2->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+              white2->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
           }
         break;
         default:
-          white2->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+          white2->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
       }
     }
   }
