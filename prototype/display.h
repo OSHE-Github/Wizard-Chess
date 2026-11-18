@@ -41,7 +41,7 @@ protected:
   Timer *timer;
   chess_game_t *chess_game;
   uint64_t debug_data[2];
-  bool refresh, invaid_move;
+  bool refresh, invalid_move;
 
 
   void timer_configuration();

@@ -34,6 +34,16 @@ static uint8_t debug_tile[] = {
   0b01111110, 0b01111110,
   0b01111110, 0b00000000
 };
+static uint8_t empty_debug_tile[] = {
+  0b00000000, 0b01111110,
+  0b01000010, 0b01000010,
+  0b01000010, 0b01000010,
+  0b01000010, 0b01000010,
+  0b01000010, 0b01000010,
+  0b01000010, 0b01000010,
+  0b01000010, 0b01000010,
+  0b01111110, 0b00000000
+};
 
 static uint8_t oshe_logo [] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -210,7 +220,7 @@ void Display::timer_configuration() {
 
       if (button_states & (1 << 0)) 
         phase = FIFTEEN_TEN;
-      else if (button_states & (1 << 1)){ 
+      else if (button_states & (1 << 1)) { 
         phase = SET;
         set_time = 3;
         set_increment = 2;
@@ -277,7 +287,82 @@ void Display::timer_configuration() {
 
 void Display::board_display()
 {
+  white2->clrScr();
+  white2->setFont(SmallFont);
+  if (chess_game != NULL) {
+    uint64_t data = debug_data[0];
+    uint8_t *tile_bitmap = NULL;
+    for (int i = 0; i < 64; i++) {
+      if (i == 32) {
+        data = debug_data[1];
+      }
+      if (((data) & 1)) {
+        tile_bitmap = empty_debug_tile;
+        white2->invertText(false);
+      }
+      else {
+        tile_bitmap = debug_tile;
+        white2->invertText(true);
+      }
+      data = data >> 1;
 
+      chess_id_t current = chess_game->board[i];
+      int y = ((63 - i) / 8);
+      int x = 7 - ((63 - i) % 8);
+      switch (CHESS_TEAM(current)) {
+        case CHESS_WHITE:
+          switch (CHESS_TYPE(current)) {
+            case CHESS_PAWN:
+              white2->print("wp", x*16, y*8);
+              break;
+            case CHESS_BISHOP:
+              white2->print("wB", x*16, y*8);
+              break;
+            case CHESS_ROOK:
+              white2->print("wR", x*16, y*8);
+              break;
+            case CHESS_KNIGHT:
+              white2->print("wH", x*16, y*8);
+              break;
+            case CHESS_QUEEN:
+              white2->print("WQ", x*16, y*8);
+              break;
+            case CHESS_KING:
+              white2->print("WK", x*16, y*8);
+              break;
+            default:
+              white2->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+          }
+        break;
+        case CHESS_BLACK:
+          switch (CHESS_TYPE(current)) {
+            case CHESS_PAWN:
+              white2->print("bp", x*16, y*8);
+              break;
+            case CHESS_BISHOP:
+              white2->print("bB", x*16, y*8);
+              break;
+            case CHESS_ROOK:
+              white2->print("bR", x*16, y*8);
+              break;
+            case CHESS_KNIGHT:
+              white2->print("bH", x*16, y*8);
+              break;
+            case CHESS_QUEEN:
+              white2->print("BQ", x*16, y*8);
+              break;
+            case CHESS_KING:
+              white2->print("BK", x*16, y*8);
+              break;
+            default:
+              white2->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+          }
+        break;
+        default:
+          white2->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
+      }
+    }
+  }
 }
 
 void Display::timer_display()
@@ -384,6 +469,7 @@ void Display::timer_display()
       }
 
     }
+    board_display();
 }
 
 void Display::splash_screen()
@@ -425,7 +511,18 @@ void Display::splash_screen()
 }
 
 void Display::draw_invalid() {
-  
+  mOLED *cScr = NULL;
+  if (chess_game->turn == CHESS_WHITE) {
+    cScr = white1;
+  }
+  else {
+    cScr = black1;
+  }
+  cScr->setFont(BigFont);
+  cScr->invertText(false);
+  cScr->print("BAD MOVE", 0, 16);
+  cScr->setFont(SmallFont);
+  cScr->print("RESET BOARD AS SHOWN", 4, 32);
 }
 
 void Display::debug_screen()
@@ -439,6 +536,7 @@ void Display::debug_screen()
     int y = 0;
     int bit = 0;
     white1->clrScr();
+    white2->clrScr();
     uint64_t data = debug_data[0];
     for (int i = 0; i < 64; i++) {
       if (i == 32) {
@@ -562,8 +660,10 @@ Display::Display()
   timer = NULL;
   chess_game = NULL;
 
+  invalid_move = false;
+
   // screen = SPLASH; should be here normally?
-  screen = DEBUG;
+  screen = SPLASH;
   debug_data[0] = 0;
   debug_data[1] = 0;
   refresh = true;
@@ -572,7 +672,7 @@ Display::Display()
 
 void Display::update()
 {
-  Serial.println("Calling Screen Function");
+  // Serial.println("Calling Screen Function");
   switch(screen) {
     case TIMER_CONF:
       timer_configuration();
@@ -594,11 +694,13 @@ void Display::update()
   }
 
   // Invalid Moves
-  draw_invalid();
+  if (invalid_move) {
+    draw_invalid();
+  }
   int i = BTN_LEFT;
 
   // Refresh Screens
-  Serial.println("Calling Update Functions");
+  // Serial.println("Calling Update Functions");
   if (white1 != NULL && refresh) {
     // Serial.println("Updating white 1");
     white1->update();
@@ -640,7 +742,7 @@ void Display::set_chess_board(chess_game_t *game) {
 
 void Display::set_invalid_mode(bool set)
 {
-  invaid_move = set;
+  invalid_move = set;
 }
 
 void Display::set_debug_data(uint32_t dataLow, uint32_t dataHigh)

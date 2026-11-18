@@ -26,13 +26,6 @@ chess_game_t chess_game;
 #define BTN_WHITE_TIMER_PIN 4
 #define BTN_BLACK_TIMER_PIN 21
 
-// Button Masks
-#define BTN_LEFT (1 << 0)
-#define BTN_SELECT (1 << 1)
-#define BTN_RIGHT (1 << 2)
-#define BTN_WHITE_TIMER (1 << 3)
-#define BTN_BLACK_TIMER (1 << 4)
-
 // Button Interrupts
 volatile uint8_t button_itr;
 uint8_t button_states;
@@ -62,20 +55,91 @@ void update_buttons()
   }
 }
 
-unsigned char reverse(unsigned char b) {
-   b = (b & 0xF0) >> 4 | (b & 0x0F) << 4;
-   b = (b & 0xCC) >> 2 | (b & 0x33) << 2;
-   b = (b & 0xAA) >> 1 | (b & 0x55) << 1;
-   return b;
+enum BoardState {
+  START,
+  PEICE_SELECTED,
+  MOVE_MADE,
+  MOVE_VALIDATION,
+  RESET_BOARD
+};
+
+// detect peice placed
+
+int32_t test_peice_placed(uint32_t before[], uint32_t after[]) {
+  int32_t changed_index = -1;
+  int32_t change_count = 0;
+  
+  uint32_t data_before = before[0];
+  uint32_t data_after = after[0]; 
+  for (int i = 0; i < 32; i++) {
+    if ((data_before & 1) && !(data_after & 1)) {
+      changed_index = 63 - i;
+      change_count++;
+    }
+    data_before = data_before >> 1;
+    data_after = data_after >> 1;
+  }
+
+  data_before = before[1];
+  data_after = after[1]; 
+  for (int i = 0; i < 32; i++) {
+    if ((data_before & 1) && !(data_after & 1)) {
+      changed_index = 63 - (i + 32);
+      change_count++;
+    }
+    data_before = data_before >> 1;
+    data_after = data_after >> 1;
+  }
+
+  if (change_count > 1) {
+    changed_index = -2;
+  }
+
+  return changed_index;
+}
+
+// detect peice picked
+int32_t test_peice_picked(uint32_t before[], uint32_t after[]) {
+  int32_t changed_index = -1;
+  int32_t change_count = 0;
+  
+  uint32_t data_before = before[0];
+  uint32_t data_after = after[0]; 
+  for (int i = 0; i < 32; i++) {
+    if (!(data_before & 1) && (data_after & 1)) {
+      changed_index = 63 - i;
+      change_count++;
+    }
+    data_before = data_before >> 1;
+    data_after = data_after >> 1;
+  }
+
+  data_before = before[1];
+  data_after = after[1]; 
+  for (int i = 0; i < 32; i++) {
+    if (!(data_before & 1) && (data_after & 1)) {
+      changed_index = 63 - (i + 32);
+      change_count++;
+    }
+    data_before = data_before >> 1;
+    data_after = data_after >> 1;
+  }
+
+  if (change_count > 1) {
+    changed_index = -2;
+  }
+
+  return changed_index;
 }
 
 bool update_board() 
 {
-  uint64_t current_read = 0;
-  static uint64_t last_read = 0; // default setup: ((0b1111111111111111 << 48) | 0b1111111111111111);
+  static uint32_t last_read[] = {0, 0};
+  static uint32_t last_valid_read[] = {0, 0};
   static unsigned long last_board_change = 0; 
   static int32_t to = -1;
   static int32_t from = -1;
+  static BoardState state = START;
 
   // Read Current Board
   digitalWrite(SHIFT_REG_SHLD, HIGH);
@@ -85,29 +149,127 @@ bool update_board()
   digitalWrite(SHIFT_REG_SHLD, HIGH);
   delayMicroseconds(SHIFT_REG_READ_DELAY);
 
-  uint32_t new_read_low = 0;
-  uint32_t new_read_high = 0;
+  uint32_t new_read[] = {0, 0};
   uint8_t bitorder = LSBFIRST;
-  new_read_low |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
-  new_read_low |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
-  new_read_low |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
-  new_read_low |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
-  new_read_high |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
-  new_read_high |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
-  new_read_high |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
-  new_read_high |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
+  new_read[0] |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
+  new_read[0] |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
+  new_read[0] |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
+  new_read[0] |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
+  new_read[1] |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder);
+  new_read[1] |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 8;
+  new_read[1] |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 16;
+  new_read[1] |= shiftIn(SHIFT_REG_INPUT, SHIFT_REG_CLOCK, bitorder) << 24;
+
+  // if this is the first board read set last state and skip the rest of this iter
+  if (last_read[0] == 0 && last_read[1] == 0) {
+    last_read[0] = new_read[0];
+    last_read[1] = new_read[1];
+    last_valid_read[0] = new_read[0];
+    last_valid_read[1] = new_read[1];
+    return false;
+  }
 
   if (PRINT_DEBUG) {
     // for (int i = 0; i < 8; i++) {
     //   Serial.print((uint8_t)(value >> (8*i)), BIN);
     // }
     // Serial.println();
-    Serial.print(new_read_low, BIN);
+    Serial.print(new_read[0], BIN);
     Serial.print(" ");
-    Serial.println(new_read_high, BIN);
+    Serial.println(new_read[1], BIN);
   }
 
-  display->set_debug_data(new_read_low, new_read_high);
+  display->set_debug_data(new_read[0], new_read[1]);
+
+  // Start State Machine
+  
+  int32_t changed_index = 0;
+  uint8_t button_mask = 0;
+  uint32_t move_result = 0;
+
+  // Serial.print(test_peice_picked(last_read, new_read));
+  // Serial.print(test_peice_placed(last_read, new_read));
+
+  Serial.print(from);
+  Serial.print(" ");
+  Serial.println(to);
+
+  // state = (BoardState)20;
+  switch (state) {
+    case START:
+      Serial.println("State Start");
+       changed_index = test_peice_picked(last_valid_read, new_read);
+       if (changed_index >= 0) {
+        from = changed_index;
+        state = PEICE_SELECTED;
+       }
+      //  else if (changed_index < -1) {
+      //   state = RESET_BOARD;
+      //  }
+    break;
+    case PEICE_SELECTED:
+    Serial.println("State Peice Selected");
+       changed_index = test_peice_placed(last_read, new_read);
+       if (changed_index >= 0) {
+        if (changed_index == from) {
+          from = -1;
+          state = START;
+          break;
+        }
+        to = changed_index;
+        state = MOVE_MADE;
+        button_states -= BTN_WHITE_TIMER;
+        button_states -= BTN_BLACK_TIMER;
+       }
+    break;
+    case MOVE_MADE:
+      Serial.println("State Move Made");
+       changed_index = test_peice_picked(last_read, new_read);
+       if (changed_index >= 0 && changed_index == to) {
+        to = -1;
+        state = PEICE_SELECTED;
+       }
+      if (chess_game.turn == CHESS_WHITE) {
+        button_mask = BTN_WHITE_TIMER;
+      }
+      else {
+        button_mask = BTN_BLACK_TIMER;
+      }
+      if ((button_states & button_mask)) {
+        state = MOVE_VALIDATION;
+        button_states -= button_mask;
+      }
+    break;
+    case MOVE_VALIDATION:
+    Serial.println("State Validation");
+    move_result = chess_move(&chess_game, from, to);
+    if (move_result == -2) {
+      state = RESET_BOARD;
+      display->set_invalid_mode(true);
+      break;
+    }
+    state = START;
+    last_valid_read[0] = new_read[0];
+    last_valid_read[1] = new_read[1];
+    to = -1;
+    from = -1;
+    timer->swapTurn();
+    break;
+    case RESET_BOARD:
+    Serial.println("State RESET");
+    if (new_read[0] == last_valid_read[0] && new_read[1] == last_valid_read[1]) {
+      display->set_invalid_mode(false);
+      state = START;
+      to = -1;
+      from = -1;
+    }
+    break;
+    default:
+    Serial.println("INVALID BOARD STATE");
+  }
+
+  last_read[0] = new_read[0];
+  last_read[1] = new_read[1];
 
   return false;
 }
