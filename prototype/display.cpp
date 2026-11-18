@@ -444,8 +444,8 @@ void Display::debug_screen()
       if (i == 32) {
         data = debug_data[1];
       }
-      y = ((63 - i) / 8);
-      x = 7 - ((63 - i) % 8);
+      y = ((i) / 8);
+      x = 7 - ((i) % 8);
       if (((data) & 1)) {
         white1->drawBitmap(x * 16, y * 8, debug_tile, 16, 8);
       }
@@ -459,8 +459,8 @@ void Display::debug_screen()
     if (chess_game != NULL) {
       for (int i = 0; i < 64; i++) {
         chess_id_t current = chess_game->board[i];
-        int y = ((i) / 8);
-        int x = 7 - ((i) % 8);
+        int y = ((63 - i) / 8);
+        int x = 7 - ((63 - i) % 8);
         switch (CHESS_TEAM(current)) {
           case CHESS_WHITE:
             switch (CHESS_TYPE(current)) {
