@@ -4,7 +4,7 @@
 #include "timer.h"
 
 #define PRINT_DEBUG 0 // 1 = on 0 = off
-#define TIMER_TEST 1
+#define TIMER_TEST 0
 
 
 // Sensor Array 
@@ -107,7 +107,7 @@ bool update_board()
     Serial.println(new_read_high, BIN);
   }
 
-  //display->set_debug_data(new_read_low, new_read_high);
+  display->set_debug_data(new_read_low, new_read_high);
 
   return false;
 }

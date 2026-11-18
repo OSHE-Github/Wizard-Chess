@@ -26,6 +26,7 @@ class Timer {
   // timer management
   void start();
   void pause();
+  void end();
   void reset(uint32_t initial_time, uint32_t turnIncrement);
 
   // game stuff
@@ -37,7 +38,7 @@ class Timer {
   uint32_t get_black_time();
   bool is_running();
   bool is_white_turn();
-  bool is_game_over();
+  uint8_t is_time_up();
   bool is_configured();
 
   // setter

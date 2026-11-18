@@ -238,10 +238,34 @@ void Display::timer_configuration() {
 
       break;
       case START:
-        // start timer 
+        static uint32_t start_start = millis();
+        static uint8_t count = 5;
+        if (millis() - start_start > 1000) {
+          white1->clrScr();
+          black1->clrScr();
+
+          white1->setFont(SmallFont);
+          black1->setFont(SmallFont);
+
+          white1->print("Game starting...", CENTER, 8);
+          white1->setFont(BigFont);
+          white1->printNumI(count, CENTER, 32);
+
+          black1->print("Game starting...", CENTER, 8);
+          black1->setFont(BigFont);
+          black1->printNumI(count, CENTER, 32);
+
+          count -= 1;
+          start_start += 1000;
+        }
+
+      if (count == 0) {
+      // start timer 
         timer->start();
         phase = FIRST;
         screen = TIMER_DISPLAY;
+      }
+      break;
     default:
       break;
   }
@@ -295,8 +319,8 @@ void Display::timer_display()
     chess_score_t white_score = chess_score(chess_game, CHESS_WHITE);
     chess_score_t black_score = chess_score(chess_game, CHESS_BLACK);
 
-    std::sprintf(white_score_buffer, "Score:%d", (int)white_score);
-    std::sprintf(black_score_buffer, "Score:%d", (int)black_score);
+    std::sprintf(white_score_buffer, "Score: %d", (int)white_score);
+    std::sprintf(black_score_buffer, "Score: %d", (int)black_score);
 
 
     white1->setFont(BigFont);
@@ -304,21 +328,62 @@ void Display::timer_display()
     white1->clrScr();
     black1->clrScr();
 
-    // White clock (
-    white1->print(white_buffer, CENTER, 4);
-    white1->print(white_score_buffer, CENTER, 44);
-
-    black1->print(black_buffer, CENTER, 4);
-    black1->print(black_score_buffer, CENTER, 44);
+    // Print timers in big font
+    white1->print(white_buffer, CENTER, 8);
+    black1->print(black_buffer, CENTER, 8);
+    
+    // Print score in small font
+    white1->setFont(SmallFont);
+    black1->setFont(SmallFont); 
+    white1->print(white_score_buffer, CENTER, 48);
+    black1->print(black_score_buffer, CENTER, 48);
 
 
     // Indicate active player
-  
-    if (timer->is_white_turn())
+    if (timer->is_white_turn()) {
         white1->invert(true);
-    else
+        black1->invert(false);
+    } else {
+        black1->invert(true);
         white1->invert(false);
+    }
 
+    // If someone runs out of time
+    uint8_t time_up = timer->is_time_up();
+    if(time_up) {
+      timer->end();
+
+      white1->clrScr();
+      black1->clrScr();
+      white1->setFont(BigFont);
+      black1->setFont(BigFont);
+
+      white1->print("TIME UP", CENTER, 4);
+      black1->print("TIME UP", CENTER, 4);
+
+      // White runs out of time, black wins
+      if (time_up == 1) {
+        black1->print("YOU WIN!", CENTER, 28);
+        white1->print("LOSER!", CENTER, 28);
+
+        black1->setFont(SmallFont);
+        white1->setFont(SmallFont);
+
+        black1->print("White ran out of time", CENTER, 52);
+        white1->print("White ran out of time", CENTER, 52);
+      } else {
+        white1->print("YOU WIN!", CENTER, 28);
+        black1->print("LOSER!", CENTER, 28);
+
+        white1->setFont(SmallFont);
+        black1->setFont(SmallFont);
+
+        white1->print("Black ran out of time", CENTER, 52);
+        black1->print("Black ran out of time", CENTER, 52);
+
+      }
+
+    }
 }
 
 void Display::splash_screen()
@@ -493,7 +558,8 @@ Display::Display()
   timer = NULL;
   chess_game = NULL;
 
-  screen = SPLASH;
+  // screen = SPLASH; should be here normally?
+  screen = DEBUG;
   debug_data[0] = 0;
   debug_data[1] = 0;
   refresh = true;

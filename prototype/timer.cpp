@@ -31,6 +31,10 @@ void Timer::pause(){
   running = false;
 }
 
+void Timer::end(){
+  running = false;
+}
+
 void Timer::reset(uint32_t initial_time, uint32_t turnIncrement) {
 
   // reset timer at specified time, default is 10 minutes
@@ -106,8 +110,14 @@ bool Timer::is_white_turn() {
   return white_turn;
 }
 
-bool Timer::is_game_over() {
-  return (white_time == 0 || black_time == 0);
+// Return 1 if white runs out of time, 2 if black does
+uint8_t Timer::is_time_up() {
+  if (white_time == 0)
+    return 1;
+  else if (black_time == 0)
+    return 2;
+  else
+    return 0;
 }
 
 bool Timer::is_configured() {
