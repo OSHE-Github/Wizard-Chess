@@ -10,23 +10,23 @@ class Timer {
   uint32_t white_time;
   uint32_t black_time;
 
+  uint32_t increment;
   // previous time
   uint32_t last_update;
-
   // whos on the clock
   bool white_turn;
-
   // is timer on?
   bool running;
+  bool configured;
 
   public:
   // Constructor
-  Timer(uint32_t start_time_min = 10);
+  Timer();
 
   // timer management
   void start();
   void pause();
-  void reset(uint32_t initial_time = 10);
+  void reset(uint32_t initial_time, uint32_t turnIncrement);
 
   // game stuff
   void update();
@@ -38,6 +38,10 @@ class Timer {
   bool is_running();
   bool is_white_turn();
   bool is_game_over();
+  bool is_configured();
+
+  // setter
+  void set_configured();
 
 };
 

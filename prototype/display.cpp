@@ -32,8 +32,157 @@ static uint8_t debug_tile[] = {
 
 //////// Private Functions
 
-void Display::timer_configuration()
-{
+void Display::timer_configuration() {
+  enum configPhase {
+    FIRST,
+    RAPID,
+    FIVE,
+    BLITZ,
+    BULLET,
+    FIFTEEN_TEN,
+    THREE_TWO,
+    SET
+  };
+
+  uint32_t set_time = 0;
+  uint32_t set_increment = 0;
+
+  static configPhase phase = FIRST;
+  // Set rapid as default config 
+  
+
+  white1->setFont(BigFont);
+
+  switch(phase) {
+    
+    case FIRST:
+      white1->clrScr();
+      white1->print("Set Time", CENTER, 12);
+      white1->setFont(SmallFont);
+      white1->print("Press Select", CENTER, 48);
+      
+      // Select pressed
+      if (button_states & (1 << 1) )
+        phase = RAPID;
+  
+      break;
+    case RAPID:
+      white1->clrScr();
+      white1->print("RAPID", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("10 minutes", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = THREE_TWO;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 10;
+        set_increment = 0;
+      } else if (button_states & (1 << 2))
+        phase = BLITZ;
+
+      break;
+    case FIVE:
+      white1->clrScr();
+      white1->print("BLITZ 5", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("5 minutes", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = RAPID;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 5;
+        set_increment = 0;
+      } else if (button_states & (1 << 2))
+        phase = BLITZ;
+
+      break;
+    
+    case BLITZ:
+      white1->clrScr();
+      white1->print("BLITZ 3", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("3 minutes", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = FIVE;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 3;
+        set_increment = 0;
+      } else if (button_states & (1 << 2))
+        phase = BULLET;
+
+      
+      break;
+    case BULLET:
+      white1->clrScr();
+      white1->print("BULLET", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("1 minute", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = BLITZ;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 1;
+        set_increment = 0;
+      } else if (button_states & (1 << 2))
+        phase = FIFTEEN_TEN;
+
+      break;
+    case FIFTEEN_TEN:
+      white1->clrScr();
+      white1->print("15|10", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("15 min + 10 sec", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = BULLET;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 15;
+        set_increment = 10;
+      } else if (button_states & (1 << 2))
+        phase = THREE_TWO;
+
+      break;
+    case THREE_TWO:
+      white1->clrScr();
+      white1->print("3|2", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("3 min + 2 sec", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = FIFTEEN_TEN;
+      else if (button_states & (1 << 1)){ 
+        phase = SET;
+        set_time = 3;
+        set_increment = 2;
+      } else if (button_states & (1 << 2))
+        phase = RAPID;
+
+      break;
+    case SET:
+      // Pass timer settings to timer
+      timer->reset(set_time, set_increment);
+      timer->set_configured();
+
+      //screen = TIMER_DISPLAY;
+      break;
+    default:
+      break;
+  }
+
+  button_states = 0;
+  refresh = true;
 
 }
 
@@ -289,7 +438,7 @@ Display::Display()
   timer = NULL;
   chess_game = NULL;
 
-  screen = DEBUG;
+  screen = TIMER_CONF;
   debug_data[0] = 0;
   debug_data[1] = 0;
   refresh = true;

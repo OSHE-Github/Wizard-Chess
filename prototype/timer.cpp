@@ -2,10 +2,11 @@
 #include <Arduino.h>
 
 // Constructor
-Timer::Timer(uint32_t start_time_min) {
+Timer::Timer() {
   // start timers at specified time, default is 10 minutes
-  white_time = start_time_min * 60000;
-  black_time = start_time_min * 60000;
+  white_time = 0;
+  black_time = 0;
+  increment = 0;
 
   // Get time of last update for conversion
   last_update = millis();
@@ -13,6 +14,7 @@ Timer::Timer(uint32_t start_time_min) {
   // White starts first
   white_turn = true;
   running = false;
+  configured = false;
 }
 
 void Timer::start() {
@@ -29,10 +31,14 @@ void Timer::pause(){
   running = false;
 }
 
-void Timer::reset(uint32_t initial_time) {
+void Timer::reset(uint32_t initial_time, uint32_t turnIncrement) {
+
   // reset timer at specified time, default is 10 minutes
   white_time = initial_time * 60000;
   black_time = initial_time * 60000;
+  // Set turn increment in seconds
+
+  increment = turnIncrement * 1000;
 
   // Get time of last update for conversion
   last_update = millis();
@@ -74,9 +80,14 @@ void Timer::swapTurn() {
   update();
 
   // Flip boolean value of who's turn it is
-  if (running) 
+  if (running) {
+    if (white_turn)
+      white_time += increment;
+    else 
+      black_time += increment;
+   
     white_turn = !white_turn;
-
+  }
 }
 
 uint32_t Timer::get_white_time() {
@@ -97,4 +108,12 @@ bool Timer::is_white_turn() {
 
 bool Timer::is_game_over() {
   return (white_time == 0 || black_time == 0);
+}
+
+bool Timer::is_configured() {
+  return configured;
+}
+
+void Timer::set_configured() {
+  configured = 1;
 }

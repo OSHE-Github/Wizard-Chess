@@ -4,7 +4,7 @@
 #include "timer.h"
 
 #define PRINT_DEBUG 0 // 1 = on 0 = off
-#define TIMER_TEST 0
+#define TIMER_TEST 1
 
 
 // Sensor Array 
@@ -107,7 +107,7 @@ bool update_board()
     Serial.println(new_read_high, BIN);
   }
 
-  display->set_debug_data(new_read_low, new_read_high);
+  //display->set_debug_data(new_read_low, new_read_high);
 
   return false;
 }
@@ -132,17 +132,9 @@ void setup()
   // Pass timer to display
   display->set_timer(timer);
 
-  #if TIMER_TEST
-    // 1 minute test clock
-    timer->reset(1);
-    timer->start();
-
-    display->set_screen(TIMER_DISPLAY);
-  #endif
-
   // Chess Engine
-  chess_init(&chess_game);
-  display->set_chess_board(&chess_game);
+  //chess_init(&chess_game);
+  //display->set_chess_board(&chess_game);
   
   // Buttons & Interupts
   Serial.println("Setting Interrupts");
@@ -178,12 +170,22 @@ void loop()
 
   #if TIMER_TEST
     static uint32_t test_start = millis();
+    static uint32_t go_next = 0;
+    if (millis() - test_start >= 5000) {
+      uint8_t randomButton = rand() % 3;
+      if (!go_next) {
+        button_states |= (1 << 1);
+        go_next = 1;
+      } else {
+        
+        button_states |= (1 << randomButton);
+      }
+      test_start += 5000;
 
-    if (millis() - test_start >= 10000) {
-        timer->swapTurn();
-        test_start += 10000;
-
-        Serial.println("Switched timer");
+      
+      Serial.print("Button ");
+      Serial.print(randomButton);
+      Serial.println(" Pressed");
     }
   #endif 
 
