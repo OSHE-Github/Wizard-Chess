@@ -1,8 +1,8 @@
 #include <OLED_I2C.h>
 #include <Wire.h>
+#include <cstdio>
 #include "display.h"
 
-extern uint8_t SmallFont[];
 
 #define WHITE_SCR_1_SDA 18
 #define WHITE_SCR_1_SCL 19
@@ -14,8 +14,13 @@ extern uint8_t SmallFont[];
 #define BLACK_SCR_2_SDA 25
 #define BLACK_SCR_2_SCL 33
 
+#define SPLASH_BREAK 5000
+
+
 extern uint8_t button_states;
 extern uint8_t BigFont[];
+extern uint8_t SmallFont[];
+
 
 //////// Bitmaps
 
@@ -30,10 +35,243 @@ static uint8_t debug_tile[] = {
   0b01111110, 0b00000000
 };
 
+static uint8_t oshe_logo [] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0xf8, 0xf8, 0xf8, 0xf8, 
+	0xf8, 0xf8, 0xf8, 0xf8, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xc0, 0xe0, 0xf0, 0xf8, 0xfc, 0xfc, 0xfc, 0xf8, 0xf8, 
+	0xf0, 0xe0, 0xc0, 0xc0, 0xc0, 0xc0, 0xe0, 0xe0, 0xe0, 0xf0, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xfe, 0xf0, 0xe0, 0xe0, 0xe0, 0xc0, 0xc0, 0xc0, 0xc0, 0xe0, 0xf0, 
+	0xf8, 0xf8, 0xfc, 0xfc, 0xfc, 0xf8, 0xf0, 0xe0, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x07, 0x0f, 0x3f, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0x3f, 0x0f, 0x07, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x80, 0xc0, 0xc0, 0xc0, 0xc0, 0xc0, 0xe0, 0xe0, 0xe0, 0xf8, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x3f, 0x1f, 0x0f, 0x07, 0x07, 0x07, 0x03, 0x03, 
+	0x03, 0x03, 0x07, 0x07, 0x07, 0x0f, 0x1f, 0x3f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xf8, 0xe0, 0xe0, 0xe0, 0xc0, 0xc0, 0xc0, 0xc0, 0xc0, 0x80, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xc1, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xc1, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x01, 0x03, 0x0f, 0x7f, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xfe, 0xfc, 0x38, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x38, 0xfc, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0x7f, 0x0f, 0x03, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0xe0, 0xf8, 0xfc, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x3f, 0x07, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x07, 0x3f, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
+	0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xfc, 0xf8, 0xe0, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x03, 0x07, 0x0f, 0x1f, 0x0f, 0x0f, 0x07, 
+	0x03, 0x03, 0x01, 0x01, 0x01, 0x03, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x03, 0x01, 0x01, 0x01, 0x03, 0x03, 
+	0x07, 0x0f, 0x0f, 0x1f, 0x0f, 0x07, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+};
+
 //////// Private Functions
 
-void Display::timer_configuration()
-{
+void Display::timer_configuration() {
+  enum configPhase {
+    FIRST,
+    RAPID,
+    FIVE,
+    BLITZ,
+    BULLET,
+    FIFTEEN_TEN,
+    THREE_TWO,
+    SET,
+    START
+  };
+
+  static uint32_t set_time = 0;
+  static uint32_t set_increment = 0;
+
+  static configPhase phase = FIRST;
+  // Set rapid as default config 
+  
+
+  white1->setFont(BigFont);
+
+  switch(phase) {
+    
+    case FIRST:
+      white1->clrScr();
+      white1->print("Set Time", CENTER, 12);
+      white1->setFont(SmallFont);
+      white1->print("Press Select", CENTER, 48);
+
+      
+      black1->clrScr();
+      black1->setFont(SmallFont);
+      black1->print("Waiting for white", CENTER, 20);
+      black1->print("to setup time O_o", CENTER, 30);
+      
+      
+      // Select pressed
+      if (button_states & (1 << 1) )
+        phase = RAPID;
+  
+      break;
+    case RAPID:
+      white1->clrScr();
+      white1->print("RAPID", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("10 minutes", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = THREE_TWO;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 10;
+        set_increment = 0;
+      } else if (button_states & (1 << 2))
+        phase = FIVE;
+
+      break;
+    case FIVE:
+      white1->clrScr();
+      white1->print("BLITZ 5", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("5 minutes", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = RAPID;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 5;
+        set_increment = 0;
+      } else if (button_states & (1 << 2))
+        phase = BLITZ;
+
+      break;
+    
+    case BLITZ:
+      white1->clrScr();
+      white1->print("BLITZ 3", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("3 minutes", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = FIVE;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 3;
+        set_increment = 0;
+      } else if (button_states & (1 << 2))
+        phase = BULLET;
+
+      
+      break;
+    case BULLET:
+      white1->clrScr();
+      white1->print("BULLET", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("1 minute", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = BLITZ;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 1;
+        set_increment = 0;
+      } else if (button_states & (1 << 2))
+        phase = FIFTEEN_TEN;
+
+      break;
+    case FIFTEEN_TEN:
+      white1->clrScr();
+      white1->print("15|10", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("15 min + 10 sec", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = BULLET;
+      else if (button_states & (1 << 1)) {
+        phase = SET;
+        set_time = 15;
+        set_increment = 10;
+      } else if (button_states & (1 << 2))
+        phase = THREE_TWO;
+
+      break;
+    case THREE_TWO:
+      white1->clrScr();
+      white1->print("3|2", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("3 min + 2 sec", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = FIFTEEN_TEN;
+      else if (button_states & (1 << 1)){ 
+        phase = SET;
+        set_time = 3;
+        set_increment = 2;
+      } else if (button_states & (1 << 2))
+        phase = RAPID;
+
+      break;
+    case SET:
+      // Pass timer settings to timer
+      timer->reset(set_time, set_increment);
+      timer->set_configured();
+
+      white1->clrScr();
+      white1->setFont(BigFont);
+      white1->print("READY?", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("Select To Start", CENTER, 24);
+      white1->print("<-          ", CENTER, 52);
+
+      if (button_states & (1 << 0)) 
+        phase = FIRST;
+      else if (button_states & (1 << 1)){ 
+        phase = START;
+      } 
+
+      break;
+      case START:
+        static uint32_t start_start = millis();
+        static uint8_t count = 5;
+        if (millis() - start_start > 1000) {
+          white1->clrScr();
+          black1->clrScr();
+
+          white1->setFont(SmallFont);
+          black1->setFont(SmallFont);
+
+          white1->print("Game starting...", CENTER, 8);
+          white1->setFont(BigFont);
+          white1->printNumI(count, CENTER, 32);
+
+          black1->print("Game starting...", CENTER, 8);
+          black1->setFont(BigFont);
+          black1->printNumI(count, CENTER, 32);
+
+          count -= 1;
+          start_start += 1000;
+        }
+
+      if (count == 0) {
+      // start timer 
+        timer->start();
+        phase = FIRST;
+        screen = TIMER_DISPLAY;
+      }
+      break;
+    default:
+      break;
+  }
+
+  button_states = 0;
+  refresh = true;
 
 }
 
@@ -51,7 +289,10 @@ void Display::timer_display()
     //     return;
     
     static uint32_t last_screen_update = 0;
-    if (millis() - last_screen_update < 250) return;
+    if (millis() - last_screen_update < 250) {
+      return;
+    }
+
     
     last_screen_update = millis();
     refresh = true;
@@ -68,91 +309,119 @@ void Display::timer_display()
     uint32_t black_minutes = black_total_seconds / 60;
     uint32_t black_seconds = black_total_seconds % 60;
 
-    white1->setFont(BigFont); 
+    char white_buffer[6];
+    char black_buffer[6];
+    std::sprintf(white_buffer, "%d:%02d", white_minutes, white_seconds);
+    std::sprintf(black_buffer, "%d:%02d", black_minutes, black_seconds);
 
+    char white_score_buffer[10];
+    char black_score_buffer[10];
+    chess_score_t white_score = chess_score(chess_game, CHESS_WHITE);
+    chess_score_t black_score = chess_score(chess_game, CHESS_BLACK);
+
+    std::sprintf(white_score_buffer, "Score: %d", (int)white_score);
+    std::sprintf(black_score_buffer, "Score: %d", (int)black_score);
+
+
+    white1->setFont(BigFont);
+    black1->setFont(BigFont); 
     white1->clrScr();
+    black1->clrScr();
 
-    // White clock (top)
-    white1->print("W:", 0, 0);
-    white1->printNumI(white_minutes, 32, 0);
-    white1->print(":", 56, 0);
+    // Print timers in big font
+    white1->print(white_buffer, CENTER, 8);
+    black1->print(black_buffer, CENTER, 8);
+    
+    // Print score in small font
+    white1->setFont(SmallFont);
+    black1->setFont(SmallFont); 
+    white1->print(white_score_buffer, CENTER, 48);
+    black1->print(black_score_buffer, CENTER, 48);
 
-    if (white_seconds < 10) {
-      white1->printNumI(0, 72, 0);
-      white1->printNumI(white_seconds, 88, 0);
-    } else {
-      white1->printNumI(white_seconds, 72, 0);
-    }
-
-    // Black clock (bottom)
-    white1->print("B:", 0, 32);
-    white1->printNumI(black_minutes, 32, 32);
-    white1->print(":", 56, 32);
-
-    if (black_seconds < 10) {
-      white1->printNumI(0, 72, 32);
-      white1->printNumI(black_seconds, 88, 32);
-    } else {
-      white1->printNumI(black_seconds, 72, 32);
-    }
 
     // Indicate active player
-  
-    if (timer->is_white_turn())
+    if (timer->is_white_turn()) {
         white1->invert(true);
-    else
+        black1->invert(false);
+    } else {
+        black1->invert(true);
         white1->invert(false);
-    
-    // // White clock
-    // white1->clrScr();
-    // white1->printNumI(white_minutes, 24, 0);
-    // white1->print(":", 56, 0);
+    }
 
-    // if (white_seconds < 10) {
-    //   white1->printNumI(0, 72, 0);
-    //   white1->printNumI(white_seconds, 88, 0);
-    // } else {
-    //   white1->printNumI(white_seconds, 72, 0);
-    // }
-    // // Black clock
-    // black1->clrScr();
-    // black1->printNumI(black_minutes, 24, 0);
-    // black1->print(":", 56, 0);
+    // If someone runs out of time
+    uint8_t time_up = timer->is_time_up();
+    if(time_up) {
+      timer->end();
 
-    // if (black_seconds < 10) {
-    //   black1->printNumI(0, 72, 0);
-    //   black1->printNumI(black_seconds, 88, 0);
-    // } else {
-    //   black1->printNumI(black_seconds, 72, 0)
-    // }
+      white1->clrScr();
+      black1->clrScr();
+      white1->setFont(BigFont);
+      black1->setFont(BigFont);
 
+      white1->print("TIME UP", CENTER, 4);
+      black1->print("TIME UP", CENTER, 4);
+
+      // White runs out of time, black wins
+      if (time_up == 1) {
+        black1->print("YOU WIN!", CENTER, 28);
+        white1->print("LOSER!", CENTER, 28);
+
+        black1->setFont(SmallFont);
+        white1->setFont(SmallFont);
+
+        black1->print("White ran out of time", CENTER, 52);
+        white1->print("White ran out of time", CENTER, 52);
+      } else {
+        white1->print("YOU WIN!", CENTER, 28);
+        black1->print("LOSER!", CENTER, 28);
+
+        white1->setFont(SmallFont);
+        black1->setFont(SmallFont);
+
+        white1->print("Black ran out of time", CENTER, 52);
+        black1->print("Black ran out of time", CENTER, 52);
+
+      }
+
+    }
 }
 
 void Display::splash_screen()
 {
-  white1->setFont(SmallFont);
-  white2->setFont(SmallFont);
-  black1->setFont(SmallFont);
-  black2->setFont(SmallFont);  
-  static int num = 0;
-  num++;
-  Serial.println("White 1");
-  white1->clrScr();
-  white1->print("White 1", 0, 0);
-  white1->printNumI(num, 20, 20);
-  Serial.println("White 2");
-  white2->clrScr();
-  white2->print("White 2", 0, 0);
-  white2->printNumI(num, 20, 20);
-  Serial.println("Black 1");
-  black1->clrScr();
-  black1->print("Black 1", 0, 0);
-  Serial.println("Black 2");
-  black1->printNumI(num, 20, 20);
-  black2->clrScr();
-  black2->print("Black 2", 0, 0);
-  black2->printNumI(num, 20, 20);
-  refresh=true;
+  static bool splash_drawn = false;
+  static uint32_t splash_time = 0;
+  
+  if (!splash_drawn) {
+    white1->clrScr();
+    white2->clrScr();
+    black1->clrScr();
+    black2->clrScr();
+
+    white1->setFont(BigFont);
+    black1->setFont(BigFont);
+
+    // write wizard chess on main screens
+    white1->print("Wizard", CENTER, 14);
+    white1->print("Chess", CENTER, 34);
+
+    black1->print("Wizard", CENTER, 14);
+    black1->print("Chess", CENTER, 34);
+
+    // Put oshe logo on side screens
+    white2->drawBitmap(32, 0, oshe_logo, 64, 64);
+    black2->drawBitmap(32, 0, oshe_logo, 64, 64);
+    black2->invert(true);
+
+    splash_drawn = true;
+    splash_time = millis();
+    refresh = true;
+    return;
+  }
+
+  // splash everywhere for 3 seconds
+  if (millis() - splash_time > SPLASH_BREAK) {
+    screen = TIMER_CONF;
+  }
 }
 
 void Display::draw_invalid() {
@@ -293,6 +562,7 @@ Display::Display()
   timer = NULL;
   chess_game = NULL;
 
+  // screen = SPLASH; should be here normally?
   screen = DEBUG;
   debug_data[0] = 0;
   debug_data[1] = 0;
@@ -405,6 +675,13 @@ void mOLED::update()
   // Serial.print(" ");
   // Serial.println(TWI_FREQ);
   OLED::update();
+  Wire.end();
+}
+
+void mOLED::invert(bool mode) {
+  Wire.end();
+  _initTWI();
+  OLED::invert(mode);
   Wire.end();
 }
 
