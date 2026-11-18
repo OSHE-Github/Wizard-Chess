@@ -5,6 +5,13 @@
 #include "timer.h"
 #include "chess.h"
 
+// Button Masks
+#define BTN_LEFT (1 << 0)
+#define BTN_SELECT (1 << 1)
+#define BTN_RIGHT (1 << 2)
+#define BTN_WHITE_TIMER (1 << 3)
+#define BTN_BLACK_TIMER (1 << 4)
+
 enum Screen {
   TIMER_CONF,
   BOARD_DISPLAY,

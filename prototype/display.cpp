@@ -155,6 +155,10 @@ void Display::splash_screen()
   refresh=true;
 }
 
+void Display::draw_invalid() {
+  
+}
+
 void Display::debug_screen()
 {
   if (refresh == true) {
@@ -321,6 +325,7 @@ void Display::update()
 
   // Invalid Moves
   draw_invalid();
+  int i = BTN_LEFT;
 
   // Refresh Screens
   Serial.println("Calling Update Functions");
