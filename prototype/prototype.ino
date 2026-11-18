@@ -4,7 +4,7 @@
 #include "timer.h"
 
 #define PRINT_DEBUG 0 // 1 = on 0 = off
-#define TIMER_TEST 1
+#define TIMER_TEST 0
 
 
 // Sensor Array 
@@ -20,11 +20,11 @@ Timer *timer;
 chess_game_t chess_game;
 
 // Button Pins
-#define BTN_LEFT_PIN 
-#define BTN_SELECT_PIN 
-#define BTN_RIGHT_PIN 
-#define BTN_WHITE_TIMER_PIN
-#define BTN_BLACK_TIMER_PIN
+#define BTN_LEFT_PIN 13
+#define BTN_SELECT_PIN 32
+#define BTN_RIGHT_PIN 5
+#define BTN_WHITE_TIMER_PIN 4
+#define BTN_BLACK_TIMER_PIN 21
 
 // Button Masks
 #define BTN_LEFT (1 << 0)
@@ -133,21 +133,22 @@ void setup()
   display->set_timer(timer);
 
   // Chess Engine
-  //chess_init(&chess_game);
-  //display->set_chess_board(&chess_game);
+  chess_init(&chess_game);
+  display->set_chess_board(&chess_game);
   
   // Buttons & Interupts
   Serial.println("Setting Interrupts");
-  // pinMode(BTN_LEFT_PIN, INPUT_PULLUP);
-  // attachInterrupt(digitalPinToInterrupt(BTN_LEFT_PIN), Btn_Left_ISR, RISING);
-  // pinMode(BTN_SELECT_PIN, INPUT_PULLUP);
-  // attachInterrupt(digitalPinToInterrupt(BTN_SELECT_PIN), Btn_Select_ISR, RISING);
-  // pinMode(BTN_RIGHT_PIN, INPUT_PULLUP);
-  // attachInterrupt(digitalPinToInterrupt(BTN_RIGHT_PIN), Btn_Right_ISR, RISING);
-  // pinMode(BTN_WHITE_TIMER_PIN, INPUT_PULLUP);
-  // attachInterrupt(digitalPinToInterrupt(BTN_WHITE_TIMER_PIN), Btn_White_Timer_ISR, RISING);
-  // pinMode(BTN_BACK_TIMER_PIN, INPUT_PULLUP);
-  // attachInterrupt(digitalPinToInterrupt(BTN_LEFT_PIN), Btn_Black_Timer_ISR, RISING);
+  pinMode(BTN_LEFT_PIN, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(BTN_LEFT_PIN), Btn_Left_ISR, FALLING);
+  pinMode(BTN_SELECT_PIN, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(BTN_SELECT_PIN), Btn_Select_ISR, FALLING);
+  pinMode(BTN_RIGHT_PIN, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(BTN_RIGHT_PIN), Btn_Right_ISR, FALLING);
+  pinMode(BTN_WHITE_TIMER_PIN, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(BTN_WHITE_TIMER_PIN), Btn_White_Timer_ISR, FALLING);
+  pinMode(BTN_BLACK_TIMER_PIN, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(BTN_BLACK_TIMER_PIN), Btn_Black_Timer_ISR, FALLING);
+
   button_itr = 0;
   button_states = 0;
   memset(button_debounce_times, 0, 8*sizeof(unsigned long));

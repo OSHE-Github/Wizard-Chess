@@ -80,7 +80,7 @@ void Display::timer_configuration() {
         set_time = 10;
         set_increment = 0;
       } else if (button_states & (1 << 2))
-        phase = BLITZ;
+        phase = FIVE;
 
       break;
     case FIVE:
@@ -175,7 +175,7 @@ void Display::timer_configuration() {
       timer->reset(set_time, set_increment);
       timer->set_configured();
 
-      //screen = TIMER_DISPLAY;
+      screen = TIMER_DISPLAY;
       break;
     default:
       break;
@@ -193,6 +193,7 @@ void Display::board_display()
 
 void Display::timer_display()
 {
+    Serial.println("HELLO");
     if (timer == NULL)
         return;
 
@@ -469,7 +470,7 @@ void Display::update()
   }
 
   // Invalid Moves
-  draw_invalid();
+  //draw_invalid();
 
   // Refresh Screens
   Serial.println("Calling Update Functions");
