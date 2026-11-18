@@ -131,13 +131,13 @@ void Display::timer_configuration() {
       white1->print("10 minutes", CENTER, 24);
       white1->print("<-   OK   ->", CENTER, 52);
 
-      if (button_states & (1 << 0)) 
+      if (button_states & BTN_LEFT) 
         phase = THREE_TWO;
-      else if (button_states & (1 << 1)) {
+      else if (button_states & BTN_SELECT) {
         phase = SET;
         set_time = 10;
         set_increment = 0;
-      } else if (button_states & (1 << 2))
+      } else if (button_states & BTN_RIGHT)
         phase = FIVE;
 
       break;
@@ -148,13 +148,13 @@ void Display::timer_configuration() {
       white1->print("5 minutes", CENTER, 24);
       white1->print("<-   OK   ->", CENTER, 52);
 
-      if (button_states & (1 << 0)) 
+      if (button_states & BTN_LEFT) 
         phase = RAPID;
-      else if (button_states & (1 << 1)) {
+      else if (button_states & BTN_SELECT) {
         phase = SET;
         set_time = 5;
         set_increment = 0;
-      } else if (button_states & (1 << 2))
+      } else if (button_states & BTN_RIGHT)
         phase = BLITZ;
 
       break;
@@ -166,13 +166,13 @@ void Display::timer_configuration() {
       white1->print("3 minutes", CENTER, 24);
       white1->print("<-   OK   ->", CENTER, 52);
 
-      if (button_states & (1 << 0)) 
+      if (button_states & BTN_LEFT) 
         phase = FIVE;
-      else if (button_states & (1 << 1)) {
+      else if (button_states & BTN_SELECT) {
         phase = SET;
         set_time = 3;
         set_increment = 0;
-      } else if (button_states & (1 << 2))
+      } else if (button_states & BTN_RIGHT)
         phase = BULLET;
 
       
@@ -184,13 +184,13 @@ void Display::timer_configuration() {
       white1->print("1 minute", CENTER, 24);
       white1->print("<-   OK   ->", CENTER, 52);
 
-      if (button_states & (1 << 0)) 
+      if (button_states & BTN_LEFT) 
         phase = BLITZ;
-      else if (button_states & (1 << 1)) {
+      else if (button_states & BTN_SELECT) {
         phase = SET;
         set_time = 1;
         set_increment = 0;
-      } else if (button_states & (1 << 2))
+      } else if (button_states & BTN_RIGHT)
         phase = FIFTEEN_TEN;
 
       break;
@@ -201,13 +201,13 @@ void Display::timer_configuration() {
       white1->print("15 min + 10 sec", CENTER, 24);
       white1->print("<-   OK   ->", CENTER, 52);
 
-      if (button_states & (1 << 0)) 
+      if (button_states & BTN_LEFT) 
         phase = BULLET;
-      else if (button_states & (1 << 1)) {
+      else if (button_states & BTN_SELECT) {
         phase = SET;
         set_time = 15;
         set_increment = 10;
-      } else if (button_states & (1 << 2))
+      } else if (button_states & BTN_RIGHT)
         phase = THREE_TWO;
 
       break;
@@ -218,13 +218,13 @@ void Display::timer_configuration() {
       white1->print("3 min + 2 sec", CENTER, 24);
       white1->print("<-   OK   ->", CENTER, 52);
 
-      if (button_states & (1 << 0)) 
+      if (button_states & BTN_LEFT) 
         phase = FIFTEEN_TEN;
-      else if (button_states & (1 << 1)) { 
+      else if (button_states & BTN_SELECT) { 
         phase = SET;
         set_time = 3;
         set_increment = 2;
-      } else if (button_states & (1 << 2))
+      } else if (button_states & BTN_RIGHT)
         phase = RAPID;
 
       break;
@@ -237,44 +237,52 @@ void Display::timer_configuration() {
       white1->setFont(BigFont);
       white1->print("READY?", CENTER, 4);
       white1->setFont(SmallFont);
-      white1->print("Select To Start", CENTER, 24);
+      white1->print("Black To Start", CENTER, 24);
       white1->print("<-          ", CENTER, 52);
+      black1->clrScr();
+      black1->setFont(BigFont);
+      black1->print("READY?", CENTER, 4);
+      black1->setFont(SmallFont);
+      black1->print("Black To Start", CENTER, 24);
+      black1->print("<-          ", CENTER, 52);
 
-      if (button_states & (1 << 0)) 
+      if (button_states & BTN_LEFT) 
         phase = FIRST;
-      else if (button_states & (1 << 1)){ 
+      else if (button_states & BTN_BLACK_TIMER){ 
         phase = START;
       } 
 
       break;
       case START:
-        static uint32_t start_start = millis();
-        static uint8_t count = 5;
-        if (millis() - start_start > 1000) {
-          white1->clrScr();
-          black1->clrScr();
+        // Transition to more tradition timer start system (i got sick of waiting 5s every time LOL)
+        // static uint32_t start_start = millis();
+        // static uint8_t count = 5;
 
-          white1->setFont(SmallFont);
-          black1->setFont(SmallFont);
+        // if (millis() - start_start > 1000) {
+        //   white1->clrScr();
+        //   black1->clrScr();
 
-          white1->print("Game starting...", CENTER, 8);
-          white1->setFont(BigFont);
-          white1->printNumI(count, CENTER, 32);
+        //   white1->setFont(SmallFont);
+        //   black1->setFont(SmallFont);
 
-          black1->print("Game starting...", CENTER, 8);
-          black1->setFont(BigFont);
-          black1->printNumI(count, CENTER, 32);
+        //   white1->print("Game starting...", CENTER, 8);
+        //   white1->setFont(BigFont);
+        //   white1->printNumI(count, CENTER, 32);
 
-          count -= 1;
-          start_start += 1000;
-        }
+        //   black1->print("Game starting...", CENTER, 8);
+        //   black1->setFont(BigFont);
+        //   black1->printNumI(count, CENTER, 32);
 
-      if (count == 0) {
+        //   count -= 1;
+        //   start_start += 1000;
+        // }
+
+      // if (count == 0) {
       // start timer 
-        timer->start();
-        phase = FIRST;
-        screen = TIMER_DISPLAY;
-      }
+      timer->start();
+      phase = FIRST;
+      screen = TIMER_DISPLAY;
+      // }
       break;
     default:
       break;
@@ -377,7 +385,7 @@ void Display::timer_display()
     //     return;
     
     static uint32_t last_screen_update = 0;
-    if (millis() - last_screen_update < 250) {
+    if (millis() - last_screen_update < 1000) {
       return;
     }
 
@@ -508,8 +516,9 @@ void Display::splash_screen()
   }
 
   // splash everywhere for 3 seconds
-  if (millis() - splash_time > SPLASH_BREAK) {
+  if (millis() - splash_time > SPLASH_BREAK || (button_states & BTN_SELECT)) {
     screen = TIMER_CONF;
+    button_states = 0;
   }
 }
 
