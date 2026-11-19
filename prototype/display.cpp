@@ -465,6 +465,99 @@ void Display::timer_display()
     board_display();
 }
 
+void Display::promotion() {
+  enum selected_piece {
+    CONFIRM,
+    CHESS_BISHOP = 1,
+    CHESS_ROOK = 2,
+    CHESS_KNIGHT = 3,
+    CHESS_QUEEN = 4
+  };
+
+  static selected_piece piece = CHESS_QUEEN;
+  refresh = true;
+  
+  switch(piece) {
+    case CHESS_QUEEN:
+      white1->clrScr();
+      white1->setFont(SmallFont);
+
+      white1->print("Promoting to...", CENTER, 8);
+      white1->print("<-   OK   ->", CENTER, 48);
+
+      white1->setFont(BigFont);
+      white1->print("QUEEN", CENTER, 24);
+
+      if (button_states & BTN_LEFT)
+        piece = CHESS_BISHOP;
+      else if (button_states & BTN_SELECT)
+        piece = CONFIRM;
+      else if (button_states & BTN_RIGHT)
+        piece = CHESS_KNIGHT;
+
+      break;
+    case CHESS_KNIGHT:
+      white1->clrScr();
+      white1->setFont(SmallFont);
+
+      white1->print("Promoting to...", CENTER, 8);
+      white1->print("<-   OK   ->", CENTER, 48);
+
+      white1->setFont(BigFont);
+      white1->print("KNIGHT", CENTER, 24);
+
+      if (button_states & BTN_LEFT)
+        piece = CHESS_QUEEN;
+      else if (button_states & BTN_SELECT)
+        piece = CONFIRM;
+      else if (button_states & BTN_RIGHT)
+        piece = CHESS_ROOK;
+
+      break;
+    case CHESS_ROOK:
+      white1->clrScr();
+      white1->setFont(SmallFont);
+
+      white1->print("Promoting to...", CENTER, 8);
+      white1->print("<-   OK   ->", CENTER, 48);
+
+      white1->setFont(BigFont);
+      white1->print("ROOK", CENTER, 24);
+
+      if (button_states & BTN_LEFT)
+        piece = CHESS_KNIGHT;
+      else if (button_states & BTN_SELECT)
+        piece = CONFIRM;
+      else if (button_states & BTN_RIGHT)
+        piece = CHESS_BISHOP;
+
+      break;
+    case CHESS_BISHOP:
+      white1->clrScr();
+      white1->setFont(SmallFont);
+
+      white1->print("Promoting to...", CENTER, 8);
+      white1->print("<-   OK   ->", CENTER, 48);
+
+      white1->setFont(BigFont);
+      white1->print("BISHOP", CENTER, 24);
+
+      if (button_states & BTN_LEFT)
+        piece = CHESS_ROOK;
+      else if (button_states & BTN_SELECT)
+        piece = CONFIRM;
+      else if (button_states & BTN_RIGHT)
+        piece = CHESS_QUEEN;
+
+      break;
+    case CONFIRM:
+      screen = TIMER_CONF;
+    default:
+      break;
+  }
+
+}
+
 void Display::game_over() {
   enum end_type {
     DETECT,
@@ -813,6 +906,9 @@ void Display::update()
       break;
     case TIMER_DISPLAY:
       timer_display();
+      break;
+    case PROMOTION:
+      promotion();
       break;
     case GAME_OVER:
       game_over();

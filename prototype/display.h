@@ -16,6 +16,7 @@ enum Screen {
   TIMER_CONF,
   BOARD_DISPLAY,
   TIMER_DISPLAY,
+  PROMOTION,
   GAME_OVER,
   SPLASH,
   DEBUG
@@ -48,6 +49,7 @@ protected:
   void timer_configuration();
   void board_display();
   void timer_display();
+  void promotion();
   void game_over();
   void splash_screen();
   void debug_screen();
