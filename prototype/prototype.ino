@@ -41,6 +41,7 @@ void Btn_Black_Timer_ISR();
 
 // Globals
 bool game_start = false;
+bool game_ready = false;
 
 void update_buttons()
 {
@@ -190,6 +191,10 @@ bool update_board()
   // Serial.print(test_peice_picked(last_read, new_read));
   // Serial.print(test_peice_placed(last_read, new_read));
 
+  // Serial.print(new_read[0], HEX);
+  // Serial.print(" ");
+  // Serial.println(new_read[1], HEX);
+
   Serial.print(from);
   Serial.print(" ");
   Serial.println(to);
@@ -200,11 +205,12 @@ bool update_board()
       if (game_start) {
         Serial.println("State Game Start");
         if (test_peice_picked(last_valid_read, new_read) == -1 && test_peice_placed(last_valid_read, new_read) == -1) {
-          timer->start();
-          display->set_screen(TIMER_DISPLAY);
+          game_ready = true;
+          state = START;
+          display->set_screen(TIMER_CONF);
         }
         else {
-          display->setScreen(BOARD_RESET);
+          display->set_screen(BOARD_RESET);
         }
       }
       break;

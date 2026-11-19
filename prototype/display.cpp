@@ -20,6 +20,7 @@
 
 extern uint8_t button_states;
 extern bool game_start;
+extern bool game_ready;
 extern uint8_t BigFont[];
 extern uint8_t SmallFont[];
 
@@ -182,18 +183,24 @@ void Display::timer_configuration() {
       white1->setFont(SmallFont);
       white1->print("Black To Start", CENTER, 24);
       white1->print("<-          ", CENTER, 52);
+      white2->clrScr();
       black1->clrScr();
       black1->setFont(BigFont);
       black1->print("READY?", CENTER, 4);
       black1->setFont(SmallFont);
       black1->print("Black To Start", CENTER, 24);
       black1->print("<-          ", CENTER, 52);
+      black2->clrScr();
 
-      if (button_states & BTN_LEFT) 
-        phase = FIRST;
-      else if (button_states & BTN_BLACK_TIMER){ 
-        phase = START;
-      } 
+      game_start = true;
+
+      if (game_ready) {
+        if (button_states & BTN_LEFT) 
+          phase = FIRST;
+        else if (button_states & BTN_BLACK_TIMER){ 
+          phase = START;
+        } 
+      }
 
       break;
       case START:
@@ -222,10 +229,10 @@ void Display::timer_configuration() {
 
       // if (count == 0) {
       // start timer (now handled by board state)
-      // timer->start();
-      // screen = TIMER_DISPLAY;
+      timer->start();
+      screen = TIMER_DISPLAY;
       phase = FIRST;
-      game_start = true;
+      // game_start = true;
       // }
       break;
     default:
@@ -239,83 +246,96 @@ void Display::timer_configuration() {
 
 void Display::board_display()
 {
-  white2->clrScr();
-  white2->setFont(SmallFont);
-  if (chess_game != NULL) {
-    uint32_t data = debug_data[1];
-    uint32_t offset = 1 << 31;
-    uint8_t *tile_bitmap = NULL;
-    bool inverted = false;
-    for (int i = 0; i < 64; i++) {
-      if (i == 32) {
-        data = debug_data[0];
-        offset = 1 << 31;
-      }
-      if (!((data) & offset)) {
-        tile_bitmap = empty_debug_tile;
-        inverted = true;
-      }
-      else {
-        tile_bitmap = debug_tile;
-        inverted = false;
-      }
-      offset = offset >> 1;
-      
-      chess_id_t current = chess_game->board[i];
-      int y = ((63 - i) / 8);
-      int x = 7 - ((63 - i) % 8);
-      white2->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
-      switch (CHESS_TEAM(current)) {
-        case CHESS_WHITE:
-          switch (CHESS_TYPE(current)) {
-            case CHESS_PAWN:
-              white2->drawInvertedBitmap(x * 16, y * 8, wp, 16, 8, inverted);
-              break;
-            case CHESS_BISHOP:
-              white2->drawInvertedBitmap(x * 16, y * 8, wb, 16, 8, inverted);
-              break;
-            case CHESS_ROOK:
-              white2->drawInvertedBitmap(x * 16, y * 8, wr, 16, 8, inverted);
-              break;
-            case CHESS_KNIGHT:
-              white2->drawInvertedBitmap(x * 16, y * 8, wh, 16, 8, inverted);
-              break;
-            case CHESS_QUEEN:
-              white2->drawInvertedBitmap(x * 16, y * 8, wq, 16, 8, inverted);
-              break;
-            case CHESS_KING:
-              white2->drawInvertedBitmap(x * 16, y * 8, wk, 16, 8, inverted);
-              break;
-            default:
-              white2->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
-          }
-        break;
-        case CHESS_BLACK:
-          switch (CHESS_TYPE(current)) {
-            case CHESS_PAWN:
-              white2->drawInvertedBitmap(x * 16, y * 8, bp, 16, 8, inverted);
-              break;
-            case CHESS_BISHOP:
-              white2->drawInvertedBitmap(x * 16, y * 8, bb, 16, 8, inverted);
-              break;
-            case CHESS_ROOK:
-              white2->drawInvertedBitmap(x * 16, y * 8, br, 16, 8, inverted);
-              break;
-            case CHESS_KNIGHT:
-              white2->drawInvertedBitmap(x * 16, y * 8, bh, 16, 8, inverted);
-              break;
-            case CHESS_QUEEN:
-              white2->drawInvertedBitmap(x * 16, y * 8, bq, 16, 8, inverted);
-              break;
-            case CHESS_KING:
-              white2->drawInvertedBitmap(x * 16, y * 8, bk, 16, 8, inverted);
-              break;
-            default:
-              white2->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
-          }
-        break;
-        default:
-          white2->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
+  mOLED *scr = white2;
+  for (int i = 0; i < 2; i++) {
+    if (i == 1) {
+      scr = black2;
+    }
+    scr->clrScr();
+    scr->setFont(SmallFont);
+    if (chess_game != NULL) {
+      uint32_t data = debug_data[1];
+      uint32_t offset = 1 << 31;
+      uint8_t *tile_bitmap = NULL;
+      bool inverted = false;
+      for (int i = 0; i < 64; i++) {
+        if (i == 32) {
+          data = debug_data[0];
+          offset = 1 << 31;
+        }
+        if (!((data) & offset)) {
+          tile_bitmap = debug_tile;
+          inverted = true;
+        }
+        else {
+          tile_bitmap = empty_debug_tile;
+          inverted = false;
+        }
+        offset = offset >> 1;
+        
+        chess_id_t current = chess_game->board[i];
+        int x, y;
+        // if (i == 1) {
+        //   y = 7 - ((63 - i) / 8);
+        //   x = ((63 - i) % 8);
+        // }
+        // else {
+        y = ((63 - i) / 8);
+        x = 7 - ((63 - i) % 8);
+        // }
+        scr->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
+        switch (CHESS_TEAM(current)) {
+          case CHESS_WHITE:
+            switch (CHESS_TYPE(current)) {
+              case CHESS_PAWN:
+                scr->drawInvertedBitmap(x * 16, y * 8, wp, 16, 8, inverted);
+                break;
+              case CHESS_BISHOP:
+                scr->drawInvertedBitmap(x * 16, y * 8, wb, 16, 8, inverted);
+                break;
+              case CHESS_ROOK:
+                scr->drawInvertedBitmap(x * 16, y * 8, wr, 16, 8, inverted);
+                break;
+              case CHESS_KNIGHT:
+                scr->drawInvertedBitmap(x * 16, y * 8, wh, 16, 8, inverted);
+                break;
+              case CHESS_QUEEN:
+                scr->drawInvertedBitmap(x * 16, y * 8, wq, 16, 8, inverted);
+                break;
+              case CHESS_KING:
+                scr->drawInvertedBitmap(x * 16, y * 8, wk, 16, 8, inverted);
+                break;
+              default:
+                scr->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
+            }
+          break;
+          case CHESS_BLACK:
+            switch (CHESS_TYPE(current)) {
+              case CHESS_PAWN:
+                scr->drawInvertedBitmap(x * 16, y * 8, bp, 16, 8, inverted);
+                break;
+              case CHESS_BISHOP:
+                scr->drawInvertedBitmap(x * 16, y * 8, bb, 16, 8, inverted);
+                break;
+              case CHESS_ROOK:
+                scr->drawInvertedBitmap(x * 16, y * 8, br, 16, 8, inverted);
+                break;
+              case CHESS_KNIGHT:
+                scr->drawInvertedBitmap(x * 16, y * 8, bh, 16, 8, inverted);
+                break;
+              case CHESS_QUEEN:
+                scr->drawInvertedBitmap(x * 16, y * 8, bq, 16, 8, inverted);
+                break;
+              case CHESS_KING:
+                scr->drawInvertedBitmap(x * 16, y * 8, bk, 16, 8, inverted);
+                break;
+              default:
+                scr->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
+            }
+          break;
+          default:
+            scr->drawBitmap(x * 16, y * 8, tile_bitmap, 16, 8);
+        }
       }
     }
   }
@@ -330,12 +350,14 @@ void Display::timer_display()
     //     return;
     
     static uint32_t last_screen_update = 0;
-    if (millis() - last_screen_update < 250 && !refresh) {
+    static uint8_t last_btns = button_states;
+    if (millis() - last_screen_update < 1000 && !refresh && !(last_btns ^ button_states)) {
       return;
     }
 
     
     last_screen_update = millis();
+    last_btns = button_states;
     refresh = true;
 
     uint32_t white_time = timer->get_white_time();
@@ -452,7 +474,7 @@ void Display::splash_screen()
     // Put oshe logo on side screens
     white2->drawBitmap(32, 0, oshe_logo, 64, 64);
     black2->drawBitmap(32, 0, oshe_logo, 64, 64);
-    black2->invert(true);
+    // black2->invert(true);
 
     splash_drawn = true;
     splash_time = millis();
@@ -486,12 +508,24 @@ void Display::draw_invalid()
 
 void Display::board_reset() 
 {
-  white1->clrScr();
-  white1->setFont(BigFont);
-  white1->invertText(false);
-  white1->print("SET PEICES", CENTER, 16);
-  white1->setFont(SmallFont);
-  white1->print("Return peices to staring position", CENTER, 32);
+  mOLED *scr = white1;
+  for (int i = 0; i < 2; i++) {
+    if (i == 1) {
+      scr = black1;
+    }
+    scr->clrScr();
+    scr->setFont(BigFont);
+    scr->invertText(false);
+    scr->print("SET UP", CENTER, 4);
+    scr->setFont(SmallFont);
+    scr->print("the", CENTER, 20);
+    scr->setFont(BigFont);
+    scr->print("BOARD", CENTER, 28);
+    scr->setFont(SmallFont);
+    scr->print("set up the", CENTER, 44);
+    scr->print("board as shown", CENTER, 52);
+  }
+  board_display();
 }
 
 void Display::debug_screen()
@@ -632,7 +666,7 @@ Display::Display()
   invalid_move = false;
 
   // screen = SPLASH; should be here normally?
-  screen = BOARD_DISPLAY;
+  screen = SPLASH;
   debug_data[0] = 0;
   debug_data[1] = 0;
   refresh = true;
@@ -657,6 +691,9 @@ void Display::update()
       break;
     case DEBUG:
       debug_screen();
+      break;
+    case BOARD_RESET:
+      board_reset();
       break;
     default:
       Serial.println("INVALID SCREEN STATE");
@@ -718,7 +755,7 @@ void Display::set_debug_data(uint32_t dataLow, uint32_t dataHigh)
 {
   debug_data[0] = dataLow;
   debug_data[1] = dataHigh;
-  if (state == DEBUG) {
+  if (screen == DEBUG) {
     refresh = true;
   }
 }
