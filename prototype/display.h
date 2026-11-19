@@ -17,6 +17,8 @@ enum Screen {
   BOARD_RESET,
   BOARD_DISPLAY,
   TIMER_DISPLAY,
+  PROMOTION,
+  GAME_OVER,
   SPLASH,
   DEBUG
 };
@@ -50,6 +52,8 @@ protected:
   void board_reset();
   void board_display();
   void timer_display();
+  void promotion();
+  void game_over();
   void splash_screen();
   void debug_screen();
   void draw_invalid();

@@ -385,6 +385,9 @@ void Display::timer_display()
     std::sprintf(white_score_buffer, "Score: %d", (int)white_score);
     std::sprintf(black_score_buffer, "Score: %d", (int)black_score);
 
+    chess_status_t white_status;
+    chess_status_t black_status;
+    chess_status(chess_game, &white_status, &black_status);
 
     white1->setFont(BigFont);
     black1->setFont(BigFont); 
@@ -398,8 +401,23 @@ void Display::timer_display()
     // Print score in small font
     white1->setFont(SmallFont);
     black1->setFont(SmallFont); 
-    white1->print(white_score_buffer, CENTER, 48);
-    black1->print(black_score_buffer, CENTER, 48);
+    white1->print(white_score_buffer, RIGHT, 56);
+    black1->print(black_score_buffer, RIGHT, 56);
+
+    if (white_status == 1) {
+      white1->setFont(SmallFont);
+      black1->setFont(SmallFont);
+
+      white1->print("You're in check!", CENTER, 32);
+      black1->print("White in check!", CENTER, 32);
+    } else if (black_status == 1) {
+      white1->setFont(SmallFont);
+      black1->setFont(SmallFont);
+
+      black1->print("You're in check!", CENTER, 32);
+      white1->print("Black in check!", CENTER, 32);
+
+    }
 
 
     // Indicate active player
@@ -410,19 +428,154 @@ void Display::timer_display()
         black1->invert(true);
         white1->invert(false);
     }
+    
+    board_display();
+}
 
-    // If someone runs out of time
-    uint8_t time_up = timer->is_time_up();
-    if(time_up) {
+void Display::promotion() {
+  enum selected_piece {
+    CONFIRM,
+    CHESS_BISHOP = 1,
+    CHESS_ROOK = 2,
+    CHESS_KNIGHT = 3,
+    CHESS_QUEEN = 4
+  };
+
+  static selected_piece piece = CHESS_QUEEN;
+  refresh = true;
+  
+  switch(piece) {
+    case CHESS_QUEEN:
+      white1->clrScr();
+      white1->setFont(SmallFont);
+
+      white1->print("Promoting to...", CENTER, 8);
+      white1->print("<-   OK   ->", CENTER, 48);
+
+      white1->setFont(BigFont);
+      white1->print("QUEEN", CENTER, 24);
+
+      if (button_states & BTN_LEFT)
+        piece = CHESS_BISHOP;
+      else if (button_states & BTN_SELECT)
+        piece = CONFIRM;
+      else if (button_states & BTN_RIGHT)
+        piece = CHESS_KNIGHT;
+
+      break;
+    case CHESS_KNIGHT:
+      white1->clrScr();
+      white1->setFont(SmallFont);
+
+      white1->print("Promoting to...", CENTER, 8);
+      white1->print("<-   OK   ->", CENTER, 48);
+
+      white1->setFont(BigFont);
+      white1->print("KNIGHT", CENTER, 24);
+
+      if (button_states & BTN_LEFT)
+        piece = CHESS_QUEEN;
+      else if (button_states & BTN_SELECT)
+        piece = CONFIRM;
+      else if (button_states & BTN_RIGHT)
+        piece = CHESS_ROOK;
+
+      break;
+    case CHESS_ROOK:
+      white1->clrScr();
+      white1->setFont(SmallFont);
+
+      white1->print("Promoting to...", CENTER, 8);
+      white1->print("<-   OK   ->", CENTER, 48);
+
+      white1->setFont(BigFont);
+      white1->print("ROOK", CENTER, 24);
+
+      if (button_states & BTN_LEFT)
+        piece = CHESS_KNIGHT;
+      else if (button_states & BTN_SELECT)
+        piece = CONFIRM;
+      else if (button_states & BTN_RIGHT)
+        piece = CHESS_BISHOP;
+
+      break;
+    case CHESS_BISHOP:
+      white1->clrScr();
+      white1->setFont(SmallFont);
+
+      white1->print("Promoting to...", CENTER, 8);
+      white1->print("<-   OK   ->", CENTER, 48);
+
+      white1->setFont(BigFont);
+      white1->print("BISHOP", CENTER, 24);
+
+      if (button_states & BTN_LEFT)
+        piece = CHESS_ROOK;
+      else if (button_states & BTN_SELECT)
+        piece = CONFIRM;
+      else if (button_states & BTN_RIGHT)
+        piece = CHESS_QUEEN;
+
+      break;
+    case CONFIRM:
+      screen = TIMER_CONF;
+    default:
+      break;
+  }
+
+}
+
+void Display::game_over() {
+  enum end_type {
+    DETECT,
+    TIMER,
+    CHECKMATE,
+    STALEMATE,
+    PLAY_AGAIN
+  };
+
+  static end_type end_state = DETECT;
+  refresh = true;
+
+  chess_status_t white;
+  chess_status_t black;
+  uint8_t time_up;
+  bool can_continue;
+
+  switch(end_state) {
+    case DETECT:
+      // Check if time ran out
+      time_up = timer->is_time_up();
+
+      can_continue = chess_status(chess_game, &white, &black);
+
+      
+      if(time_up) {
+        end_state = TIMER;
+
+      } else if (!can_continue) {
+        // If someone is in checkmate
+        if (white == 2 || black == 2) {
+          end_state = CHECKMATE;
+        } else if (white == 3 || black == 3) {
+          end_state = STALEMATE;
+        }
+      }
+
+      break;
+    case TIMER:
       timer->end();
 
       white1->clrScr();
       black1->clrScr();
-      white1->setFont(BigFont);
-      black1->setFont(BigFont);
+      black1->setFont(SmallFont);
+      white1->setFont(SmallFont);
 
-      white1->print("TIME UP", CENTER, 4);
-      black1->print("TIME UP", CENTER, 4);
+      white1->print("Time ran out.", CENTER, 4);
+      black1->print("Time ran out.", CENTER, 4);
+
+      black1->setFont(BigFont);
+      white1->setFont(BigFont);
 
       // White runs out of time, black wins
       if (time_up == 1) {
@@ -432,8 +585,8 @@ void Display::timer_display()
         black1->setFont(SmallFont);
         white1->setFont(SmallFont);
 
-        black1->print("White ran out of time", CENTER, 52);
-        white1->print("White ran out of time", CENTER, 52);
+        black1->print("Press select", CENTER, 52);
+        white1->print("Press select", CENTER, 52);
       } else {
         white1->print("YOU WIN!", CENTER, 28);
         black1->print("LOSER!", CENTER, 28);
@@ -441,13 +594,72 @@ void Display::timer_display()
         white1->setFont(SmallFont);
         black1->setFont(SmallFont);
 
-        white1->print("Black ran out of time", CENTER, 52);
-        black1->print("Black ran out of time", CENTER, 52);
+        white1->print("Press select", CENTER, 52);
+        black1->print("Press select", CENTER, 52);
+      }
+      
+      end_state = PLAY_AGAIN;
+      break;
+    case CHECKMATE:
+
+        white1->clrScr();
+        black1->clrScr();
+        white1->setFont(SmallFont);
+        black1->setFont(SmallFont);
+
+        white1->print("Checkmate!", CENTER, 4);
+        black1->print("Checkmate!", CENTER, 4);
+
+        white1->print("Press select", CENTER, 52);
+        black1->print("Press select", CENTER, 52);
+
+        white1->setFont(BigFont);
+        black1->setFont(BigFont);
+
+      if (white == 2) {
+        
+        black1->print("YOU WIN!", CENTER, 28);
+        white1->print("LOSER!", CENTER, 28);
+
+      } else {
+        white1->print("YOU WIN!", CENTER, 28);
+        black1->print("LOSER!", CENTER, 28);
 
       }
 
-    }
-    board_display();
+      end_state = PLAY_AGAIN;
+      break;
+    case STALEMATE:
+        white1->clrScr();
+        black1->clrScr();
+        white1->setFont(SmallFont);
+        black1->setFont(SmallFont);
+
+        white1->print("Stalemate!", CENTER, 4);
+        black1->print("Stalemate!", CENTER, 4);
+
+        white1->print("Press select", CENTER, 52);
+        black1->print("Press select", CENTER, 52);
+
+        white1->setFont(BigFont);
+        black1->setFont(BigFont);
+        black1->print("TIE.", CENTER, 28);
+        white1->print("TIE.", CENTER, 28);
+
+        end_state = PLAY_AGAIN;
+        break;
+      case PLAY_AGAIN:
+        if (button_states & (1 << 1)) {
+          end_state = DETECT;
+          screen = TIMER_CONF;
+        }
+
+        break;
+      default:
+        break;
+  }
+
+
 }
 
 void Display::splash_screen()
@@ -685,6 +897,12 @@ void Display::update()
       break;
     case TIMER_DISPLAY:
       timer_display();
+      break;
+    case PROMOTION:
+      promotion();
+      break;
+    case GAME_OVER:
+      game_over();
       break;
     case SPLASH:
       splash_screen();
