@@ -1,8 +1,0 @@
-Assembly Instructions:
-Chess Pieces:
-Once each piece has been printed, take a magnet and push it into the hole on the bottom of the chess piece. This is a press fit and should not require any adhesive; however, if you find that the tolerance is too loose, feel free to use some glue to better hold the magnet in place. 
-
-Sensor Board:
-
-
-Full Chessboard:
