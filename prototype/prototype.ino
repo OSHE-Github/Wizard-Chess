@@ -40,6 +40,7 @@ void Btn_White_Timer_ISR();
 void Btn_Black_Timer_ISR();
 
 // Globals
+bool game_start = false;
 
 void update_buttons()
 {
@@ -56,6 +57,7 @@ void update_buttons()
 }
 
 enum BoardState {
+  GAME_SETUP,
   START,
   PEICE_SELECTED,
   MOVE_MADE,
@@ -135,11 +137,11 @@ int32_t test_peice_picked(uint32_t before[], uint32_t after[]) {
 bool update_board() 
 {
   static uint32_t last_read[] = {0, 0};
-  static uint32_t last_valid_read[] = {0, 0};
+  static uint32_t last_valid_read[] = {0xFFFF0000, 0x0000FFFF};
   static unsigned long last_board_change = 0; 
   static int32_t to = -1;
   static int32_t from = -1;
-  static BoardState state = START;
+  static BoardState state = GAME_SETUP;
 
   // Read Current Board
   digitalWrite(SHIFT_REG_SHLD, HIGH);
@@ -164,8 +166,6 @@ bool update_board()
   if (last_read[0] == 0 && last_read[1] == 0) {
     last_read[0] = new_read[0];
     last_read[1] = new_read[1];
-    last_valid_read[0] = new_read[0];
-    last_valid_read[1] = new_read[1];
     return false;
   }
 
@@ -196,6 +196,18 @@ bool update_board()
 
   // state = (BoardState)20;
   switch (state) {
+    case GAME_SETUP:
+      if (game_start) {
+        Serial.println("State Game Start");
+        if (test_peice_picked(last_valid_read, new_read) == -1 && test_peice_placed(last_valid_read, new_read) == -1) {
+          timer->start();
+          display->set_screen(TIMER_DISPLAY);
+        }
+        else {
+          display->setScreen(BOARD_RESET);
+        }
+      }
+      break;
     case START:
       Serial.println("State Start");
        changed_index = test_peice_picked(last_valid_read, new_read);
@@ -240,28 +252,28 @@ bool update_board()
       }
     break;
     case MOVE_VALIDATION:
-    Serial.println("State Validation");
-    move_result = chess_move(&chess_game, from, to);
-    if (move_result == -2) {
-      state = RESET_BOARD;
-      display->set_invalid_mode(true);
-      break;
-    }
-    state = START;
-    last_valid_read[0] = new_read[0];
-    last_valid_read[1] = new_read[1];
-    to = -1;
-    from = -1;
-    timer->swapTurn();
-    break;
-    case RESET_BOARD:
-    Serial.println("State RESET");
-    if (new_read[0] == last_valid_read[0] && new_read[1] == last_valid_read[1]) {
-      display->set_invalid_mode(false);
+      Serial.println("State Validation");
+      move_result = chess_move(&chess_game, from, to);
+      if (move_result == -2) {
+        state = RESET_BOARD;
+        display->set_invalid_mode(true);
+        break;
+      }
       state = START;
+      last_valid_read[0] = new_read[0];
+      last_valid_read[1] = new_read[1];
       to = -1;
       from = -1;
-    }
+      timer->swapTurn();
+      break;
+      case RESET_BOARD:
+      Serial.println("State RESET");
+      if (new_read[0] == last_valid_read[0] && new_read[1] == last_valid_read[1]) {
+        display->set_invalid_mode(false);
+        state = START;
+        to = -1;
+        from = -1;
+      }
     break;
     default:
     Serial.println("INVALID BOARD STATE");

@@ -14,6 +14,7 @@
 
 enum Screen {
   TIMER_CONF,
+  BOARD_RESET,
   BOARD_DISPLAY,
   TIMER_DISPLAY,
   SPLASH,
@@ -46,6 +47,7 @@ protected:
 
 
   void timer_configuration();
+  void board_reset();
   void board_display();
   void timer_display();
   void splash_screen();

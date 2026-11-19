@@ -19,6 +19,7 @@
 
 
 extern uint8_t button_states;
+extern bool game_start;
 extern uint8_t BigFont[];
 extern uint8_t SmallFont[];
 
@@ -196,7 +197,7 @@ void Display::timer_configuration() {
 
       break;
       case START:
-        // Transition to more tradition timer start system (i got sick of waiting 5s every time LOL)
+        // Transition to more traditional timer start system (i got sick of waiting 5s every time LOL)
         // static uint32_t start_start = millis();
         // static uint8_t count = 5;
 
@@ -220,10 +221,11 @@ void Display::timer_configuration() {
         // }
 
       // if (count == 0) {
-      // start timer 
-      timer->start();
+      // start timer (now handled by board state)
+      // timer->start();
+      // screen = TIMER_DISPLAY;
       phase = FIRST;
-      screen = TIMER_DISPLAY;
+      game_start = true;
       // }
       break;
     default:
@@ -328,7 +330,7 @@ void Display::timer_display()
     //     return;
     
     static uint32_t last_screen_update = 0;
-    if (millis() - last_screen_update < 250) {
+    if (millis() - last_screen_update < 250 && !refresh) {
       return;
     }
 
@@ -465,7 +467,8 @@ void Display::splash_screen()
   }
 }
 
-void Display::draw_invalid() {
+void Display::draw_invalid() 
+{
   mOLED *cScr = NULL;
   if (chess_game->turn == CHESS_WHITE) {
     cScr = white1;
@@ -475,9 +478,20 @@ void Display::draw_invalid() {
   }
   cScr->setFont(BigFont);
   cScr->invertText(false);
-  cScr->print("BAD MOVE", 0, 16);
+  cScr->print("BAD MOVE", CENTER, 16);
   cScr->setFont(SmallFont);
-  cScr->print("RESET BOARD AS SHOWN", 4, 32);
+  cScr->print("RESET BOARD AS SHOWN", CENTER, 32);
+}
+
+
+void Display::board_reset() 
+{
+  white1->clrScr();
+  white1->setFont(BigFont);
+  white1->invertText(false);
+  white1->print("SET PEICES", CENTER, 16);
+  white1->setFont(SmallFont);
+  white1->print("Return peices to staring position", CENTER, 32);
 }
 
 void Display::debug_screen()
