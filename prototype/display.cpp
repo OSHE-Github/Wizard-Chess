@@ -328,7 +328,7 @@ void Display::timer_display()
     //     return;
     
     static uint32_t last_screen_update = 0;
-    if (millis() - last_screen_update < 1000) {
+    if (millis() - last_screen_update < 250) {
       return;
     }
 
@@ -704,7 +704,9 @@ void Display::set_debug_data(uint32_t dataLow, uint32_t dataHigh)
 {
   debug_data[0] = dataLow;
   debug_data[1] = dataHigh;
-  refresh = true;
+  if (state == DEBUG) {
+    refresh = true;
+  }
 }
 
 ///////// Custom OLED functions
