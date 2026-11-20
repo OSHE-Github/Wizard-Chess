@@ -215,7 +215,7 @@ void Display::timer_configuration() {
       if (game_ready) {
         if (button_states & BTN_LEFT) 
           phase = FIRST;
-        else if (button_states & BTN_BLACK_TIMER){ 
+        else if (button_states & BTN_BLACK_TIMER || !timed_game){ 
           phase = START;
         } 
       }
