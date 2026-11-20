@@ -41,6 +41,16 @@ void Btn_Black_Timer_ISR();
 
 #define UNTIMED_MOVE_TIME 1000 // millis
 
+typedef struct HistoryEntry {
+  chess_game_t game;
+  uint32_t sensor_state[2];
+  Timer time;
+};
+
+HistoryEntry history[64];
+int32_t history_index = -1;
+int32_t history_total = 0;
+
 // Globals
 bool game_start = false;
 bool game_ready = false;
@@ -147,6 +157,7 @@ bool update_board()
   static int32_t from = -1;
   static BoardState state = GAME_SETUP;
   static unsigned long time_move_made;
+  static Screen game_screen = NO_SCREEN;
 
   // Read Current Board
   digitalWrite(SHIFT_REG_SHLD, HIGH);
@@ -192,6 +203,7 @@ bool update_board()
   uint8_t button_mask = 0;
   uint32_t move_result = 0;
   unsigned long time_elapsed;
+  HistoryEntry new_entry;
 
   // Serial.print(test_peice_picked(last_read, new_read));
   // Serial.print(test_peice_placed(last_read, new_read));
@@ -200,9 +212,9 @@ bool update_board()
   // Serial.print(" ");
   // Serial.println(new_read[1], HEX);
 
-  // Serial.print(from);
-  // Serial.print(" ");
-  // Serial.println(to);
+  Serial.print(history_index);
+  Serial.print(" ");
+  Serial.println(history_total);
 
   // state = (BoardState)20;
   switch (state) {
@@ -221,11 +233,43 @@ bool update_board()
       break;
     case START:
       // Serial.println("State Start");
-       changed_index = test_peice_picked(last_valid_read, new_read);
-       if (changed_index >= 0) {
-        from = changed_index;
-        state = PEICE_SELECTED;
-       }
+      if (history_total == 0 && (timer->is_running() || !timed_game)) {
+        // Store History
+        history_index++;
+        history_total++;
+        HistoryEntry new_entry;
+        new_entry.game = chess_game;
+        new_entry.sensor_state[0] = last_valid_read[0];
+        new_entry.sensor_state[1] = last_valid_read[1];
+        timer->pause();
+        new_entry.time = *timer;
+        timer->start();
+        history[history_index] = new_entry;
+      }
+      changed_index = test_peice_picked(last_valid_read, new_read);
+      if (changed_index >= 0) {
+      from = changed_index;
+      state = PEICE_SELECTED;
+      }
+      // restore last move
+      if ((button_states & BTN_LEFT) && history_total > 1) {
+      history_total--;
+      history_index--;
+      if (history_index < 0) {
+        history_index = 63;
+      }
+      chess_game = history[history_index].game;
+      last_valid_read[0] = history[history_index].sensor_state[0];
+      last_valid_read[1] = history[history_index].sensor_state[1];
+      *timer = history[history_index].time;
+      game_screen = display->get_screen();
+      display->set_screen(BOARD_RESET);
+      state = RESET_BOARD;
+      button_states = 0;
+      }
+      if ((button_states & BTN_RIGHT)) {
+        ESP.restart();
+      }
       //  else if (changed_index < -1) {
       //   state = RESET_BOARD;
       //  }
@@ -273,17 +317,43 @@ bool update_board()
         display->set_invalid_mode(true);
         break;
       }
+
+      // Store History
+      history_index++;
+      history_total++;
+      if (history_index > 63) {
+        history_index = 0;
+      }
+      if (history_total >= 64) {
+        history_total = 64;
+      }
+
       state = START;
       last_valid_read[0] = new_read[0];
       last_valid_read[1] = new_read[1];
       to = -1;
       from = -1;
       timer->swapTurn();
+
+      new_entry.game = chess_game;
+      new_entry.sensor_state[0] = new_read[0];
+      new_entry.sensor_state[1] = new_read[1];
+      timer->pause();
+      new_entry.time = *timer;
+      timer->start();
+      history[history_index] = new_entry;
+
       break;
       case RESET_BOARD:
       Serial.println("State RESET");
+      display->force_refresh();
       if (new_read[0] == last_valid_read[0] && new_read[1] == last_valid_read[1]) {
         display->set_invalid_mode(false);
+        if (game_screen != NO_SCREEN) {
+          display->set_screen(game_screen);
+          game_screen = NO_SCREEN;
+        }
+        timer->start();
         state = START;
         to = -1;
         from = -1;

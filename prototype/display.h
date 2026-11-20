@@ -21,7 +21,8 @@ enum Screen {
   PROMOTION,
   GAME_OVER,
   SPLASH,
-  DEBUG
+  DEBUG,
+  NO_SCREEN
 };
 
 // Custom OLED class to add support for multiple displays
@@ -64,6 +65,7 @@ public:
   Display();
   void update();
   void set_screen(Screen);
+  Screen get_screen();
   void set_timer(Timer *t);
   void set_invalid_mode(bool);
   void set_debug_data(uint32_t, uint32_t);

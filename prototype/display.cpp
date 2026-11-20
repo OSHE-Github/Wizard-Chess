@@ -1042,6 +1042,10 @@ void Display::set_screen(Screen scr)
   refresh = true;
 }
 
+Screen Display::get_screen() {
+  return screen;
+}
+
 void Display::set_timer(Timer *t) {
   timer = t;
   refresh = true;

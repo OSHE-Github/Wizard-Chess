@@ -1,7 +1,6 @@
 #ifndef BITMAPS_H
 #define BITMAPS_H
 
-
 //////// Bitmaps
 
 static uint8_t debug_tile[] = {
