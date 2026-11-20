@@ -39,7 +39,8 @@ void Btn_Right_ISR();
 void Btn_White_Timer_ISR();
 void Btn_Black_Timer_ISR();
 
-#define UNTIMED_MOVE_TIME 1000 // millis
+#define UNTIMED_MOVE_TIME 500 // millis
+#define HISTORY_LENGTH 256
 
 typedef struct HistoryEntry {
   chess_game_t game;
@@ -47,7 +48,7 @@ typedef struct HistoryEntry {
   Timer time;
 };
 
-HistoryEntry history[64];
+HistoryEntry history[HISTORY_LENGTH];
 int32_t history_index = -1;
 int32_t history_total = 0;
 
@@ -256,7 +257,7 @@ bool update_board()
       history_total--;
       history_index--;
       if (history_index < 0) {
-        history_index = 63;
+        history_index = HISTORY_LENGTH - 1;
       }
       chess_game = history[history_index].game;
       last_valid_read[0] = history[history_index].sensor_state[0];
@@ -335,11 +336,11 @@ bool update_board()
       // Store History
       history_index++;
       history_total++;
-      if (history_index > 63) {
+      if (history_index > (HISTORY_LENGTH - 1)) {
         history_index = 0;
       }
-      if (history_total >= 64) {
-        history_total = 64;
+      if (history_total >= HISTORY_LENGTH) {
+        history_total = HISTORY_LENGTH;
       }
 
       state = START;

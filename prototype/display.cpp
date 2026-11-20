@@ -713,16 +713,16 @@ void Display::game_over() {
         white1->setFont(BigFont);
         black1->setFont(BigFont);
 
-      if (white == CHESS_CHECKMATE) {
+      // if (white == CHESS_CHECKMATE) {
         
-        black1->print("YOU WIN!", CENTER, 28);
-        white1->print("LOSER!", CENTER, 28);
+      //   black1->print("YOU WIN!", CENTER, 28);
+      //   white1->print("LOSER!", CENTER, 28);
 
-      } else if (black == CHESS_CHECKMATE) {
-        white1->print("YOU WIN!", CENTER, 28);
-        black1->print("LOSER!", CENTER, 28);
+      // } else if (black == CHESS_CHECKMATE) {
+      //   white1->print("YOU WIN!", CENTER, 28);
+      //   black1->print("LOSER!", CENTER, 28);
 
-      }
+      // }
 
       end_state = PLAY_AGAIN;
       break;
