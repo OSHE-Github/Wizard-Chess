@@ -212,9 +212,9 @@ bool update_board()
   // Serial.print(" ");
   // Serial.println(new_read[1], HEX);
 
-  Serial.print(history_index);
-  Serial.print(" ");
-  Serial.println(history_total);
+  // Serial.print(history_index);
+  // Serial.print(" ");
+  // Serial.println(history_total);
 
   // state = (BoardState)20;
   switch (state) {
@@ -269,6 +269,20 @@ bool update_board()
       }
       if ((button_states & BTN_RIGHT)) {
         ESP.restart();
+      }
+      
+      // check if game over
+      chess_status_t white;
+      chess_status_t black;
+
+      chess_status(&chess_game, &white, &black);
+
+      Serial.print(white);
+      Serial.print(" ");
+      Serial.println(black);
+
+      if(white == 2 || white == 3 || black == 2 || black == 3) {
+        display->set_screen(GAME_OVER);
       }
       //  else if (changed_index < -1) {
       //   state = RESET_BOARD;

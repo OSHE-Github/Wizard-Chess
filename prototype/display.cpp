@@ -583,6 +583,37 @@ void Display::untimed_display() {
     white1->print("TURN", CENTER, 24);
   }
 
+  char white_score_buffer[10];
+  char black_score_buffer[10];
+  chess_score_t white_score = chess_score(chess_game, CHESS_WHITE);
+  chess_score_t black_score = chess_score(chess_game, CHESS_BLACK);
+
+  std::sprintf(white_score_buffer, "Score: %d", (int)white_score);
+  std::sprintf(black_score_buffer, "Score: %d", (int)black_score);
+
+  chess_status_t white_status;
+  chess_status_t black_status;
+  chess_status(chess_game, &white_status, &black_status);
+
+  Serial.print(white_status);
+  Serial.print(" ");
+  Serial.println(black_status);
+  
+  if (white_status == 1) {
+    white1->setFont(SmallFont);
+    black1->setFont(SmallFont);
+
+    white1->print("You're in check!", CENTER, 40);
+    black1->print("White in check!", CENTER, 40);
+  } else if (black_status == 1) {
+    white1->setFont(SmallFont);
+    black1->setFont(SmallFont);
+
+    black1->print("You're in check!", CENTER, 40);
+    white1->print("Black in check!", CENTER, 40);
+
+  }
+
   board_display();
 
   refresh = true;
@@ -612,8 +643,11 @@ void Display::game_over() {
 
       can_continue = chess_status(chess_game, &white, &black);
 
-      
-      if(time_up) {
+      Serial.print(white);
+      Serial.print(" x ");
+      Serial.println(black);
+
+      if(time_up && timed_game) {
         end_state = TIMER;
       } else if (!can_continue) {
         // If someone is in checkmate
@@ -679,12 +713,12 @@ void Display::game_over() {
         white1->setFont(BigFont);
         black1->setFont(BigFont);
 
-      if (white == 2) {
+      if (white == CHESS_CHECKMATE) {
         
         black1->print("YOU WIN!", CENTER, 28);
         white1->print("LOSER!", CENTER, 28);
 
-      } else {
+      } else if (black == CHESS_CHECKMATE) {
         white1->print("YOU WIN!", CENTER, 28);
         black1->print("LOSER!", CENTER, 28);
 
