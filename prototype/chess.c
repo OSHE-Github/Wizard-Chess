@@ -857,7 +857,7 @@ bool chess_status(const chess_game_t* game, chess_status_t* out_white_status, ch
     if(out_black_status!=NULL) {
         *out_black_status = CHESS_NORMAL;
     }
-    chess_value_t moves[64]; 
+    chess_value_t moves[64];
     bool has_move = false;
     bool set_white = false;
     bool set_black = false;
@@ -867,7 +867,7 @@ bool chess_status(const chess_game_t* game, chess_status_t* out_white_status, ch
             if(CHESS_KING==CHESS_TYPE(game->board[i])) {
                 if (is_checked_king(game, i, game->board)) {
                     if (0 == chess_compute_moves(game, i, moves)) {
-                        if(CHESS_TEAM(game->board[i]==CHESS_WHITE)) {
+                        if(CHESS_TEAM(game->board[i])==CHESS_WHITE) {
                             if(out_white_status!=NULL) {
                                 *out_white_status = CHESS_CHECKMATE;
                             }
