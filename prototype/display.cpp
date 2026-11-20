@@ -21,6 +21,7 @@
 extern uint8_t button_states;
 extern bool game_start;
 extern bool game_ready;
+extern bool timed_game;
 extern uint8_t BigFont[];
 extern uint8_t SmallFont[];
 
@@ -35,6 +36,7 @@ void Display::timer_configuration() {
     BULLET,
     FIFTEEN_TEN,
     THREE_TWO,
+    NO_TIMER,
     SET,
     START
   };
@@ -76,7 +78,7 @@ void Display::timer_configuration() {
       white1->print("<-   OK   ->", CENTER, 52);
 
       if (button_states & BTN_LEFT) 
-        phase = THREE_TWO;
+        phase = NO_TIMER;
       else if (button_states & BTN_SELECT) {
         phase = SET;
         set_time = 10;
@@ -169,6 +171,22 @@ void Display::timer_configuration() {
         set_time = 3;
         set_increment = 2;
       } else if (button_states & BTN_RIGHT)
+        phase = NO_TIMER;
+
+      break;
+    case NO_TIMER:
+      white1->clrScr();
+      white1->print("NO TIMER", CENTER, 4);
+      white1->setFont(SmallFont);
+      white1->print("Untimed & Auto move", CENTER, 24);
+      white1->print("<-   OK   ->", CENTER, 52);
+
+      if (button_states & BTN_LEFT) 
+        phase = THREE_TWO;
+      else if (button_states & BTN_SELECT) { 
+        phase = SET;
+        timed_game = false;
+      } else if (button_states & BTN_RIGHT)
         phase = RAPID;
 
       break;
@@ -229,8 +247,13 @@ void Display::timer_configuration() {
 
       // if (count == 0) {
       // start timer (now handled by board state)
-      timer->start();
-      screen = TIMER_DISPLAY;
+      if (timed_game) {
+        timer->start();
+        screen = TIMER_DISPLAY;
+      }
+      else {
+        screen = UNTIMED_DISPLAY;
+      }
       phase = FIRST;
       // game_start = true;
       // }
@@ -527,6 +550,42 @@ void Display::promotion() {
       break;
   }
 
+}
+
+void Display::untimed_display() {
+  
+  static uint32_t last_screen_update = 0;
+  if (millis() - last_screen_update < 1000) {
+    return;
+  }
+  last_screen_update = millis();
+
+  white1->clrScr();
+  black1->clrScr();
+
+  white1->setFont(BigFont);
+  black1->setFont(BigFont);
+
+  if (chess_game->turn == CHESS_WHITE) {
+    white1->invert(true);
+    black1->invert(false);
+    white1->print("YOUR", CENTER, 8);
+    white1->print("TURN", CENTER, 24);
+    black1->print("WHITES", CENTER, 8);
+    black1->print("TURN", CENTER, 24);
+  }
+  else {
+    white1->invert(false);
+    black1->invert(true);
+    black1->print("YOUR", CENTER, 8);
+    black1->print("TURN", CENTER, 24);
+    white1->print("BLACKS", CENTER, 8);
+    white1->print("TURN", CENTER, 24);
+  }
+
+  board_display();
+
+  refresh = true;
 }
 
 void Display::game_over() {
@@ -923,6 +982,9 @@ void Display::update()
     case TIMER_DISPLAY:
       timer_display();
       break;
+    case UNTIMED_DISPLAY:
+      untimed_display();
+      break;
     case PROMOTION:
       promotion();
       break;
@@ -1001,6 +1063,10 @@ void Display::set_debug_data(uint32_t dataLow, uint32_t dataHigh)
   if (screen == DEBUG) {
     refresh = true;
   }
+}
+
+void Display::force_refresh() {
+  refresh = true;
 }
 
 ///////// Custom OLED functions

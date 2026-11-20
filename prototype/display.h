@@ -17,6 +17,7 @@ enum Screen {
   BOARD_RESET,
   BOARD_DISPLAY,
   TIMER_DISPLAY,
+  UNTIMED_DISPLAY,
   PROMOTION,
   GAME_OVER,
   SPLASH,
@@ -52,6 +53,7 @@ protected:
   void board_reset();
   void board_display();
   void timer_display();
+  void untimed_display();
   void promotion();
   void game_over();
   void splash_screen();
@@ -66,6 +68,7 @@ public:
   void set_invalid_mode(bool);
   void set_debug_data(uint32_t, uint32_t);
   void set_chess_board(chess_game_t*);
+  void force_refresh();
 };
 
 #endif

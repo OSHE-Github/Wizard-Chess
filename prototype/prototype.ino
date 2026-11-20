@@ -39,9 +39,12 @@ void Btn_Right_ISR();
 void Btn_White_Timer_ISR();
 void Btn_Black_Timer_ISR();
 
+#define UNTIMED_MOVE_TIME 1000 // millis
+
 // Globals
 bool game_start = false;
 bool game_ready = false;
+bool timed_game = true;
 
 void update_buttons()
 {
@@ -143,6 +146,7 @@ bool update_board()
   static int32_t to = -1;
   static int32_t from = -1;
   static BoardState state = GAME_SETUP;
+  static unsigned long time_move_made;
 
   // Read Current Board
   digitalWrite(SHIFT_REG_SHLD, HIGH);
@@ -187,6 +191,7 @@ bool update_board()
   int32_t changed_index = 0;
   uint8_t button_mask = 0;
   uint32_t move_result = 0;
+  unsigned long time_elapsed;
 
   // Serial.print(test_peice_picked(last_read, new_read));
   // Serial.print(test_peice_placed(last_read, new_read));
@@ -237,6 +242,7 @@ bool update_board()
         to = changed_index;
         state = MOVE_MADE;
         button_states = 0;
+        time_move_made = millis();
        }
     break;
     case MOVE_MADE:
@@ -252,13 +258,15 @@ bool update_board()
       else {
         button_mask = BTN_BLACK_TIMER;
       }
-      if ((button_states & button_mask)) {
+      time_elapsed = millis() - time_move_made;
+      if ((button_states & button_mask) || (!timed_game && (time_elapsed >= UNTIMED_MOVE_TIME))) {
         state = MOVE_VALIDATION;
         button_states -= button_mask;
       }
     break;
     case MOVE_VALIDATION:
       Serial.println("State Validation");
+      display->force_refresh();
       move_result = chess_move(&chess_game, from, to);
       if (move_result == -2) {
         state = RESET_BOARD;
