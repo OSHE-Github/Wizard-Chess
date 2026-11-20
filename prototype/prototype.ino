@@ -195,9 +195,9 @@ bool update_board()
   // Serial.print(" ");
   // Serial.println(new_read[1], HEX);
 
-  Serial.print(from);
-  Serial.print(" ");
-  Serial.println(to);
+  // Serial.print(from);
+  // Serial.print(" ");
+  // Serial.println(to);
 
   // state = (BoardState)20;
   switch (state) {
@@ -215,7 +215,7 @@ bool update_board()
       }
       break;
     case START:
-      Serial.println("State Start");
+      // Serial.println("State Start");
        changed_index = test_peice_picked(last_valid_read, new_read);
        if (changed_index >= 0) {
         from = changed_index;

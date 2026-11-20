@@ -389,6 +389,10 @@ void Display::timer_display()
     chess_status_t black_status;
     chess_status(chess_game, &white_status, &black_status);
 
+    Serial.print(white_status);
+    Serial.print(" ");
+    Serial.println(black_status);
+
     white1->setFont(BigFont);
     black1->setFont(BigFont); 
     white1->clrScr();
@@ -401,8 +405,8 @@ void Display::timer_display()
     // Print score in small font
     white1->setFont(SmallFont);
     black1->setFont(SmallFont); 
-    white1->print(white_score_buffer, RIGHT, 56);
-    black1->print(black_score_buffer, RIGHT, 56);
+    white1->print(white_score_buffer, RIGHT, 52);
+    black1->print(black_score_buffer, RIGHT, 52);
 
     if (white_status == 1) {
       white1->setFont(SmallFont);
@@ -552,7 +556,6 @@ void Display::game_over() {
       
       if(time_up) {
         end_state = TIMER;
-
       } else if (!can_continue) {
         // If someone is in checkmate
         if (white == 2 || black == 2) {
@@ -564,6 +567,7 @@ void Display::game_over() {
 
       break;
     case TIMER:
+      time_up = timer->is_time_up();
       timer->end();
 
       white1->clrScr();
@@ -658,8 +662,9 @@ void Display::game_over() {
       default:
         break;
   }
-
-
+  if (end_state != DETECT) {
+    screen = GAME_OVER;
+  }
 }
 
 void Display::splash_screen()
@@ -704,17 +709,37 @@ void Display::splash_screen()
 void Display::draw_invalid() 
 {
   mOLED *cScr = NULL;
+  chess_status_t white_status;
+  chess_status_t black_status;
+  chess_status(chess_game, &white_status, &black_status);
+  bool checked = false;
   if (chess_game->turn == CHESS_WHITE) {
     cScr = white1;
+    if (white_status == 1) {
+      checked = true;
+    }
   }
   else {
     cScr = black1;
+    if (black_status == 1) {
+      checked = true;
+    }
   }
-  cScr->setFont(BigFont);
-  cScr->invertText(false);
-  cScr->print("BAD MOVE", CENTER, 16);
-  cScr->setFont(SmallFont);
-  cScr->print("RESET BOARD AS SHOWN", CENTER, 32);
+
+  if (!checked) {
+    cScr->setFont(BigFont);
+    cScr->invertText(false);
+    cScr->print("BAD MOVE", CENTER, 16);
+    cScr->setFont(SmallFont);
+    cScr->print("RESET BOARD AS SHOWN", CENTER, 32);
+  }
+  else {
+    cScr->setFont(BigFont);
+    cScr->invertText(false);
+    cScr->print("IN CHECK", CENTER, 16);
+    cScr->setFont(SmallFont);
+    cScr->print("Reset & dont lose!", CENTER, 32);
+  }
 }
 
 

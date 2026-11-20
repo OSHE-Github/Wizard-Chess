@@ -1,5 +1,8 @@
 #include "timer.h"
+#include "display.h"
 #include <Arduino.h>
+
+extern Display *display;
 
 // Constructor
 Timer::Timer() {
@@ -75,9 +78,10 @@ void Timer::update() {
 
   last_update = current_time;
 
-  if (white_time == 0 || black_time == 0)
+  if (white_time == 0 || black_time == 0) {
     running = false;
-
+    display->set_screen(GAME_OVER);
+  }
 }
 
 void Timer::swapTurn() {
