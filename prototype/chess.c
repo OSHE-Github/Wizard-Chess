@@ -1,4 +1,5 @@
 #include "chess.h"
+#include <Arduino.h>
 
 // #include <memory.h>
 #include <stdio.h>
@@ -6,6 +7,7 @@
 #ifndef NULL
 #define NULL 0
 #endif
+
 static chess_value_t scoring[] = {
     1,
     3,
@@ -448,6 +450,27 @@ bool chess_contains_move(const chess_index_t* moves, size_t moves_size, chess_in
     return false;
 }
 
+// static chess_value_t is_checked_king_exposure(const chess_game_t* game, chess_value_t king_index, chess_index_t from, const chess_value_t* game_board)
+// {
+//     const chess_value_t id = game_board[king_index];
+//     const chess_value_t team = CHESS_TEAM(id);
+//     chess_value_t tmp_moves[64];
+//     chess_value_t tmp_moves_size;
+//     for (int i = 0; i < 64; ++i) {
+//         const chess_value_t tmp_id = game_board[i];
+//         if (tmp_id != CHESS_NONE) {
+//             const chess_value_t tmp_team = CHESS_TEAM(tmp_id);
+//             if (tmp_team != team) {
+//                 tmp_moves_size = compute_moves(game, i, tmp_moves, game_board);
+//                 if (chess_contains_move(tmp_moves, tmp_moves_size, king_index)) {
+//                     return 1;
+//                 }
+//             }
+//         }
+//     }
+//     return 0;
+// }
+
 static chess_value_t is_checked_king(const chess_game_t* game, chess_value_t king_index, const chess_value_t* game_board) {
     const chess_value_t id = game_board[king_index];
     const chess_value_t team = CHESS_TEAM(id);
@@ -881,7 +904,7 @@ bool chess_status(const chess_game_t* game, chess_status_t* out_white_status, ch
                             set_black = true;
                         }
                     } else {
-                        if(CHESS_TEAM(game->board[i]==CHESS_WHITE)) {
+                        if(CHESS_TEAM(game->board[i])==CHESS_WHITE) {
                             if(out_white_status!=NULL) {
                                 *out_white_status = CHESS_CHECK;
                             }
